@@ -22,3 +22,143 @@ nav  {
 
 }
 
+.image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.image-container img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+    padding: 10px;
+}
+
+.pink {
+    text-decoration: none;
+}
+h2 {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 1rem;
+    padding: 0rem;
+    display: flex;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+
+.content {
+    padding: 80px 20px;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        flex: none;
+    }
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('dist/assets/fonts/open-sans-regular-normal.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('dist/assets/fonts/open-sans-bold-normal.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('dist/assets/fonts/josefin-sans-bold-normal.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    src: url('dist/assets/fonts/libre-baskerville-regular-normal.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 700;
+    src: url('dist/assets/fonts/libre-baskerville-bold-normal.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: url('dist/assets/fonts/lobster-regular-normal.woff2') format('woff2');
+}
