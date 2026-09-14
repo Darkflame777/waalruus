@@ -2,12 +2,17 @@
 h1, h2, h3 {
     display: inline;
     margin-right: 20px;
+    text-align: center;
+    text-decoration: black;
 }
 
 .headers {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+.title{
+    text-align: center;
 }
 
 nav  {
@@ -23,9 +28,9 @@ nav  {
 }
 
 .image-container {
-    position: relative;
+    position: page;
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
 }
 
 .image-container img {
@@ -49,16 +54,19 @@ nav  {
 
 .pink {
     text-decoration: none;
+    background-color: lightblue;
+    padding: 60px;
+    border: black;
 }
-h2 {
-    text-decoration: none;
-}
+
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
+.midden{
+    line-height: 1.2;
+}
 
 nav {
     background-color: #333;
@@ -66,7 +74,6 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
     padding: 1rem;
 }
 
@@ -98,67 +105,56 @@ nav ul li a:hover {
 
 
 .content {
-    padding: 80px 20px;
+    padding: 1rem ;
 }
 
-
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        flex: none;
-    }
-}
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('dist/assets/fonts/open-sans-regular-normal.woff2') format('woff2');
+.logo {
+   text-decoration: lightblue;
 }
 
-
-@font-face {
-    font-display: swap;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('dist/assets/fonts/open-sans-bold-normal.woff2') format('woff2');
+p {
+    text-align: center;
 }
 
-
-@font-face {
-    font-display: swap;
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('dist/assets/fonts/josefin-sans-bold-normal.woff2') format('woff2');
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1000;
 }
-
-
-@font-face {
-    font-display: swap;
-    font-family: 'Libre Baskerville';
-    font-style: normal;
-    font-weight: 400;
-    src: url('dist/assets/fonts/libre-baskerville-regular-normal.woff2') format('woff2');
+footer {
+    background: var(--dark-blue);
+    color: white; padding: 70px 5% 30px;
 }
-
-
-@font-face {
-    font-display: swap;
-    font-family: 'Libre Baskerville';
-    font-style: normal;
-    font-weight: 700;
-    src: url('dist/assets/fonts/libre-baskerville-bold-normal.woff2') format('woff2');
+.footer-grid {
+      max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
 }
-
-
-@font-face {
-    font-display: swap;
-    font-family: 'Lobster';
-    font-style: normal;
-    font-weight: 400;
-    src: url('dist/assets/fonts/lobster-regular-normal.woff2') format('woff2');
+.footer-column h3 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+.footer-column p {
+    color: #b6c3c8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.footer-bottom {
+    max-width: 1150px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.15);
+    color: #82929a;
+    font-size: 12px;
 }
