@@ -18,6 +18,47 @@ nav ul {
 nav li {
     list-style: none;
 }
+.logo {
+    text-align: center;
+}
 
+.tekst {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+ul {
+    font-size: 18px;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+}
+.plaatje {
+    float: right;
+    width: 200px;
+}
+.alineas {
+    max-width: 800px;
+}
 
+.inhoud {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
 
+.tekst {
+    max-width: 500px;
+}
+
+.plaatje {
+    width: 200px;
+}
+.afbeeldingen {
+    width: 370px;
+}
+
+body {
+    background-color: lightblue;
+}
