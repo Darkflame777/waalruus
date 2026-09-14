@@ -1,0 +1,68 @@
+.menu-grid {
+    max-width: 1150px;
+    margin: 0 auto 120px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.menu-card {
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    transition: transform .3s;
+}
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+.menu-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( transparent 20%, rgba(5, 25, 35, .95) );
+}
+.menu-lunch {
+    background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554");
+}
+.menu-diner {
+    background-image: url("https://images.unsplash.com/photo-1544025162-d76694265947");
+}
+.menu-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+}
+.menu-content small {
+    color: var(--yellow);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.menu-content h3 {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin: 8px 0 15px;
+    font-weight: 900;
+}
+.menu-content p {
+    max-width: 450px;
+    line-height: 1.6;
+    color: #e5ebee;
+}
+body{
+    background-color: lightblue;
+}
+.title{
+}
+button a{
+    background-color: none;
+}
+.button1{
+    background-color: orange;
+}
