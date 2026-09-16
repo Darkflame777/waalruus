@@ -1,76 +1,80 @@
 <!DOCTYPE html>
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>De walrus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Walrus - Contact</title>
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-<header>
-    Let op: op 27 september zijn we de hele dag gesloten vanwege personeels feest!
+
+<!-- MELDING BOVENAAN -->
+<header class="top-banner">
+    <span id="banner-text">Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!</span>
 </header>
-</header>
-    <h1><a href="homepage.html">De walrus -grand cafe-</a></h1>
+
+<!-- TAALSWAPPER & HOOFD-HEADER -->
+<div class="header-container">
+    <div class="language-switcher">
+        <button onclick="setLanguage('nl')" class="lang-btn active" id="btn-nl">NL</button>
+        <button onclick="setLanguage('de')" class="lang-btn" id="btn-de">DE</button>
+        <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">EN</button>
+    </div>
+
+    <h1 class="site-title"><a href="homepage.html">De Walrus - Grand Café</a></h1>
+
     <nav>
         <ul>
-            <li><a href="menukaart.html">Menukaart</a></li>
-            <li> <a href="arrangement.html">Arrangement</a></li>
-            <li><a href="zakelijk.html">Zakelijk</a> </li>
-            <li><a href="contact.html">Contact</a> </li>
-            <li><a href="werken%20bij.html">Werken bij</a> </li>
-            <li><a href="reserveren.html">Reserveren</a> </li>
+            <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+            <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+            <li><a href="zakelijk.html" id="nav-zakelijk">Zakelijk</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li><a href="werken%20bij.html" id="nav-werken">Werken bij</a></li>
+            <li><a href="reserveren.html" id="nav-reserveren">Reserveren</a></li>
         </ul>
     </nav>
-
-
-    <h1>Neem contact met ons op!</h1>
-    <h3>Onze telefoon staat bíjna altijd aan en je kan ons bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100. Een mailtje sturen mag natuurlijk ook, dit kan via onderstaande link.
-    </h3>
-    <h3><a href="klik hier om ons een mailtje te sturen!">Klik hier om ons een mailtje te sturen!</a></h3>
-
-
-    <h1>RESTAURANT IN LEEUWARDEN EN SNEEK </h1>
-
-
-
-
-
-<div class="kaarten">
-
-    <div class="kaart">
-        <a href="leeuwarden.html">
-            <img src="https://www.dewalrus.nl/media/hcuocbgs/leeuwarden.jfif?width=800&height=400&quality=80&v=1dcd31b39b233f0" alt="Leeuwarden">
-            <div class="overlay">Restaurant Leeuwarden →</div>
-        </a>
-        <div class="tekst">Leeuwarden</div>
-    </div>
-
-    <div class="kaart">
-        <a href="sneek.html">
-            <img src="https://www.dewalrus.nl/media/4ewllnyi/sneek.jfif?width=800&height=400&quality=80&v=1dcd31b39169030" alt="Sneek">
-            <div class="overlay">Restaurant Sneek →</div>
-        </a>
-        <div class="tekst">Sneek</div>
-    </div>
-
 </div>
 
+<main class="main-content">
+    <!-- CONTACT INTRO -->
+    <h1 id="title-contact">Neem contact met ons op!</h1>
+    <h3 id="text-contact">
+        Onze telefoon staat bíjna altijd aan en je kan ons bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100. Een mailtje sturen mag natuurlijk ook, dit kan via onderstaande link.
+    </h3>
+    <h3><a href="mailto:info@dewalrusleeuwarden.nl" id="mail-link">Klik hier om ons een mailtje te sturen!</a></h3>
 
+    <!-- RESTAURANTS SECTIE -->
+    <h1 id="title-restaurants">RESTAURANT IN LEEUWARDEN EN SNEEK</h1>
 
+    <div class="kaarten">
+        <div class="kaart">
+            <a href="leeuwarden.html">
+                <img src="https://www.dewalrus.nl/media/hcuocbgs/leeuwarden.jfif?width=800&height=400&quality=80&v=1dcd31b39b233f0" alt="Leeuwarden">
+                <div class="overlay" id="card-overlay-1">Restaurant Leeuwarden →</div>
+            </a>
+            <div class="tekst">Leeuwarden</div>
+        </div>
 
-    <p>
+        <div class="kaart">
+            <a href="sneek.html">
+                <img src="https://www.dewalrus.nl/media/4ewllnyi/sneek.jfif?width=800&height=400&quality=80&v=1dcd31b39169030" alt="Sneek">
+                <div class="overlay" id="card-overlay-2">Restaurant Sneek →</div>
+            </a>
+            <div class="tekst">Sneek</div>
+        </div>
+    </div>
+
+    <!-- LOCATIES INFO -->
     <div class="locaties">
-
         <div class="locatie">
             <h2>De Walrus Leeuwarden</h2>
             <p>
                 Gouverneursplein 37<br>
                 8911 HH Leeuwarden
             </p>
-
-            <p>
+            <p id="hours-leeuwarden">
                 Zondag t/m zaterdag van 10:00 tot 01:00 uur
             </p>
-
             <p>
                 Tel: 058 - 21 377 40<br>
                 E-mail: info@dewalrusleeuwarden.nl
@@ -83,31 +87,111 @@
                 Leeuwenburg 11<br>
                 8601 CG Sneek
             </p>
-
-            <p>
+            <p id="hours-sneek">
                 Zondag t/m zaterdag van 10:00 tot 01:00 uur
             </p>
-
             <p>
                 Tel: 0515 - 438 100<br>
                 E-mail: info@dewalrussneek.nl
             </p>
         </div>
 
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <h2>Leuk dat je bent geweest!</h2>
-
+        <div class="locatie-afsluiting">
+            <h2 id="title-thanks">Leuk dat je bent geweest!</h2>
             <img
                     src="https://www.dewalrus.nl/media/a2ea5xzn/footer-walrus.jpg?rmode=min&width=800&height=600&quality=80&v=1dcd31b31950620"
                     alt="De Walrus"
                     class="walrus-klein"
             >
         </div>
-
-
-
-
     </div>
+</main>
 
+<!-- JAVASCRIPT VOOR DE TAALSWAPPER -->
+<script>
+    const translations = {
+        nl: {
+            banner: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            navMenu: "Menukaart",
+            navArr: "Arrangement",
+            navZakelijk: "Zakelijk",
+            navContact: "Contact",
+            navWerken: "Werken bij",
+            navReserveren: "Reserveren",
+            titleContact: "Neem contact met ons op!",
+            textContact: "Onze telefoon staat bíjna altijd aan en je kan ons bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100. Een mailtje sturen mag natuurlijk ook, dit kan via onderstaande link.",
+            mailLink: "Klik hier om ons een mailtje te sturen!",
+            titleRestaurants: "RESTAURANT IN LEEUWARDEN EN SNEEK",
+            overlay1: "Restaurant Leeuwarden →",
+            overlay2: "Restaurant Sneek →",
+            hoursLeeuwarden: "Zondag t/m zaterdag van 10:00 tot 01:00 uur",
+            hoursSneek: "Zondag t/m zaterdag van 10:00 tot 01:00 uur",
+            titleThanks: "Leuk dat je bent geweest!"
+        },
+        de: {
+            banner: "Achtung: Am 27. September haben wir wegen einer Betriebsfeier den ganzen Tag geschlossen!",
+            navMenu: "Speisekarte",
+            navArr: "Angebote",
+            navZakelijk: "Geschäftlich",
+            navContact: "Kontakt",
+            navWerken: "Karriere",
+            navReserveren: "Reservieren",
+            titleContact: "Nehmen Sie Kontakt mit uns auf!",
+            textContact: "Unser Telefon ist fast immer besetzt. Sie erreichen uns in Leeuwarden unter 058 213 7740 oder in Sneek unter 0515 438 100. Gerne können Sie uns auch eine E-Mail über den untenstehenden Link senden.",
+            mailLink: "Klicken Sie hier, um uns eine E-Mail zu senden!",
+            titleRestaurants: "RESTAURANT IN LEEUWARDEN UND SNEEK",
+            overlay1: "Restaurant Leeuwarden →",
+            overlay2: "Restaurant Sneek →",
+            hoursLeeuwarden: "Sonntag bis Samstag von 10:00 bis 01:00 Uhr",
+            hoursSneek: "Sonntag bis Samstag von 10:00 bis 01:00 Uhr",
+            titleThanks: "Schön, dass Sie da waren!"
+        },
+        en: {
+            banner: "Please note: on September 27th we will be closed all day for our staff party!",
+            navMenu: "Menu",
+            navArr: "Packages",
+            navZakelijk: "Corporate",
+            navContact: "Contact",
+            navWerken: "Careers",
+            navReserveren: "Reservations",
+            titleContact: "Get in touch with us!",
+            textContact: "Our phone is almost always on! You can reach us in Leeuwarden at 058 213 7740 or in Sneek at 0515 438 100. Sending an email is also welcome via the link below.",
+            mailLink: "Click here to send us an email!",
+            titleRestaurants: "RESTAURANT IN LEEUWARDEN AND SNEEK",
+            overlay1: "Restaurant Leeuwarden →",
+            overlay2: "Restaurant Sneek →",
+            hoursLeeuwarden: "Sunday to Saturday from 10:00 AM to 01:00 AM",
+            hoursSneek: "Sunday to Saturday from 10:00 AM to 01:00 AM",
+            titleThanks: "Thanks for visiting us!"
+        }
+    };
+
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+
+        document.getElementById('banner-text').innerHTML = translations[lang].banner;
+        document.getElementById('nav-menu').innerHTML = translations[lang].navMenu;
+        document.getElementById('nav-arr').innerHTML = translations[lang].navArr;
+        document.getElementById('nav-zakelijk').innerHTML = translations[lang].navZakelijk;
+        document.getElementById('nav-contact').innerHTML = translations[lang].navContact;
+        document.getElementById('nav-werken').innerHTML = translations[lang].navWerken;
+        document.getElementById('nav-reserveren').innerHTML = translations[lang].navReserveren;
+
+        document.getElementById('title-contact').innerHTML = translations[lang].titleContact;
+        document.getElementById('text-contact').innerHTML = translations[lang].textContact;
+        document.getElementById('mail-link').innerHTML = translations[lang].mailLink;
+        document.getElementById('title-restaurants').innerHTML = translations[lang].titleRestaurants;
+
+        document.getElementById('card-overlay-1').innerHTML = translations[lang].overlay1;
+        document.getElementById('card-overlay-2').innerHTML = translations[lang].overlay2;
+
+        document.getElementById('hours-leeuwarden').innerHTML = translations[lang].hoursLeeuwarden;
+        document.getElementById('hours-sneek').innerHTML = translations[lang].hoursSneek;
+        document.getElementById('title-thanks').innerHTML = translations[lang].titleThanks;
+
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById('btn-' + lang).classList.add('active');
+    }
+</script>
 </body>
 </html>
