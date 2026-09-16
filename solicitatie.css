@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #263f36;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+.melding {
+    background-color: #263f36;
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-inhoud {
+    max-width: 1300px;
+    margin: auto;
+    padding: 22px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header-inhoud h1 a {
+    color: #263f36;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: #263f36;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b27a3c;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #b27a3c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.sollicitatie-formulier {
+    max-width: 950px;
+    margin: 55px auto;
+    padding: 45px 50px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sollicitatie-formulier h2 {
+    color: #263f36;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sollicitatie-formulier h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background-color: #b27a3c;
+    margin: 15px auto 25px;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+    text-align: center;
+    font-size: 17px;
+}
+
+.formulier-rij {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.formulier-groep {
+    margin-bottom: 22px;
+}
+
+.formulier-groep label {
+    display: block;
+    margin-bottom: 7px;
+    color: #263f36;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d8d2c7;
+    border-radius: 5px;
+    background-color: #faf9f6;
+    color: #263f36;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #b27a3c;
+    box-shadow: 0 0 0 2px rgba(178, 122, 60, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.keuze-groep {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #f5f1e8;
+    border: 1px solid #e4ded2;
+    border-radius: 8px;
+}
+
+.keuze-groep h3 {
+    margin-bottom: 15px;
+    color: #263f36;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 9px 0;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #263f36;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    margin: 35px auto 0;
+    padding: 13px 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #263f36;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #b27a3c;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 70px;
+    padding: 30px 20px;
+    background-color: #263f36;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 900px) {
+
+    .header-inhoud {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .formulier-rij {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header-inhoud {
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 12px 18px;
+    }
+
+    .sollicitatie-formulier {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    .sollicitatie-formulier h2 {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .keuze-groep {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

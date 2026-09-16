@@ -27,10 +27,6 @@ body > header:last-of-type {
     position: relative;
 }
 
-/* ========================================
-   TAALSWAPPER
-======================================== */
-
 .language-switcher {
     display: flex;
     justify-content: flex-end;
@@ -56,10 +52,6 @@ body > header:last-of-type {
     background-color: #263f36;
     color: white;
 }
-
-/* ========================================
-   HEADER & NAVIGATIE
-======================================== */
 
 body > header:last-of-type > h1:first-of-type {
     text-align: center;
@@ -117,10 +109,6 @@ nav a:hover::after {
 nav a:hover {
     color: #b27a3c;
 }
-
-/* ========================================
-   CONTENT STIJLEN
-======================================== */
 
 .logo {
     max-width: 1100px;
@@ -245,10 +233,6 @@ body > header:last-of-type > ul li {
 .kaarten + .logo + .tekst {
     margin-bottom: 50px;
 }
-
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
 
 @media (max-width: 800px) {
     body > header:last-of-type {
