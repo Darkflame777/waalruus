@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #263f36;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+
+.melding {
+    background-color: #263f36;
+    color: white;
+
+    text-align: center;
+
+    padding: 12px 20px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+header {
+    background-color: white;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-inhoud {
+    max-width: 1300px;
+
+    margin: 0 auto;
+    padding: 22px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.header-inhoud h1 {
+    margin: 0;
+}
+
+.header-inhoud h1 a {
+    color: #263f36;
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+.header-inhoud h1 a:hover {
+    color: #b27a3c;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+
+    color: #263f36;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 5px 0;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #b27a3c;
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #b27a3c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.welkom {
+    position: relative;
+
+    max-width: 1300px;
+
+    margin: 40px auto 0;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.welkom img {
+    display: block;
+
+    width: 100%;
+    height: 600px;
+
+    object-fit: cover;
+}
+
+.welkom::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(38, 63, 54, 0.38);
+}
+
+.welkom-tekst {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    color: white;
+}
+
+.welkom-tekst h2 {
+    margin-bottom: 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    line-height: 1.3;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.welkom-tekst p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 23px;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+.informatie {
+    max-width: 950px;
+
+    margin: 55px auto;
+
+    padding: 45px 55px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.informatie h2 {
+    margin-bottom: 25px;
+
+    color: #263f36;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+}
+
+.informatie h2::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 3px;
+
+    margin: 12px auto 0;
+
+    background-color: #b27a3c;
+}
+
+.informatie p {
+    margin-bottom: 20px;
+
+    color: #444;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.informatie p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.evenement {
+    border-top: 5px solid #b27a3c;
+}
+
+.knop {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 28px;
+
+    background-color: #263f36;
+
+    color: white;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+            background-color 0.3s ease,
+            transform 0.2s ease;
+}
+
+.knop:hover {
+    background-color: #b27a3c;
+
+    transform: translateY(-2px);
+}
+
+.reserveren {
+    max-width: 950px;
+
+    margin: 55px auto;
+
+    padding: 50px 55px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border-top: 5px solid #263f36;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.reserveren h2 {
+    margin-bottom: 10px;
+
+    color: #263f36;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+}
+
+.reserveren h2::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 3px;
+
+    margin: 12px auto 25px;
+
+    background-color: #b27a3c;
+}
+
+.reserveren h3 {
+    margin-bottom: 15px;
+
+    color: #263f36;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+}
+
+.reserveren p {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    color: #444;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+footer {
+    margin-top: 70px;
+
+    padding: 50px 30px 25px;
+
+    background-color: #263f36;
+
+    color: white;
+}
+
+.footer-inhoud {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+}
+
+.footer-locatie {
+    text-align: center;
+}
+
+.footer-locatie h3 {
+    margin-bottom: 15px;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 23px;
+}
+
+.footer-locatie p {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.footer-onderkant {
+    max-width: 1000px;
+
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.footer-onderkant p {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+
+    .header-inhoud {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .header-inhoud h1 a {
+        font-size: 27px;
+    }
+
+    nav ul {
+        gap: 15px 20px;
+    }
+
+    .welkom {
+        margin: 25px 20px 0;
+    }
+
+    .welkom img {
+        height: 450px;
+    }
+
+    .welkom-tekst h2 {
+        font-size: 34px;
+    }
+
+    .informatie,
+    .reserveren {
+        margin: 40px 25px;
+
+        padding: 35px;
+    }
+
+    .footer-inhoud {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .melding {
+        padding: 10px 15px;
+
+        font-size: 13px;
+    }
+
+    .header-inhoud {
+        padding: 18px 15px;
+    }
+
+    .header-inhoud h1 a {
+        font-size: 23px;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 8px;
+    }
+
+    .welkom {
+        margin: 15px 10px 0;
+
+        border-radius: 5px;
+    }
+
+    .welkom img {
+        height: 300px;
+    }
+
+    .welkom-tekst h2 {
+        font-size: 27px;
+    }
+
+    .welkom-tekst p {
+        font-size: 18px;
+    }
+
+    .informatie,
+    .reserveren {
+        margin: 25px 15px;
+
+        padding: 25px 20px;
+    }
+
+    .informatie h2,
+    .reserveren h2 {
+        font-size: 27px;
+    }
+
+    .informatie p,
+    .reserveren p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .knop {
+        width: 100%;
+
+        padding: 12px 15px;
+    }
+
+    .footer-inhoud {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    footer {
+        margin-top: 40px;
+
+        padding: 35px 20px;
+    }
+}
