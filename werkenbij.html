@@ -1,130 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>De walrus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Walrus - Werken bij</title>
     <link rel="stylesheet" href="werkenbij.css">
 </head>
 <body>
+
+<!-- MELDING BOVENAAN -->
 <header>
-    Let op: op 27 september zijn we de hele dag gesloten vanwege personeels feest!
+    <span id="banner-text">Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!</span>
 </header>
+
+<!-- HOOFD HEADER MET TAALSWAPPER -->
 <header>
-    <h1><a href="homepage.html">De walrus -grand cafe-</a></h1>
+    <div class="language-switcher">
+        <button onclick="setLanguage('nl')" class="lang-btn active" id="btn-nl">NL</button>
+        <button onclick="setLanguage('de')" class="lang-btn" id="btn-de">DE</button>
+        <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">EN</button>
+    </div>
+
+    <h1><a href="homepage.html">De Walrus - Grand Café</a></h1>
+
     <nav>
         <ul>
-            <li><a href="menukaart.html">Menukaart</a></li>
-            <li> <a href="arrangement.html">Arrangement</a></li>
-            <li><a href="zakelijk.html">Zakelijk</a> </li>
-            <li><a href="contact.html">Contact</a> </li>
-            <li><a href="werkenbij.html">Werken bij</a> </li>
-            <li><a href="reserveren.html">Reserveren</a> </li>
+            <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+            <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+            <li><a href="zakelijk.html" id="nav-zakelijk">Zakelijk</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li><a href="werkenbij.html" id="nav-werken">Werken bij</a></li>
+            <li><a href="reserveren.html" id="nav-reserveren">Reserveren</a></li>
         </ul>
     </nav>
 
-    <h1 class="logo">
+    <h1 class="logo" id="title-main">
         Werken bij De Walrus?
     </h1>
 
-    <img src="https://www.dewalrus.nl/media/c1xj3cju/werkenbijheader.jfif?rmode=min&width=1920&quality=80&v=1dcd31b6e9f1790"
-         class="walrus-werken">
+    <img src="https://www.dewalrus.nl/media/c1xj3cju/werkenbijheader.jfif?rmode=min&width=1920&quality=80&v=1dcd31b6e9f1790" class="walrus-werken" alt="Werken bij De Walrus">
 
-
-    <h1 class="logo">
+    <h1 class="logo" id="title-sub">
         Kom je werken bij De Walrus?
     </h1>
 
-    <h3 class="tekst">
-        Is het restaurant al bekend terrein? Of nog niet zo bekend, maar wel
-        interessant om uit te proberen? We hebben vaak verschillende vacatures
-        open staan, maar je mag ook een open-sollicitatie sturen als je denkt
-        dat je ons team kunt versterken.
+    <h3 class="tekst" id="text-intro">
+        Is het restaurant al bekend terrein? Of nog niet zo bekend, maar wel interessant om uit te proberen? We hebben vaak verschillende vacatures open staan, maar je mag ook een open-sollicitatie sturen als je denkt dat je ons team kunt versterken.
         <br><br>
-
-        De werkzaamheden binnen het restaurant zijn divers. Dus ben jij onze
-        nieuwe chef, sous-chef, pasloper, keukenhulp of collega in de bediening?
-        Wie weet!
+        De werkzaamheden binnen het restaurant zijn divers. Dus ben jij onze nieuwe chef, sous-chef, pasloper, keukenhulp of collega in de bediening? Wie weet!
         <br><br>
-
-        Solliciteer via het contactformulier helemaal onderaan deze pagina en
-        we nodigen je graag uit voor een kennismakingsgesprek. De koffie is
-        van ons. Geef direct in je sollicitatie even aan welke dagen jou het
-        beste uitkomen.
+        Solliciteer via het contactformulier helemaal onderaan deze pagina en we nodigen je graag uit voor een kennismakingsgesprek. De koffie is van ons. Geef direct in je sollicitatie even aan welke dagen jou het beste uitkomen.
     </h3>
 
-
-    <h1 class="logo">
+    <h1 class="logo" id="title-vacancies">
         Vacatures
     </h1>
 
-    <h3 class="tekst">
-        De vacatures staan altijd open voor Leeuwarden én Sneek!
-        Bekijk ze hieronder:
+    <h3 class="tekst" id="text-vacancies-intro">
+        De vacatures staan altijd open voor Leeuwarden én Sneek! Bekijk ze hieronder:
     </h3>
 
     <ul>
-        <li>Restaurant manager</li>
-        <li>Kok: Zelfstandig werkend én leerling kok</li>
-        <li>Supervisor Bediening</li>
-        <li>Medewerker Bediening</li>
-        <li>Keukenhulp / Afwasser</li>
-        <li>Schoonmaak</li>
+        <li id="vac-1">Restaurant manager</li>
+        <li id="vac-2">Kok: Zelfstandig werkend én leerling kok</li>
+        <li id="vac-3">Supervisor Bediening</li>
+        <li id="vac-4">Medewerker Bediening</li>
+        <li id="vac-5">Keukenhulp / Afwasser</li>
+        <li id="vac-6">Schoonmaak</li>
     </ul>
 
-    <h3 class="tekst">
+    <h3 class="tekst" id="text-not-found">
         Staat jouw vacature er niet tussen?
     </h3>
 
-    <h3 class="tekst">
+    <h3 class="tekst" id="text-open-app">
         Open sollicitatie
     </h3>
 
-
-    <h1 class="logo">
+    <h1 class="logo" id="title-video">
         Benieuwd hoe een eerste werkdag bij De Walrus is? Bekijk de video!
     </h1>
 
-    <img src="https://www.dewalrus.nl/media/howbyn0r/maxresdefault.jpg?width=1920&height=1080&quality=80&v=1dcd31b6f61cb50"
-         class="video">
+    <img src="https://www.dewalrus.nl/media/howbyn0r/maxresdefault.jpg?width=1920&height=1080&quality=80&v=1dcd31b6f61cb50" class="video" alt="Video impressie">
 
-
-    <h1 class="logo">
+    <h1 class="logo" id="title-first-day">
         Je eerste werkdag bij De Walrus
     </h1>
 
-
     <div class="kaarten">
-
         <div class="kaart">
-            <img src="https://www.dewalrus.nl/media/pshft1fb/werkenbijcard1.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b6d566af0">
+            <img src="https://www.dewalrus.nl/media/pshft1fb/werkenbijcard1.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b6d566af0" alt="Sfeerfoto 1">
         </div>
-
         <div class="kaart">
-            <img src="https://www.dewalrus.nl/media/zgda4q5s/werkenbijcard2.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b6a4f4570">
+            <img src="https://www.dewalrus.nl/media/zgda4q5s/werkenbijcard2.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b6a4f4570" alt="Sfeerfoto 2">
         </div>
-
         <div class="kaart">
-            <img src="https://www.dewalrus.nl/media/j14mocxm/werkenbijcard3.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b6b7ffd40">
+            <img src="https://www.dewalrus.nl/media/j14mocxm/werkenbijcard3.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b6b7ffd40" alt="Sfeerfoto 3">
         </div>
-
         <div class="kaart">
-            <img src="https://www.dewalrus.nl/media/c1zjc1oh/werkenbijcard4.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b691e1870">
+            <img src="https://www.dewalrus.nl/media/c1zjc1oh/werkenbijcard4.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b691e1870" alt="Sfeerfoto 4">
         </div>
-
     </div>
 
-
-    <h1 class="logo">
+    <h1 class="logo" id="title-apply">
         Solliciteer nu!
     </h1>
 
-    <h3 class="tekst">
-        Heb je vragen over de mogelijkheden of kom je er niet uit met
-        solliciteren? Je kunt ons telefonisch bereiken in Leeuwarden op
-        058 213 7740 of in Sneek op 0515 438 100. We zien je sollicitatie
-        graag tegemoet!
+    <h3 class="tekst" id="text-apply">
+        Heb je vragen over de mogelijkheden of kom je er niet uit met solliciteren? Je kunt ons telefonisch bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100. We zien je sollicitatie graag tegemoet!
     </h3>
-    
 </header>
+
+<!-- TAALSCRIPT -->
+<script>
+    const translations = {
+        nl: {
+            banner: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            navMenu: "Menukaart", navArr: "Arrangement", navZakelijk: "Zakelijk", navContact: "Contact", navWerken: "Werken bij", navReserveren: "Reserveren",
+            titleMain: "Werken bij De Walrus?",
+            titleSub: "Kom je werken bij De Walrus?",
+            textIntro: "Is het restaurant al bekend terrein? Of nog niet zo bekend, maar wel interessant om uit te proberen? We hebben vaak verschillende vacatures open staan, maar je mag ook een open-sollicitatie sturen als je denkt dat je ons team kunt versterken.<br><br>De werkzaamheden binnen het restaurant zijn divers. Dus ben jij onze nieuwe chef, sous-chef, pasloper, keukenhulp of collega in de bediening? Wie weet!<br><br>Solliciteer via het contactformulier helemaal onderaan deze pagina en we nodigen je graag uit voor een kennismakingsgesprek. De koffie is van ons. Geef direct in je sollicitatie even aan welke dagen jou het beste uitkomen.",
+            titleVacancies: "Vacatures",
+            textVacanciesIntro: "De vacatures staan altijd open voor Leeuwarden én Sneek! Bekijk ze hieronder:",
+            vac1: "Restaurant manager", vac2: "Kok: Zelfstandig werkend én leerling kok", vac3: "Supervisor Bediening", vac4: "Medewerker Bediening", vac5: "Keukenhulp / Afwasser", vac6: "Schoonmaak",
+            textNotFound: "Staat jouw vacature er niet tussen?",
+            textOpenApp: "Open sollicitatie",
+            titleVideo: "Benieuwd hoe een eerste werkdag bij De Walrus is? Bekijk de video!",
+            titleFirstDay: "Je eerste werkdag bij De Walrus",
+            titleApply: "Solliciteer nu!",
+            textApply: "Heb je vragen over de mogelijkheden of kom je er niet uit met solliciteren? Je kunt ons telefonisch bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100. We zien je sollicitatie graag tegemoet!"
+        },
+        de: {
+            banner: "Achtung: Am 27. September haben wir wegen einer Betriebsfeier den ganzen Tag geschlossen!",
+            navMenu: "Speisekarte", navArr: "Angebote", navZakelijk: "Geschäftlich", navContact: "Kontakt", navWerken: "Karriere", navReserveren: "Reservieren",
+            titleMain: "Arbeiten bei De Walrus?",
+            titleSub: "Kommst du bei De Walrus arbeiten?",
+            textIntro: "Ist das Restaurant bereits bekanntes Terrain? Oder noch nicht so bekannt, aber interessant zum Ausprobieren? Wir haben oft verschiedene Stellenangebote offen stehen, aber du darfst auch eine Initiativbewerbung senden, wenn du denkst, dass du unser Team verstärken kannst.<br><br>Die Aufgaben im Restaurant sind vielfältig. Bist du also unser neuer Chefkoch, Sous-Chef, Passläufer, Küchenhilfe oder Kollege im Service? Wer weiß!<br><br>Bewirb dich über das Kontaktformular ganz unten auf dieser Seite und wir laden dich gerne zu einem Kennenlerngespräch ein. Der Kaffee geht auf uns. Gib in deiner Bewerbung bitte direkt an, welche Tage dir am besten passen.",
+            titleVacancies: "Stellenangebote",
+            textVacanciesIntro: "Die Stellenangebote sind immer für Leeuwarden und Sneek offen! Sieh sie dir unten an:",
+            vac1: "Restaurantmanager", vac2: "Koch: Selbstständig arbeitender Koch & Auszubildender", vac3: "Supervisor Service", vac4: "Servicemitarbeiter", vac5: "Küchenhilfe / Spüler", vac6: "Reinigungskraft",
+            textNotFound: "Ist dein Wunschjob nicht dabei?",
+            textOpenApp: "Initiativbewerbung",
+            titleVideo: "Neugierig, wie ein erster Arbeitstag bei De Walrus ist? Sieh dir das Video an!",
+            titleFirstDay: "Dein erster Arbeitstag bei De Walrus",
+            titleApply: "Jetzt bewerben!",
+            textApply: "Hast du Fragen zu den Möglichkeiten oder kommst du bei der Bewerbung nicht weiter? Du kannst uns telefonisch in Leeuwarden unter 058 213 7740 oder in Sneek unter 0515 438 100 erreichen. Wir freuen uns auf deine Bewerbung!"
+        },
+        en: {
+            banner: "Please note: on September 27th we will be closed all day for our staff party!",
+            navMenu: "Menu", navArr: "Packages", navZakelijk: "Corporate", navContact: "Contact", navWerken: "Careers", navReserveren: "Reservations",
+            titleMain: "Work at De Walrus?",
+            titleSub: "Will you join the team at De Walrus?",
+            textIntro: "Is hospitality familiar territory for you? Or not yet, but are you interested in trying it out? We often have various job openings, but you can also send an open application if you think you can strengthen our team.<br><br>The tasks within the restaurant are diverse. So, will you be our new head chef, sous-chef, food runner, kitchen assistant, or colleague in waitstaff? Who knows!<br><br>Apply via the contact form at the very bottom of this page and we would love to invite you for an introductory chat. Coffee's on us. Please indicate in your application which days suit you best.",
+            titleVacancies: "Job Openings",
+            textVacanciesIntro: "Vacancies are always open for both Leeuwarden and Sneek! Check them out below:",
+            vac1: "Restaurant Manager", vac2: "Chef: Independent Working Chef & Apprentice Chef", vac3: "Floor Manager / Supervisor", vac4: "Waitstaff / Server", vac5: "Kitchen Assistant / Dishwasher", vac6: "Cleaning Staff",
+            textNotFound: "Is your preferred position not listed?",
+            textOpenApp: "Open application",
+            titleVideo: "Curious what a first working day at De Walrus looks like? Watch the video!",
+            titleFirstDay: "Your first working day at De Walrus",
+            titleApply: "Apply now!",
+            textApply: "Do you have questions about the possibilities or need help with applying? You can reach us by phone in Leeuwarden at 058 213 7740 or in Sneek at 0515 438 100. We look forward to receiving your application!"
+        }
+    };
+
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.getElementById('banner-text').innerHTML = translations[lang].banner;
+        document.getElementById('nav-menu').innerHTML = translations[lang].navMenu;
+        document.getElementById('nav-arr').innerHTML = translations[lang].navArr;
+        document.getElementById('nav-zakelijk').innerHTML = translations[lang].navZakelijk;
+        document.getElementById('nav-contact').innerHTML = translations[lang].navContact;
+        document.getElementById('nav-werken').innerHTML = translations[lang].navWerken;
+        document.getElementById('nav-reserveren').innerHTML = translations[lang].navReserveren;
+
+        document.getElementById('title-main').innerHTML = translations[lang].titleMain;
+        document.getElementById('title-sub').innerHTML = translations[lang].titleSub;
+        document.getElementById('text-intro').innerHTML = translations[lang].textIntro;
+        document.getElementById('title-vacancies').innerHTML = translations[lang].titleVacancies;
+        document.getElementById('text-vacancies-intro').innerHTML = translations[lang].textVacanciesIntro;
+
+        document.getElementById('vac-1').innerHTML = translations[lang].vac1;
+        document.getElementById('vac-2').innerHTML = translations[lang].vac2;
+        document.getElementById('vac-3').innerHTML = translations[lang].vac3;
+        document.getElementById('vac-4').innerHTML = translations[lang].vac4;
+        document.getElementById('vac-5').innerHTML = translations[lang].vac5;
+        document.getElementById('vac-6').innerHTML = translations[lang].vac6;
+
+        document.getElementById('text-not-found').innerHTML = translations[lang].textNotFound;
+        document.getElementById('text-open-app').innerHTML = translations[lang].textOpenApp;
+        document.getElementById('title-video').innerHTML = translations[lang].titleVideo;
+        document.getElementById('title-first-day').innerHTML = translations[lang].titleFirstDay;
+        document.getElementById('title-apply').innerHTML = translations[lang].titleApply;
+        document.getElementById('text-apply').innerHTML = translations[lang].textApply;
+
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById('btn-' + lang).classList.add('active');
+    }
+</script>
 </body>
 </html>

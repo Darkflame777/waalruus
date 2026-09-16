@@ -24,21 +24,56 @@ body > header:last-of-type {
     background-color: white;
     padding: 20px 40px 40px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
-body > header:last-of-type > h1:first-child {
+/* ========================================
+   TAALSWAPPER
+======================================== */
+
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto 10px;
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: 1px solid #263f36;
+    color: #263f36;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    background-color: #263f36;
+    color: white;
+}
+
+/* ========================================
+   HEADER & NAVIGATIE
+======================================== */
+
+body > header:last-of-type > h1:first-of-type {
     text-align: center;
     margin-bottom: 15px;
 }
 
-body > header:last-of-type > h1:first-child a {
+body > header:last-of-type > h1:first-of-type a {
     color: #263f36;
     text-decoration: none;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 32px;
 }
 
-body > header:last-of-type > h1:first-child a:hover {
+body > header:last-of-type > h1:first-of-type a:hover {
     color: #b27a3c;
 }
 
@@ -83,6 +118,10 @@ nav a:hover {
     color: #b27a3c;
 }
 
+/* ========================================
+   CONTENT STIJLEN
+======================================== */
+
 .logo {
     max-width: 1100px;
     margin: 45px auto 20px;
@@ -102,7 +141,6 @@ nav a:hover {
     margin: 12px auto 0;
 }
 
-
 .tekst {
     max-width: 950px;
     margin: 0 auto 25px;
@@ -112,7 +150,6 @@ nav a:hover {
     font-weight: normal;
     line-height: 1.8;
 }
-
 
 .walrus-werken {
     display: block;
@@ -124,7 +161,6 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-
 
 body > header:last-of-type > ul {
     max-width: 800px;
@@ -194,13 +230,16 @@ body > header:last-of-type > ul li {
     margin-bottom: 50px;
 }
 
-@media (max-width: 800px) {
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
 
+@media (max-width: 800px) {
     body > header:last-of-type {
         padding: 20px;
     }
 
-    body > header:last-of-type > h1:first-child a {
+    body > header:last-of-type > h1:first-of-type a {
         font-size: 26px;
     }
 
@@ -227,6 +266,9 @@ body > header:last-of-type > ul li {
 }
 
 @media (max-width: 500px) {
+    .language-switcher {
+        justify-content: center;
+    }
 
     body > header:first-of-type {
         font-size: 13px;
@@ -237,7 +279,7 @@ body > header:last-of-type > ul li {
         padding: 15px;
     }
 
-    body > header:last-of-type > h1:first-child a {
+    body > header:last-of-type > h1:first-of-type a {
         font-size: 22px;
     }
 
