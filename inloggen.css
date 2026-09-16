@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f1e8;
+    color: #444;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.melding {
+    background-color: #263f36;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+
+.header-inhoud {
+    background-color: white;
+    padding: 25px 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-inhoud h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.header-inhoud h1 a {
+    color: #263f36;
+    transition: color 0.3s ease;
+}
+
+.header-inhoud h1 a:hover {
+    color: #b27a3c;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: #263f36;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b27a3c;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #b27a3c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto 70px;
+    min-height: 450px;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-inhoud {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 45px;
+    border-radius: 8px;
+    border-top: 4px solid #b27a3c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.login h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #263f36;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.login h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #b27a3c;
+    margin: 10px auto 0;
+}
+
+
+.welkomsttekst {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+
+.formulier-groep {
+    margin-bottom: 20px;
+}
+
+.formulier-groep label {
+    display: block;
+    color: #263f36;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.formulier-groep input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d8d0c2;
+    border-radius: 5px;
+    background-color: #faf9f5;
+    color: #333;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.formulier-groep input:focus {
+    outline: none;
+    border-color: #b27a3c;
+    box-shadow: 0 0 0 2px rgba(178, 122, 60, 0.15);
+}
+
+.formulier-groep input::placeholder {
+    color: #999;
+}
+
+
+.wachtwoord-vergeten {
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 25px;
+}
+
+.wachtwoord-vergeten a {
+    color: #b27a3c;
+    font-size: 14px;
+}
+
+.wachtwoord-vergeten a:hover {
+    text-decoration: underline;
+}
+
+
+.knop {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #263f36;
+    color: white;
+    padding: 13px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.knop:hover {
+    background-color: #b27a3c;
+    transform: translateY(-2px);
+}
+
+
+.nieuw-account {
+    text-align: center;
+    border-top: 1px solid #e5dfd4;
+    margin-top: 30px;
+    padding-top: 25px;
+}
+
+.nieuw-account p {
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.registreren {
+    color: #b27a3c;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.registreren:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    background-color: #263f36;
+    color: white;
+    margin-top: 60px;
+}
+
+.footer-inhoud {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-locatie h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.footer-locatie p {
+    color: #eee;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.footer-onderkant {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 18px 20px;
+}
+
+.footer-onderkant p {
+    color: #ddd;
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+
+@media (max-width: 900px) {
+
+    .header-inhoud {
+        padding: 25px;
+    }
+
+    .header-inhoud h1 {
+        font-size: 30px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .login-inhoud {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .melding {
+        font-size: 12px;
+        padding: 9px 15px;
+    }
+
+    .header-inhoud {
+        padding: 25px 18px 20px;
+    }
+
+    .header-inhoud h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        width: 94%;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .login-inhoud {
+        padding: 30px 22px;
+    }
+
+    .login h2 {
+        font-size: 27px;
+    }
+
+    .welkomsttekst {
+        font-size: 14px;
+    }
+
+    .footer-inhoud {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 35px 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .header-inhoud h1 {
+        font-size: 22px;
+    }
+
+    .login-inhoud {
+        padding: 25px 18px;
+    }
+
+    .login h2 {
+        font-size: 24px;
+    }
+}
