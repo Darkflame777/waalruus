@@ -1,77 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>De walrus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Walrus - Zakelijk</title>
     <link rel="stylesheet" href="zakelijk.css">
 </head>
 <body>
-<header>
-    Let op: op 27 september zijn we de hele dag gesloten vanwege personeels feest!
+
+<!-- MELDING BOVENAAN -->
+<header class="top-banner">
+    <span id="banner-text">Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!</span>
 </header>
-<header>
-    <h1><a href="homepage.html">De walrus -grand cafe-</a></h1>
+
+<!-- HOOFD-HEADER -->
+<header class="main-header">
+
+    <!-- TAALSWAP KNOPPEN -->
+    <div class="language-switcher">
+        <button onclick="setLanguage('nl')" class="lang-btn active" id="btn-nl">NL</button>
+        <button onclick="setLanguage('de')" class="lang-btn" id="btn-de">DE</button>
+        <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">EN</button>
+    </div>
+
+    <h1><a href="homepage.html">De Walrus - Grand Café</a></h1>
+
     <nav>
         <ul>
-            <li><a href="menukaart.html">Menukaart</a></li>
-            <li> <a href="arrangement.html">Arrangement</a></li>
-            <li><a href="zakelijk.html">Zakelijk</a> </li>
-            <li><a href="contact.html">Contact</a> </li>
-            <li><a href="werken%20bij.html">Werken bij</a> </li>
-            <li><a href="reserveren.html">Reserveren</a> </li>
+            <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+            <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+            <li><a href="zakelijk.html" id="nav-zakelijk">Zakelijk</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li><a href="werken%20bij.html" id="nav-werken">Werken bij</a></li>
+            <li><a href="reserveren.html" id="nav-reserveren">Reserveren</a></li>
         </ul>
     </nav>
-<h1 class="logo">
-    Vergaderen maar wel even weg uit de sleur van het kantoor?
-    <h3 class="tekst">
-        Dan wil je vergaderen op een mooie locatie die niet
-        aanvoelt als je kantoor! Bij De Walrus kun je het noodzakelijke
-        met het aangename combineren. Want in ons Grand Café in Leeuwarden
-        en Sneek ontmoet je elkaar op een toegankelijke manier, heb je andere gesprekken en kun je gelijk blijven lunchen, dineren of borrelen.
-    </h3>
-    <h1 class="logo">
-        Vergaderen in Sneek of Leeuwarden? De feiten op een rij:
-        <h4>Vergaderarrangement vanaf €13,75 per persoon!</h4>
-        <h4>Meerdere (prive)ruimtes tot 100 personen beschikbaar</h4>
-        <h4>Beide restaurants liggen in hartje centrum</h4>
-        <h4>Combineer jouw meeting met een lunch, diner of borrel. Alles onder één dak</h4>
-        <h4>Alle zakelijke benodigdheden: van pennen tot beamers en van flipovers tot statafels</h4>
-        <h4>Ook jouw presentatie, brainstorm, receptie en jubileum bij De Walrus</h4>
-
-
-            <h1 class="logo">
-                Vergadering met lunch, diner of borrel in Sneek of Leeuwarden?
-            </h1>
-
-            <div class="inhoud">
-                <h3 class="alineas">
-                    Net als bij elke locatie voor vergaderingen en zakelijke evenementen
-                    kun je bij ons ook privé-ruimtes reserveren. Of, pak met je collega’s
-                    een tafel in één van de gezellige hoeken in het restaurant in Sneek of Leeuwarden.
-                    <br><br>
-                    We hebben alvast verschillende arrangementen samengesteld, maar denken ook graag
-                    met je mee. Bitterballen na 30 minuten of Gin-Tonics bij het vragenrondje?
-                    Alles kan en alles mag. En de zakelijke benodigdheden? Die hebben we ook:
-                    van pennen tot beamers en van flipovers tot statafels.
-                    <br><br>
-                    Voor groepen tot vijftig hebben we diverse arrangementen samengesteld.
-                    Is de groep groter of heb je andere wensen? Geen probleem! Neem contact op voor een arrangement op maat.
-                </h3>
-
-                <img src="https://www.dewalrus.nl/media/3kjhi3sj/zakelijk1.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b407f3b10" class="plaatje">
-            </div>
-        <img src="https://www.dewalrus.nl/media/jaxhqqms/zakelijkcard1.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b3bc22830" class="afbeeldingen">
-        <img src="https://www.dewalrus.nl/media/svwjgzln/zakelijkcard2.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b49a4ff40" class="afbeeldingen">
-        <img src="https://www.dewalrus.nl/media/2i3jlak5/zakelijkcard3.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b45f90e40" class="afbeeldingen">
-        <img src="https://www.dewalrus.nl/media/otgiy1un/zakelijkcard4.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b4734e9a0" class="afbeeldingen">
-
-<h1 class="logo">
-    Neem contact met ons op!
-</h1>
-        <h3 class="tekst">
-            Heb je vragen over de mogelijkheden of een van onze arrangementen?
-            Je kunt ons telefonisch bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100.
-        </h3>
 </header>
+
+<main>
+    <!-- SECTIE 1: INTRO -->
+    <section>
+        <h1 class="logo" id="title-1">Vergaderen maar wel even weg uit de sleur van het kantoor?</h1>
+        <p class="tekst" id="text-1">
+            Dan wil je vergaderen op een mooie locatie die niet aanvoelt als je kantoor! Bij De Walrus kun je het noodzakelijke met het aangename combineren. Want in ons Grand Café in Leeuwarden en Sneek ontmoet je elkaar op een toegankelijke manier, heb je andere gesprekken en kun je gelijk blijven lunchen, dineren of borrelen.
+        </p>
+    </section>
+
+    <!-- SECTIE 2: FEITENLIJST -->
+    <section>
+        <h2 class="logo" id="title-2">Vergaderen in Sneek of Leeuwarden? De feiten op een rij:</h2>
+        <ul class="feiten-lijst">
+            <li id="fact-1">Vergaderarrangement vanaf €13,75 per persoon!</li>
+            <li id="fact-2">Meerdere (privé)ruimtes tot 100 personen beschikbaar</li>
+            <li id="fact-3">Beide restaurants liggen in hartje centrum</li>
+            <li id="fact-4">Combineer jouw meeting met een lunch, diner of borrel. Alles onder één dak</li>
+            <li id="fact-5">Alle zakelijke benodigdheden: van pennen tot beamers en van flipovers tot statafels</li>
+            <li id="fact-6">Ook jouw presentatie, brainstorm, receptie en jubileum bij De Walrus</li>
+        </ul>
+    </section>
+
+    <!-- SECTIE 3: INHOUD MET AFBEELDING -->
+    <section>
+        <h2 class="logo" id="title-3">Vergadering met lunch, diner of borrel in Sneek of Leeuwarden?</h2>
+
+        <div class="inhoud">
+            <p class="alineas" id="text-3">
+                Net als bij elke locatie voor vergaderingen en zakelijke evenementen kun je bij ons ook privé-ruimtes reserveren. Of, pak met je collega’s een tafel in één van de gezellige hoeken in het restaurant in Sneek of Leeuwarden.
+                <br><br>
+                We hebben alvast verschillende arrangementen samengesteld, maar denken ook graag met je mee. Bitterballen na 30 minuten of Gin-Tonics bij het vragenrondje? Alles kan en alles mag. En de zakelijke benodigdheden? Die hebben we ook: van pennen tot beamers en van flipovers tot statafels.
+                <br><br>
+                Voor groepen tot vijftig hebben we diverse arrangementen samengesteld. Is de groep groter of heb je andere wensen? Geen probleem! Neem contact op voor een arrangement op maat.
+            </p>
+
+            <img src="https://www.dewalrus.nl/media/3kjhi3sj/zakelijk1.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b407f3b10" alt="Zakelijk bij De Walrus" class="plaatje">
+        </div>
+
+        <!-- FOTOGALERIJ -->
+        <div class="galerij">
+            <img src="https://www.dewalrus.nl/media/jaxhqqms/zakelijkcard1.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b3bc22830" class="afbeeldingen" alt="Sfeerfoto 1">
+            <img src="https://www.dewalrus.nl/media/svwjgzln/zakelijkcard2.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b49a4ff40" class="afbeeldingen" alt="Sfeerfoto 2">
+            <img src="https://www.dewalrus.nl/media/2i3jlak5/zakelijkcard3.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b45f90e40" class="afbeeldingen" alt="Sfeerfoto 3">
+            <img src="https://www.dewalrus.nl/media/otgiy1un/zakelijkcard4.jfif?rmode=min&width=800&height=600&quality=80&v=1dcd31b4734e9a0" class="afbeeldingen" alt="Sfeerfoto 4">
+        </div>
+    </section>
+
+    <!-- SECTIE 4: CONTACT -->
+    <section>
+        <h2 class="logo" id="title-4">Neem contact met ons op!</h2>
+        <p class="tekst" id="text-4">
+            Heb je vragen over de mogelijkheden of een van onze arrangementen? Je kunt ons telefonisch bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100.
+        </p>
+    </section>
+</main>
+
+<!-- JAVASCRIPT VOOR TAALSWAPPER -->
+<script>
+    const translations = {
+        nl: {
+            banner: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            navMenu: "Menukaart",
+            navArr: "Arrangement",
+            navZakelijk: "Zakelijk",
+            navContact: "Contact",
+            navWerken: "Werken bij",
+            navReserveren: "Reserveren",
+            title1: "Vergaderen maar wel even weg uit de sleur van het kantoor?",
+            text1: "Dan wil je vergaderen op een mooie locatie die niet aanvoelt als je kantoor! Bij De Walrus kun je het noodzakelijke met het aangename combineren. Want in ons Grand Café in Leeuwarden en Sneek ontmoet je elkaar op een toegankelijke manier, heb je andere gesprekken en kun je gelijk blijven lunchen, dineren of borrelen.",
+            title2: "Vergaderen in Sneek of Leeuwarden? De feiten op een rij:",
+            fact1: "Vergaderarrangement vanaf €13,75 per persoon!",
+            fact2: "Meerdere (privé)ruimtes tot 100 personen beschikbaar",
+            fact3: "Beide restaurants liggen in hartje centrum",
+            fact4: "Combineer jouw meeting met een lunch, diner of borrel. Alles onder één dak",
+            fact5: "Alle zakelijke benodigdheden: van pennen tot beamers en van flipovers tot statafels",
+            fact6: "Ook jouw presentatie, brainstorm, receptie en jubileum bij De Walrus",
+            title3: "Vergadering met lunch, diner of borrel in Sneek of Leeuwarden?",
+            text3: "Net als bij elke locatie voor vergaderingen en zakelijke evenementen kun je bij ons ook privé-ruimtes reserveren. Of, pak met je collega’s een tafel in één van de gezellige hoeken in het restaurant in Sneek of Leeuwarden.<br><br>We hebben alvast verschillende arrangementen samengesteld, maar denken ook graag met je mee. Bitterballen na 30 minuten of Gin-Tonics bij het vragenrondje? Alles kan en alles mag. En de zakelijke benodigdheden? Die hebben we ook: van pennen tot beamers en van flipovers tot statafels.<br><br>Voor groepen tot vijftig hebben we diverse arrangementen samengesteld. Is de groep groter of heb je andere wensen? Geen probleem! Neem contact op voor een arrangement op maat.",
+            title4: "Neem contact met ons op!",
+            text4: "Heb je vragen over de mogelijkheden of een van onze arrangementen? Je kunt ons telefonisch bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100."
+        },
+        de: {
+            banner: "Achtung: Am 27. September haben wir wegen einer Betriebsfeier den ganzen Tag geschlossen!",
+            navMenu: "Speisekarte",
+            navArr: "Angebote",
+            navZakelijk: "Geschäftlich",
+            navContact: "Kontakt",
+            navWerken: "Karriere",
+            navReserveren: "Reservieren",
+            title1: "Tagen, aber raus aus dem Büroalltag?",
+            text1: "Dann möchten Sie an einem schönen Ort tagen, der sich nicht wie Ihr Büro anfühlt! Bei De Walrus können Sie das Nützliche mit dem Angenehmen verbinden. Denn in unserem Grand Café in Leeuwarden und Sneek begegnen Sie einander auf unkomplizierte Weise, führen andere Gespräche und können direkt zum Mittagessen, Abendessen oder auf einen Umtrunk bleiben.",
+            title2: "Tagen in Sneek oder Leeuwarden? Die Fakten auf einen Blick:",
+            fact1: "Tagungspaket ab 13,75 € pro Person!",
+            fact2: "Mehrere (private) Räume für bis zu 100 Personen verfügbar",
+            fact3: "Beide Restaurants liegen mitten im Zentrum",
+            fact4: "Kombinieren Sie Ihr Meeting mit Mittagessen, Abendessen oder Umtrunk. Alles unter einem Dach",
+            fact5: "Alle geschäftlichen Extras: von Stiften bis zu Beamern und von Flipcharts bis zu Stehtischen",
+            fact6: "Auch Ihre Präsentation, Ihr Brainstorming, Ihr Empfang und Ihr Jubiläum bei De Walrus",
+            title3: "Tagung mit Mittagessen, Abendessen oder Umtrunk in Sneek oder Leeuwarden?",
+            text3: "Wie bei jeder Location für Tagungen und geschäftliche Events können Sie bei uns auch Privaträume reservieren. Oder schnappen Sie sich mit Ihren Kollegen einen Tisch in einer der gemütlichen Ecken im Restaurant in Sneek oder Leeuwarden.<br><br>Wir haben bereits verschiedene Pakete zusammengestellt, denken aber auch gerne mit Ihnen mit. Bitterballen nach 30 Minuten oder Gin Tonics bei der Fragerunde? Alles ist möglich. Und die geschäftliche Ausstattung? Die haben wir auch: von Stiften bis zu Beamern und von Flipcharts bis zu Stehtischen.<br><br>Für Gruppen von bis zu fünfzig Personen haben wir verschiedene Pakete zusammengestellt. Ist die Gruppe größer oder haben Sie andere Wünsche? Kein Problem! Kontaktieren Sie uns für ein maßgeschneidertes Angebot.",
+            title4: "Nehmen Sie Kontakt mit uns auf!",
+            text4: "Haben Sie Fragen zu den Möglichkeiten oder zu einem unserer Angebote? Sie erreichen uns telefonisch in Leeuwarden unter 058 213 7740 oder in Sneek unter 0515 438 100."
+        },
+        en: {
+            banner: "Please note: on September 27th we will be closed all day for our staff party!",
+            navMenu: "Menu",
+            navArr: "Packages",
+            navZakelijk: "Corporate",
+            navContact: "Contact",
+            navWerken: "Careers",
+            navReserveren: "Reservations",
+            title1: "Looking to hold a meeting away from the office routine?",
+            text1: "Then you'll want to meet at a beautiful location that doesn't feel like your office! At De Walrus, you can combine business with pleasure. At our Grand Café in Leeuwarden and Sneek, you can connect in an accessible way, have different conversations, and stay right after for lunch, dinner, or drinks.",
+            title2: "Meeting in Sneek or Leeuwarden? The facts at a glance:",
+            fact1: "Meeting packages starting from €13.75 per person!",
+            fact2: "Multiple (private) rooms available for up to 100 people",
+            fact3: "Both restaurants are located right in the city center",
+            fact4: "Combine your meeting with lunch, dinner, or drinks. Everything under one roof",
+            fact5: "All business essentials: from pens to projectors and from flipcharts to standing tables",
+            fact6: "Host your presentation, brainstorm session, reception, or anniversary at De Walrus too",
+            title3: "Meeting with lunch, dinner, or drinks in Sneek or Leeuwarden?",
+            text3: "Just like at any venue for meetings and corporate events, you can reserve private rooms with us. Or grab a table with your colleagues in one of the cozy corners of our restaurant in Sneek or Leeuwarden.<br><br>We have already put together various packages, but we are also happy to think along with you. Dutch bitterballen after 30 minutes or Gin & Tonics during the Q&A session? Anything goes. And the business supplies? We have those too: from pens to projectors and from flipcharts to standing tables.<br><br>We have put together various packages for groups of up to fifty people. Is your group larger or do you have other requests? No problem! Contact us for a custom package.",
+            title4: "Get in touch with us!",
+            text4: "Do you have questions about the possibilities or one of our packages? You can reach us by phone in Leeuwarden at 058 213 7740 or in Sneek at 0515 438 100."
+        }
+    };
+
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+
+        document.getElementById('banner-text').innerHTML = translations[lang].banner;
+        document.getElementById('nav-menu').innerHTML = translations[lang].navMenu;
+        document.getElementById('nav-arr').innerHTML = translations[lang].navArr;
+        document.getElementById('nav-zakelijk').innerHTML = translations[lang].navZakelijk;
+        document.getElementById('nav-contact').innerHTML = translations[lang].navContact;
+        document.getElementById('nav-werken').innerHTML = translations[lang].navWerken;
+        document.getElementById('nav-reserveren').innerHTML = translations[lang].navReserveren;
+
+        document.getElementById('title-1').innerHTML = translations[lang].title1;
+        document.getElementById('text-1').innerHTML = translations[lang].text1;
+        document.getElementById('title-2').innerHTML = translations[lang].title2;
+
+        document.getElementById('fact-1').innerHTML = translations[lang].fact1;
+        document.getElementById('fact-2').innerHTML = translations[lang].fact2;
+        document.getElementById('fact-3').innerHTML = translations[lang].fact3;
+        document.getElementById('fact-4').innerHTML = translations[lang].fact4;
+        document.getElementById('fact-5').innerHTML = translations[lang].fact5;
+        document.getElementById('fact-6').innerHTML = translations[lang].fact6;
+
+        document.getElementById('title-3').innerHTML = translations[lang].title3;
+        document.getElementById('text-3').innerHTML = translations[lang].text3;
+        document.getElementById('title-4').innerHTML = translations[lang].title4;
+        document.getElementById('text-4').innerHTML = translations[lang].text4;
+
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById('btn-' + lang).classList.add('active');
+    }
+</script>
 </body>
 </html>
