@@ -15,9 +15,6 @@ body {
     line-height: 1.6;
 }
 
-/* ========================================
-   MELDING BOVENAAN
-======================================== */
 
 .melding {
     background-color: #263f36;
@@ -27,9 +24,7 @@ body {
     font-size: 14px;
 }
 
-/* ========================================
-   HEADER & NAVIGATIE
-======================================== */
+
 
 .header-inhoud {
     background-color: white;
@@ -56,9 +51,7 @@ body {
     color: #b27a3c;
 }
 
-/* ========================================
-   TAALSWAPPER (MATCHEND THEMA)
-======================================== */
+
 
 .language-switcher {
     position: absolute;
@@ -86,9 +79,7 @@ body {
     color: white;
 }
 
-/* ========================================
-   NAVIGATIE MENU
-======================================== */
+
 
 nav ul {
     list-style: none;
@@ -127,9 +118,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* ========================================
-   MAIN CONTENT STIJLEN
-======================================== */
 
 main {
     width: 90%;
@@ -260,9 +248,6 @@ main p {
     border-radius: 6px;
 }
 
-/* ========================================
-   FOOTER
-======================================== */
 
 footer {
     background-color: #263f36;
