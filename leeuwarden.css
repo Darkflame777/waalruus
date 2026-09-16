@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f1e8;
+    color: #333;
+    line-height: 1.7;
+}
+.melding {
+    background-color: #263f36;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+header {
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-inhoud {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.header-inhoud h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    white-space: nowrap;
+}
+.header-inhoud h1 a {
+    color: #263f36;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.header-inhoud h1 a:hover {
+    color: #b27a3c;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+nav li {
+    list-style: none;
+}
+nav a {
+    position: relative;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b27a3c;
+    transition: width 0.3s ease;
+}
+nav a:hover {
+     color: #b27a3c;
+}
+nav a:hover::after {
+    width: 100%;
+}
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.welkom {
+    position: relative;
+    margin-bottom: 70px;
+}
+.welkom > img:first-of-type {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.welkom > h2:first-child {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: white;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    line-height: 1.25;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+}
+.welkom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    z-index: 1;
+.welkom > h1 {
+    max-width: 1000px;
+    margin: 70px auto 20px;
+    padding: 0 30px;
+    color: #263f36;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+}
+}
+.welkom > h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #b27a3c;
+    margin: 15px auto 0;
+}
+.welkom > h1 + h2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.8;
+}
+.welkom > img:last-of-type {
+    display: block;
+    width: calc(100% - 60px);
+    max-width: 1300px;
+    height: 600px;
+    object-fit: cover;
+    margin: 50px auto 80px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1000px) {
+    .header-inhoud {
+        flex-direction: column;
+        padding: 20px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+    .welkom > img:first-of-type {
+        height: 500px;
+    }
+    .welkom::before {
+        height: 500px;
+    }
+    .welkom > h2:first-child {
+        font-size: 40px;
+    }
+    .welkom > h1 {
+        font-size: 38px;
+    }
+    .welkom > img:last-of-type {
+        height: 500px;
+    }
+}
+@media (max-width: 600px) {
+
+    .melding {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+    .header-inhoud {
+        padding: 18px 15px;
+        gap: 15px;
+    }
+    .header-inhoud h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    nav ul {
+        gap: 12px 18px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    .welkom {
+        margin-bottom: 45px;
+    }
+    .welkom > img:first-of-type {
+        height: 400px;
+    }
+    .welkom::before {
+        height: 400px;
+    }
+    .welkom > h2:first-child {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+    .welkom > h1 {
+        margin-top: 50px;
+        padding: 0 20px;
+        font-size: 31px;
+    }
+    .welkom > h1 + h2 {
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+    }
+    .welkom > img:last-of-type {
+        width: calc(100% - 40px);
+        height: 300px;
+        margin: 40px auto 50px;
+        border-radius: 8px;
+    }
+}
