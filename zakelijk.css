@@ -15,6 +15,10 @@ body {
     line-height: 1.6;
 }
 
+/* ========================================
+   MELDING BOVENAAN
+======================================== */
+
 .melding {
     background-color: #263f36;
     color: white;
@@ -23,6 +27,9 @@ body {
     font-size: 14px;
 }
 
+/* ========================================
+   HEADER & NAVIGATIE
+======================================== */
 
 .header-inhoud {
     background-color: white;
@@ -49,31 +56,39 @@ body {
     color: #b27a3c;
 }
 
+/* ========================================
+   TAALSWAPPER (MATCHEND THEMA)
+======================================== */
+
 .language-switcher {
     position: absolute;
     right: 35px;
     top: 25px;
     display: flex;
-    gap: 5px;
+    gap: 8px;
 }
 
 .lang-btn {
-    background-color: white;
+    background-color: transparent;
+    border: 1px solid #263f36;
     color: #263f36;
-    border: 1px solid #b27a3c;
-    border-radius: 4px;
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 4px 10px;
+    font-size: 13px;
     font-weight: bold;
+    border-radius: 4px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .lang-btn:hover,
 .lang-btn.active {
-    background-color: #b27a3c;
+    background-color: #263f36;
     color: white;
 }
+
+/* ========================================
+   NAVIGATIE MENU
+======================================== */
 
 nav ul {
     list-style: none;
@@ -112,6 +127,9 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* ========================================
+   MAIN CONTENT STIJLEN
+======================================== */
 
 main {
     width: 90%;
@@ -146,13 +164,11 @@ main h2::after {
     margin-top: 10px;
 }
 
-
 main p {
     font-size: 16px;
     line-height: 1.8;
     color: #444;
 }
-
 
 .zakelijk-intro {
     border-top: 4px solid #b27a3c;
@@ -161,7 +177,6 @@ main p {
 .zakelijk-intro p {
     max-width: 950px;
 }
-
 
 .feiten-lijst {
     list-style: none;
@@ -192,7 +207,6 @@ main p {
     font-size: 25px;
 }
 
-
 .vergaderen-inhoud {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,7 +227,6 @@ main p {
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-
 
 .galerij {
     display: grid;
@@ -247,6 +260,9 @@ main p {
     border-radius: 6px;
 }
 
+/* ========================================
+   FOOTER
+======================================== */
 
 footer {
     background-color: #263f36;
@@ -287,8 +303,11 @@ footer {
     font-size: 13px;
 }
 
-@media (max-width: 900px) {
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
 
+@media (max-width: 900px) {
     .header-inhoud {
         padding: 25px 25px 20px;
     }
@@ -323,7 +342,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-
     .melding {
         font-size: 12px;
         padding: 9px 15px;
@@ -400,9 +418,7 @@ footer {
     }
 }
 
-
 @media (max-width: 400px) {
-
     .galerij {
         grid-template-columns: 1fr;
     }
