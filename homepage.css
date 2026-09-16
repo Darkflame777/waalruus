@@ -173,22 +173,35 @@ main > section:nth-of-type(4) p {
     text-align: left;
 }
 
-button {
-    margin: 15px 8px 0;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 5px;
-    background-color: #263f36;
+   button {
+       margin: 15px 8px 0;
+       padding: 12px 28px;
+       border: none;
+       border-radius: 5px;
+       background-color: #263f36;
+       color: white;
+       font-size: 15px;
+       font-weight: bold;
+       cursor: pointer;
+       transition: background-color 0.3s ease, transform 0.2s ease;
+   }
+
+
+button a {
     color: white;
+    text-decoration: none;
     font-size: 15px;
     font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #b27a3c;
     transform: translateY(-2px);
+}
+
+button:hover a {
+    color: white;
+    text-decoration: none;
 }
 
 main > section:last-child {
