@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserveren - De Walrus</title>
+    <link rel="stylesheet" href="reserverenformulier.css">
+</head>
+
+<body>
+
+<header>
+    <div class="melding">
+        Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
+    </div>
+
+    <div class="header-inhoud">
+        <h1>
+            <a href="homepage.html">De Walrus - Grand Café -</a>
+        </h1>
+
+        <nav>
+            <ul>
+                <li><a href="reserveren.html">Reserveren</a></li>
+                <li><a href="menukaart.html">Menukaart</a></li>
+                <li><a href="zakelijk.html">Zakelijk</a></li>
+                <li><a href="arrangement.html">Arrangementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="werkenbij.html">Werken bij</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="reserveren">
+        <h2>Reserveer een tafel</h2>
+
+        <p class="intro">
+            Wil je gezellig komen eten of borrelen bij De Walrus?
+            Reserveer eenvoudig een tafel via het formulier hieronder.
+        </p>
+
+        <form>
+
+            <div class="formulier-rij">
+                <div class="formulier-groep">
+                    <label for="naam">Naam</label>
+                    <input type="text" id="naam" name="naam" required>
+                </div>
+
+                <div class="formulier-groep">
+                    <label for="email">E-mailadres</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="formulier-rij">
+                <div class="formulier-groep">
+                    <label for="telefoon">Telefoonnummer</label>
+                    <input type="tel" id="telefoon" name="telefoon" required>
+                </div>
+
+                <div class="formulier-groep">
+                    <label for="personen">Aantal personen</label>
+                    <select id="personen" name="personen" required>
+                        <option value="">Kies aantal</option>
+                        <option value="1">1 persoon</option>
+                        <option value="2">2 personen</option>
+                        <option value="3">3 personen</option>
+                        <option value="4">4 personen</option>
+                        <option value="5">5 personen</option>
+                        <option value="6">6 personen</option>
+                        <option value="7">7 personen</option>
+                        <option value="8">8 personen</option>
+                        <option value="9">9 personen</option>
+                        <option value="10">10 personen</option>
+                        <option value="meer">Meer dan 10 personen</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="formulier-rij">
+                <div class="formulier-groep">
+                    <label for="datum">Datum</label>
+                    <input type="date" id="datum" name="datum" required>
+                </div>
+
+                <div class="formulier-groep">
+                    <label for="tijd">Tijd</label>
+                    <input type="time" id="tijd" name="tijd" required>
+                </div>
+            </div>
+
+            <div class="formulier-groep">
+                <label for="locatie">Locatie</label>
+                <select id="locatie" name="locatie" required>
+                    <option value="">Kies een locatie</option>
+                    <option value="leeuwarden">Leeuwarden</option>
+                    <option value="sneek">Sneek</option>
+                </select>
+            </div>
+
+            <div class="formulier-groep">
+                <label for="opmerking">Opmerking</label>
+                <textarea id="opmerking" name="opmerking" rows="5"
+                          placeholder="Heb je speciale wensen of opmerkingen?"></textarea>
+            </div>
+
+            <button type="submit">Reservering aanvragen</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>De Walrus Grand Café</p>
+    <p>Leeuwarden &nbsp; | &nbsp; Sneek</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Werken bij De Walrus</title>
+  <link rel="stylesheet" href="solicitatie.css">
+</head>
+
+<body>
+
+<header>
+  <div class="melding">
+    Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
+  </div>
+
+  <div class="header-inhoud">
+    <h1>
+      <a href="homepage.html">De Walrus - Grand Café -</a>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="menukaart.html">Menukaart</a></li>
+        <li><a href="zakelijk.html">Zakelijk</a></li>
+        <li><a href="arrangement.html">Arrangementen</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sollicitatie.html">Werken bij</a></li>
+        <li><a href="reserveren.html">Reserveren</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="sollicitatie-formulier">
+
+    <h2>Solliciteer bij De Walrus</h2>
+
+    <p class="intro">
+      Wil jij onderdeel worden van ons gezellige team?
+      Vul het formulier hieronder in en laat ons weten waarom jij
+      bij De Walrus wilt werken.
+    </p>
+
+    <form>
+
+      <div class="formulier-rij">
+
+        <div class="formulier-groep">
+          <label for="naam">Naam</label>
+          <input type="text" id="naam" name="naam" required>
+        </div>
+
+        <div class="formulier-groep">
+          <label for="geboortedatum">Geboortedatum</label>
+          <input type="date" id="geboortedatum" name="geboortedatum" required>
+        </div>
+
+      </div>
+
+      <div class="formulier-rij">
+
+        <div class="formulier-groep">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="formulier-groep">
+          <label for="telefoon">Telefoonnummer</label>
+          <input type="tel" id="telefoon" name="telefoon" required>
+        </div>
+
+      </div>
+
+      <div class="formulier-groep">
+        <label for="functie">Functie</label>
+        <input type="text" id="functie" name="functie" required>
+      </div>
+
+      <div class="formulier-groep">
+        <label for="motivatie">Motivatie</label>
+        <textarea id="motivatie" name="motivatie" rows="6" required></textarea>
+      </div>
+
+      <div class="keuze-groep">
+
+        <h3>Beschikbaarheid</h3>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="beschikbaarheid" value="parttime">
+          Parttime
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="beschikbaarheid" value="fulltime">
+          Fulltime
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="beschikbaarheid" value="anders">
+          Anders
+        </label>
+
+      </div>
+
+      <div class="keuze-groep">
+
+        <h3>Locatie</h3>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="locatie" value="sneek">
+          Sneek
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="locatie" value="leeuwarden">
+          Leeuwarden
+        </label>
+
+      </div>
+
+      <div class="keuze-groep">
+
+        <h3>Hoe ben je bij ons terecht gekomen?</h3>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="vriend">
+          Via een vriend, familielid of kennis
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="medewerker">
+          Via een huidige medewerker van De Walrus
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="gouden-tip">
+          Via de Gouden Tip
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="social-media">
+          Social media
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="nieuwsbrief">
+          Nieuwsbrief van De Walrus
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="vacaturebank">
+          Vacaturebank (bv. Indeed)
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="poster">
+          Poster / Flyer
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" name="gevonden" value="anders">
+          Anders... (graag in motivatie zetten)
+        </label>
+
+      </div>
+
+      <button type="submit">
+        Solliciteer
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>De Walrus Grand Café</p>
+  <p>Leeuwarden &nbsp; | &nbsp; Sneek</p>
+</footer>
+
+</body>
+</html>
