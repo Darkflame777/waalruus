@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" id="html-root">
 <head>
     <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Walrus - Grand Café</title>
+    <title id="page-title">De Walrus - Grand Café</title>
     <link rel="stylesheet" href="homepage.css">
 </head>
 
@@ -12,7 +12,7 @@
 
 <header>
 
-    <div class="melding">
+    <div class="melding" id="txt-melding">
         Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
     </div>
 
@@ -23,12 +23,17 @@
 
         <nav>
             <ul>
-                <li><a href="menukaart.html">Menukaart</a></li>
-                <li><a href="arrangement.html">Arrangement</a></li>
-                <li><a href="zakelijk.html">Zakelijk</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="werkenbij.html">Werken bij</a></li>
-                <li><a href="reserveren.html">Reserveren</a></li>
+                <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+                <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+                <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+                <li><a href="contact.html" id="nav-con">Contact</a></li>
+                <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
+                <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
+                <li class="taal-knoppen">
+                    <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+                    <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
+                    <button type="button" id="btn-en" onclick="vertaal('en')">EN</button>
+                </li>
             </ul>
         </nav>
     </div>
@@ -38,7 +43,7 @@
 <main>
 
     <section class="welkom">
-        <h2>Welkom bij De Walrus, leuk dat je er bent!</h2>
+        <h2 id="welkom-titel">Welkom bij De Walrus, leuk dat je er bent!</h2>
 
         <img
                 src="afbeeldingen/header-dewalrus.jpg"
@@ -49,16 +54,16 @@
     </section>
 
     <section class="intro">
-        <h2>Ontspan, geniet en ontmoet.</h2>
+        <h2 id="intro-titel">Ontspan, geniet en ontmoet</h2>
 
-        <p>
+        <p id="intro-p1">
             Zo, jij hebt smaak! Je bent namelijk beland op de website van
             Grand-Café De Walrus, de één-na-leukste plek in de omgeving
             Leeuwarden en Sneek. Wat zijn dan de leukste plekken?
             Nou, onze daadwerkelijke Grand-Café’s natuurlijk!
         </p>
 
-        <p>
+        <p id="intro-p2">
             Beide restaurants zijn gevestigd in een groots sfeervol pand,
             op een prachtige locatie in het centrum. Dé ideale plek voor
             een lekkere kop koffie, uitgebreide lunch, een heerlijk diner
@@ -67,43 +72,45 @@
             en spring zelf op de tafel.
         </p>
 
-        <p>
-            Kom langs of <a href="reserveren.html">reserveer</a> bij één van onze restaurants en ervaar
+        <p id="intro-p3">
+            Kom langs of <a href="reserveren.html" id="reserveren-link">reserveer</a> bij één van onze restaurants en ervaar
             het zelf!
         </p>
     </section>
-<section>
-    <h2>Een zakelijk bezoek?</h2>
-<p>
-    We hebben alles in huis voor een geslaagde vergadering.
-    Want vergaderen hoeft helemaal niet saai of vermoeiend te zijn!
-    Borrel tijdens of na de vergadering?
-    Natuurlijk! Overheerlijke lunch met verse broodjes?
-    Hebben we voor je! Privé-ruimtes? Aanwezig en beschikbaar!
-    En na je vergadering hoef je heus niet gelijk naar huis,
-    je kan gewoon blijven plakken voor een gezellig drie- of viergangenmenu (of gewoon voor een bitterbal).
-</p>
-    <p>We hebben alvast verschillende zakelijke arrangementen samengesteld. Hier lees je er meer over!</p>
-<p>PS. Op zoek naar een (bij)baan? Stuur jouw <a href="solicitatie.html">sollicitatie</a> naar ons toe!</p>
-</section>
+
+    <section>
+        <h2 id="zakelijk-titel">Een zakelijk bezoek?</h2>
+        <p id="zakelijk-p1">
+            We hebben alles in huis voor een geslaagde vergadering.
+            Want vergaderen hoeft helemaal niet saai of vermoeiend te zijn!
+            Borrel tijdens of na de vergadering?
+            Natuurlijk! Overheerlijke lunch met verse broodjes?
+            Hebben we voor je! Privé-ruimtes? Aanwezig en beschikbaar!
+            En na je vergadering hoef je heus niet gelijk naar huis,
+            je kan gewoon blijven plakken voor een gezellig drie- of viergangenmenu (of gewoon voor een bitterbal).
+        </p>
+        <p id="zakelijk-p2">We hebben alvast verschillende zakelijke arrangementen samengesteld. Hier lees je er meer over!</p>
+        <p id="sollicitatie-p">PS. Op zoek naar een (bij)baan? Stuur jouw <a href="sollicitatie.html" id="sollicitatie-link">sollicitatie</a> naar ons toe!</p>
+    </section>
 
     <section class="tekst-button">
-       <h2>Als Vriend spaar je bij elk bezoek</h2>
-        <p>Word jij gratis Vriend van De Walrus?
+        <h2 id="vriend-titel">Als Vriend spaar je bij elk bezoek</h2>
+        <p id="vriend-p1">Word jij gratis Vriend van De Walrus?
             Als we onze vriendschap officieel maken,
             worden wij daar zó gelukkig van dat jij de eerste 150 punten (twv €7,50) van ons cadeau krijgt.
         </p>
-        <p>Voor elke euro die je bij ons uitgeeft, ontvang je 1 Vriendenpunt.
+        <p id="vriend-p2">Voor elke euro die je bij ons uitgeeft, ontvang je 1 Vriendenpunt.
             Je kunt je gespaarde punten inwisselen voor bijvoorbeeld koffie met gebak,
             gratis nachos, een cadeaubon en andere leuke beloningen die we zullen aankondigen.
         </p>
-        <p>Je meldt je makkelijk aan en ontvangt een digitale spaarkaart die je met één klik toevoegt aan je Google of Apple Wallet.</p>
+        <p id="vriend-p3">Je meldt je makkelijk aan en ontvangt een digitale spaarkaart die je met één klik toevoegt aan je Google of Apple Wallet.</p>
 
-        <button><a href="wordvriend.html">Word vriend</a></button>
-        <button><a href="inloggen.html">Login</a></button>
+        <button><a href="wordvriend.html" id="btn-vriend">Word vriend</a></button>
+        <button><a href="inloggen.html" id="btn-login">Login</a></button>
     </section>
+
     <section class="locaties">
-        <h2>Restaurant in Leeuwarden en Sneek</h2>
+        <h2 id="locaties-titel">Restaurant in Leeuwarden en Sneek</h2>
 
         <div class="locatie-kaarten">
 
@@ -113,7 +120,7 @@
                     Gouverneursplein 37<br>
                     8911 HH Leeuwarden
                 </p>
-                <p>
+                <p id="tijden-leeuwarden">
                     Zondag t/m zaterdag<br>
                     10:00 tot 01:00 uur
                 </p>
@@ -128,7 +135,7 @@
                     Leeuwenburg 11<br>
                     8601 CG Sneek
                 </p>
-                <p>
+                <p id="tijden-sneek">
                     Zondag t/m zaterdag<br>
                     10:00 tot 01:00 uur
                 </p>
@@ -140,34 +147,162 @@
         </div>
     </section>
 </main>
+
 <footer>
+    <div id="footer-tekst">
+        De Walrus Leeuwarden
+        Gouverneursplein 37
+        8911 HH Leeuwarden
 
-    De Walrus Leeuwarden
-    Gouverneursplein 37
-    8911 HH Leeuwarden
+        Zondag t/m zaterdag van 10:00 tot 01:00 uur
 
-    Zondag t/m zaterdag van 10:00 tot 01:00 uur
+        Tel: 058 - 21 377 40
+        E-mail: info@dewalrusleeuwarden.nl
 
-    Tel: 058 - 21 377 40
-    E-mail: info@dewalrusleeuwarden.nl
+        De Walrus Sneek
+        Leeuwenburg 11
+        8601 CG Sneek
 
-    De Walrus Sneek
-    Leeuwenburg 11
-    8601 CG Sneek
+        Zondag t/m zaterdag van 10:00 tot 01:00 uur
 
-    Zondag t/m zaterdag van 10:00 tot 01:00 uur
+        Tel: 0515 - 438 100
+        E-mail: info@dewalrussneek.nl
 
-    Tel: 0515 - 438 100
-    E-mail: info@dewalrussneek.nl
+        Leuk dat je bent geweest!
 
-    Leuk dat je bent geweest!
-
-    © 2026 De Walrus - Cookies en privacy statement
+        © 2026 De Walrus - Cookies en privacy statement
+    </div>
 </footer>
+
+
+<script>
+    const vertalingen = {
+        nl: {
+            title: "De Walrus - Grand Café",
+            melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            menu: "Menukaart", arr: "Arrangement", zak: "Zakelijk", con: "Contact", werk: "Werken bij", res: "Reserveren",
+            welkomTitel: "Welkom bij De Walrus, leuk dat je er bent!",
+            introTitel: "Ontspan, geniet en ontmoet",
+            introP1: "Zo, jij hebt smaak! Je bent namelijk beland op de website van Grand-Café De Walrus, de één-na-leukste plek in de omgeving Leeuwarden en Sneek. Wat zijn dan de leukste plekken? Nou, onze daadwerkelijke Grand-Café’s natuurlijk!",
+            introP2: "Beide restaurants zijn gevestigd in een groots sfeervol pand, op een prachtige locatie in het centrum. Dé ideale plek voor een lekkere kop koffie, uitgebreide lunch, een heerlijk diner en een gezellige borrel. Dus kom tot rust in de gezelligste drukte van Noord-Nederland. Of doe er juist een schepje bovenop en spring zelf op de tafel.",
+            introP3tekst: "Kom langs of [link] bij één van onze restaurants en ervaar het zelf!",
+            reserverenText: "reserveer",
+            zakelijkTitel: "Een zakelijk bezoek?",
+            zakelijkP1: "We hebben alles in huis voor een geslaagde vergadering. Want vergaderen hoeft helemaal niet saai of vermoeiend te zijn! Borrel tijdens of na de vergadering? Natuurlijk! Overheerlijke lunch met verse broodjes? Hebben we voor je! Privé-ruimtes? Aanwezig en beschikbaar! En na je vergadering hoef je heus niet gelijk naar huis, je kan gewoon blijven plakken voor een gezellig drie- of viergangenmenu (of gewoon voor een bitterbal).",
+            zakelijkP2: "We hebben alvast verschillende zakelijke arrangementen samengesteld. Hier lees je er meer over!",
+            sollicitatieTekst: "PS. Op zoek naar een (bij)baan? Stuur jouw [link] naar ons toe!",
+            sollicitatieLink: "sollicitatie",
+            vriendTitel: "Als Vriend spaar je bij elk bezoek",
+            vriendP1: "Word jij gratis Vriend van De Walrus? Als we onze vriendschap officieel maken, worden wij daar zó gelukkig van dat jij de eerste 150 punten (twv €7,50) van ons cadeau krijgt.",
+            vriendP2: "Voor elke euro die je bij ons uitgeeft, ontvang je 1 Vriendenpunt. Je kunt je gespaarde punten inwisselen voor bijvoorbeeld koffie met gebak, gratis nachos, een cadeaubon en andere leuke beloningen die we zullen aankondigen.",
+            vriendP3: "Je meldt je makkelijk aan en ontvangt een digitale spaarkaart die je met één klik toevoegt aan je Google of Apple Wallet.",
+            btnVriend: "Word vriend",
+            btnLogin: "Login",
+            locatiesTitel: "Restaurant in Leeuwarden en Sneek",
+            tijden: "Zondag t/m zaterdag<br>10:00 tot 01:00 uur",
+            footer: "De Walrus Leeuwarden\nGouverneursplein 37\n8911 HH Leeuwarden\n\nZondag t/m zaterdag van 10:00 tot 01:00 uur\n\nTel: 058 - 21 377 40\nE-mail: info@dewalrusleeuwarden.nl\n\nDe Walrus Sneek\nLeeuwenburg 11\n8601 CG Sneek\n\nZondag t/m zaterdag van 10:00 tot 01:00 uur\n\nTel: 0515 - 438 100\nE-mail: info@dewalrussneek.nl\n\nLeuk dat je bent geweest!\n\n© 2026 De Walrus - Cookies en privacy statement"
+        },
+        de: {
+            title: "De Walrus - Grand Café",
+            melding: "Achtung: Am 27. September sind wir wegen einer Personalfeier den ganzen Tag geschlossen!",
+            menu: "Speisekarte", arr: "Arrangement", zak: "Geschäftlich", con: "Kontakt", werk: "Karriere", res: "Reservieren",
+            welkomTitel: "Willkommen bei De Walrus, schön, dass Sie da sind!",
+            introTitel: "Entspannen, genießen und treffen",
+            introP1: "Sie haben Geschmack! Sie sind auf der Website des Grand-Café De Walrus gelandet, dem zweitschönsten Ort in der Umgebung von Leeuwarden und Sneek. Was sind dann die schönsten Orte? Nun, unsere tatsächlichen Grand-Cafés natürlich!",
+            introP2: "Beide Restaurants befinden sich in einem großen, stimmungsvollen Gebäude an einem wunderschönen Standort im Zentrum. Der ideale Ort für eine gute Tasse Kaffee, ein ausgiebiges Mittagessen, ein köstliches Abendessen und einen gemütlichen Umtrunk.",
+            introP3tekst: "Kommen Sie vorbei oder [link] Sie in einem unserer Restaurants und erleben Sie es selbst!",
+            reserverenText: "reservieren",
+            zakelijkTitel: "Ein geschäftlicher Besuch?",
+            zakelijkP1: "Wir haben alles im Haus für ein gelungenes Meeting. Denn Meetings müssen keineswegs langweilig sein! Ein Umtrunk während oder nach dem Meeting? Natürlich! Herrliches Mittagessen? Haben wir für Sie! Private Räume? Vorhanden und verfügbar!",
+            zakelijkP2: "Wir haben bereits verschiedene geschäftliche Arrangements zusammengestellt. Lesen Sie hier mehr darüber!",
+            sollicitatieTekst: "PS. Auf der Suche nach einem Job? Senden Sie Ihre [link] an uns!",
+            sollicitatieLink: "Bewerbung",
+            vriendTitel: "Als Freund sparen Sie bei jedem Besuch",
+            vriendP1: "Werden Sie kostenloser Freund von De Walrus? Wir schenken Ihnen die ersten 150 Punkte im Wert von 7,50 €.",
+            vriendP2: "Für jeden Euro erhalten Sie 1 Freundschaftspunkt. Sie können Punkte gegen Kaffee mit Kuchen, Nachos oder Gutscheine einlösen.",
+            vriendP3: "Sie melden sich einfach an und erhalten eine digitale Karte für Ihr Google oder Apple Wallet.",
+            btnVriend: "Freund werden",
+            btnLogin: "Anmelden",
+            locatiesTitel: "Restaurant in Leeuwarden und Sneek",
+            tijden: "Sonntag bis Samstag<br>10:00 bis 01:00 Uhr",
+            footer: "De Walrus Leeuwarden\nGouverneursplein 37\n8911 HH Leeuwarden\n\nSonntag bis Samstag von 10:00 bis 01:00 Uhr\n\nTel: 058 - 21 377 40\nE-mail: info@dewalrusleeuwarden.nl\n\nDe Walrus Sneek\nLeeuwenburg 11\n8601 CG Sneek\n\nSonntag bis Samstag von 10:00 bis 01:00 Uhr\n\nTel: 0515 - 438 100\nE-mail: info@dewalrussneek.nl\n\nSchön, dass Sie da waren!\n\n© 2026 De Walrus - Cookies und Datenschutzerklärung"
+        },
+        en: {
+            title: "De Walrus - Grand Café",
+            melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+            menu: "Menu", arr: "Packages", zak: "Business", con: "Contact", werk: "Careers", res: "Reservations",
+            welkomTitel: "Welcome to De Walrus, great to have you here!",
+            introTitel: "Relax, enjoy and meet",
+            introP1: "Well, you have good taste! You have landed on the website of Grand-Café De Walrus, the second-best place around Leeuwarden and Sneek. What are the best places? Well, our actual Grand-Cafés of course!",
+            introP2: "Both restaurants are located in a grand, atmospheric building in a wonderful central location. The ideal place for a good cup of coffee, extensive lunch, delicious dinner, and cozy drinks.",
+            introP3tekst: "Drop by or [link] at one of our restaurants and experience it yourself!",
+            reserverenText: "make a reservation",
+            zakelijkTitel: "A business visit?",
+            zakelijkP1: "We have everything in-house for a successful meeting. Meetings don't have to be boring or exhausting! Drinks during or after the meeting? Of course! Delicious lunch with fresh sandwiches? We've got you covered! Private rooms? Available!",
+            zakelijkP2: "We have put together various business packages. Read more about them here!",
+            sollicitatieTekst: "PS. Looking for a job? Send your [link] to us!",
+            sollicitatieLink: "application",
+            vriendTitel: "Save with every visit as a Friend",
+            vriendP1: "Become a free Friend of De Walrus? We are so happy to make it official that we will gift you your first 150 points (worth €7.50).",
+            vriendP2: "For every euro spent, you receive 1 Friend point. Redeem points for coffee with cake, free nachos, gift cards, and more.",
+            vriendP3: "Sign up easily and receive a digital loyalty card added to your Google or Apple Wallet with one click.",
+            btnVriend: "Become a friend",
+            btnLogin: "Log in",
+            locatiesTitel: "Restaurant in Leeuwarden and Sneek",
+            tijden: "Sunday through Saturday<br>10:00 AM to 01:00 AM",
+            footer: "De Walrus Leeuwarden\nGouverneursplein 37\n8911 HH Leeuwarden\n\nSunday to Saturday from 10:00 to 01:00\n\nTel: 058 - 21 377 40\nE-mail: info@dewalrusleeuwarden.nl\n\nDe Walrus Sneek\nLeeuwenburg 11\n8601 CG Sneek\n\nSunday to Saturday from 10:00 to 01:00\n\nTel: 0515 - 438 100\nE-mail: info@dewalrussneek.nl\n\nGreat to have you here!\n\n© 2026 De Walrus - Cookies and privacy statement"
+        }
+    };
+
+    function vertaal(taal) {
+        document.getElementById('html-root').setAttribute('lang', taal);
+        document.getElementById('page-title').innerText = vertalingen[taal].title;
+        document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+        document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+        document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+        document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+        document.getElementById('nav-con').innerText = vertalingen[taal].con;
+        document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+        document.getElementById('nav-res').innerText = vertalingen[taal].res;
+
+        document.getElementById('welkom-titel').innerText = vertalingen[taal].welkomTitel;
+        document.getElementById('intro-titel').innerText = vertalingen[taal].introTitel;
+        document.getElementById('intro-p1').innerText = vertalingen[taal].introP1;
+        document.getElementById('intro-p2').innerText = vertalingen[taal].introP2;
+
+        let p3Template = vertalingen[taal].introP3tekst;
+        let p3Html = p3Template.replace('[link]', '<a href="reserveren.html" id="reserveren-link">' + vertalingen[taal].reserverenText + '</a>');
+        document.getElementById('intro-p3').innerHTML = p3Html;
+
+        document.getElementById('zakelijk-titel').innerText = vertalingen[taal].zakelijkTitel;
+        document.getElementById('zakelijk-p1').innerText = vertalingen[taal].zakelijkP1;
+        document.getElementById('zakelijk-p2').innerText = vertalingen[taal].zakelijkP2;
+
+        let solTemplate = vertalingen[taal].sollicitatieTekst;
+        let solHtml = solTemplate.replace('[link]', '<a href="sollicitatie.html" id="sollicitatie-link">' + vertalingen[taal].sollicitatieLink + '</a>');
+        document.getElementById('sollicitatie-p').innerHTML = solHtml;
+
+        document.getElementById('vriend-titel').innerText = vertalingen[taal].vriendTitel;
+        document.getElementById('vriend-p1').innerText = vertalingen[taal].vriendP1;
+        document.getElementById('vriend-p2').innerText = vertalingen[taal].vriendP2;
+        document.getElementById('vriend-p3').innerText = vertalingen[taal].vriendP3;
+
+        document.getElementById('btn-vriend').innerText = vertalingen[taal].btnVriend;
+        document.getElementById('btn-login').innerText = vertalingen[taal].btnLogin;
+
+        document.getElementById('locaties-titel').innerText = vertalingen[taal].locatiesTitel;
+        document.getElementById('tijden-leeuwarden').innerHTML = vertalingen[taal].tijden;
+        document.getElementById('tijden-sneek').innerHTML = vertalingen[taal].tijden;
+
+        document.getElementById('footer-tekst').innerText = vertalingen[taal].footer;
+
+        document.getElementById('btn-nl').classList.remove('actief-taal');
+        document.getElementById('btn-de').classList.remove('actief-taal');
+        document.getElementById('btn-en').classList.remove('actief-taal');
+        document.getElementById('btn-' + taal).classList.add('actief-taal');
+    }
+</script>
+
 </body>
 </html>
-
-
-
-
-
