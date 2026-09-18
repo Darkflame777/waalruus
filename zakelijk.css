@@ -288,10 +288,6 @@ footer {
     font-size: 13px;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
-
 @media (max-width: 900px) {
     .header-inhoud {
         padding: 25px 25px 20px;

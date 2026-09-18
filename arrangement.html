@@ -31,7 +31,6 @@
                 <li><a href="contact.html" id="nav-con">Contact</a></li>
                 <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
                 <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
-                <!-- Taalwisselaar knoppen -->
                 <li class="taal-knoppen">
                     <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
                     <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
@@ -170,7 +169,6 @@
 
 </footer>
 
-<!-- JAVASCRIPT VOOR DE TAALWISSELAAR -->
 <script>
     const vertalingen = {
         nl: {
@@ -243,7 +241,6 @@
         document.getElementById('page-title').innerText = vertalingen[taal].title;
         document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
 
-        // Navigatie
         document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
         document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
         document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
@@ -251,7 +248,6 @@
         document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
         document.getElementById('nav-res').innerText = vertalingen[taal].res;
 
-        // Pagina inhoud
         document.getElementById('welkom-titel').innerText = vertalingen[taal].welkomTitel;
         document.getElementById('welkom-sub').innerText = vertalingen[taal].welkomSub;
         document.getElementById('info1-titel').innerText = vertalingen[taal].info1Titel;
@@ -265,7 +261,6 @@
         document.getElementById('res-p').innerText = vertalingen[taal].resP;
         document.getElementById('btn-res').innerText = vertalingen[taal].btnRes;
 
-        // Footer
         document.querySelector('.tijd-lwd').innerHTML = vertalingen[taal].tijd;
         document.querySelector('.tijd-snk').innerHTML = vertalingen[taal].tijd;
         document.getElementById('email-lwd').innerText = vertalingen[taal].email;
@@ -273,7 +268,6 @@
         document.getElementById('foot-tekst1').innerText = vertalingen[taal].f1;
         document.getElementById('foot-tekst2').innerText = vertalingen[taal].f2;
 
-        // Actieve knop stijl bijwerken
         document.getElementById('btn-nl').classList.remove('actief-taal');
         document.getElementById('btn-de').classList.remove('actief-taal');
         document.getElementById('btn-en').classList.remove('actief-taal');

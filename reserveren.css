@@ -102,8 +102,6 @@ nav a.actief::after {
     width: 100%;
 }
 
-
-
 .taal-knoppen {
     display: flex;
     gap: 6px;

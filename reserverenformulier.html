@@ -28,7 +28,6 @@
                 <li><a href="arrangement.html" id="nav-arr">Arrangementen</a></li>
                 <li><a href="contact.html" id="nav-con">Contact</a></li>
                 <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
-                <!-- Taalwisselaar knoppen -->
                 <li class="taal-knoppen">
                     <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
                     <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
@@ -49,7 +48,6 @@
             Reserveer eenvoudig een tafel via het formulier hieronder.
         </p>
 
-        <!-- Formulier met een nette JavaScript-aanroep op submit -->
         <form id="reserveringsFormulier" onsubmit="verzendFormulier(event)">
 
             <div class="formulier-rij">
@@ -128,7 +126,6 @@
     <p>Leeuwarden &nbsp; | &nbsp; Sneek</p>
 </footer>
 
-<!-- SCRIPT VOOR VERTALING EN FORMULIER -->
 <script>
     lethuidigeBevestiging = "Bedankt voor je reserveringsaanvraag! We nemen snel contact met je op.";
 
@@ -208,9 +205,9 @@
     }
 
     function verzendFormulier(event) {
-        event.preventDefault(); // Voorkomt dat de pagina herlaadt
-        alert(huidigeBevestiging); // Toont de melding in de gekozen taal
-        document.getElementById('reserveringsFormulier').reset(); // Maakt formulier leeg
+        event.preventDefault();
+        alert(huidigeBevestiging);
+        document.getElementById('reserveringsFormulier').reset();
     }
 
     window.onload = function() {

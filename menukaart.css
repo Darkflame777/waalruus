@@ -80,7 +80,6 @@ nav.logo ul li a:hover::after {
     width: 100%;
 }
 
-/* --- TOEVOEGING: Styling voor de taalwisselaar knoppen --- */
 .taal-knoppen {
     display: flex;
     gap: 6px;
@@ -108,7 +107,6 @@ nav.logo ul li a:hover::after {
     color: white;
     transform: none;
 }
-/* -------------------------------------------------- */
 
 section.title {
     max-width: 1000px;

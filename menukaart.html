@@ -22,7 +22,6 @@
                 <li><a href="contact.html" id="nav-con">Contact</a></li>
                 <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
                 <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
-                <!-- Taalwisselaar knoppen -->
                 <li class="taal-knoppen">
                     <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
                     <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
@@ -64,7 +63,6 @@
     </div>
 </section>
 
-<!-- SCRIPT VOOR TAALWISSELAAR -->
 <script>
     const vertalingen = {
         nl: {
@@ -122,7 +120,6 @@
         document.getElementById('page-title').innerText = vertalingen[taal].title;
         document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
 
-        // Navigatie
         document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
         document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
         document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
@@ -130,7 +127,6 @@
         document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
         document.getElementById('nav-res').innerText = vertalingen[taal].res;
 
-        // Pagina inhoud
         document.getElementById('titel-hoofd').innerText = vertalingen[taal].titelHoofd;
         document.getElementById('titel-sub').innerHTML = vertalingen[taal].titelSub;
         document.getElementById('button-hoofd').innerText = vertalingen[taal].buttonHoofd;
@@ -145,7 +141,6 @@
         document.getElementById('diner-tekst').innerText = vertalingen[taal].dinerTekst;
         document.getElementById('diner-btn').innerText = vertalingen[taal].dinerBtn;
 
-        // Actieve knop stijl bijwerken
         document.getElementById('btn-nl').classList.remove('actief-taal');
         document.getElementById('btn-de').classList.remove('actief-taal');
         document.getElementById('btn-en').classList.remove('actief-taal');

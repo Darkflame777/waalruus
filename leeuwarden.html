@@ -29,7 +29,6 @@
                 <li><a href="contact.html" id="nav-con">Contact</a></li>
                 <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
                 <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
-                <!-- Taalwisselaar knoppen -->
                 <li class="taal-knoppen">
                     <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
                     <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
@@ -76,13 +75,12 @@
              alt="Diner bij De Walrus"
              width="1300"
              height="600"
-             style="display: block; width: 100%; height: auto; border-radius: 8px; margin-top: 20px;"
+             style="display: block; width: 100%; height: auto; border-radius: 8px; margin-top: "
         >
     </section>
 
 </main>
 
-<!-- SCRIPT VOOR TAALWISSELAAR -->
 <script>
     const vertalingen = {
         nl: {
@@ -125,7 +123,6 @@
         document.getElementById('page-title').innerText = vertalingen[taal].title;
         document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
 
-        // Navigatie
         document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
         document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
         document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
@@ -133,7 +130,6 @@
         document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
         document.getElementById('nav-res').innerText = vertalingen[taal].res;
 
-        // Pagina inhoud
         document.getElementById('welkom-titel').innerText = vertalingen[taal].welkomTitel;
         document.getElementById('sec-titel').innerText = vertalingen[taal].secTitel;
         document.getElementById('tekst-p1').innerText = vertalingen[taal].p1;
@@ -141,7 +137,6 @@
         document.getElementById('tekst-p3').innerText = vertalingen[taal].p3;
         document.getElementById('tekst-p4').innerText = vertalingen[taal].p4;
 
-        // Actieve knop stijl bijwerken
         document.getElementById('btn-nl').classList.remove('actief-taal');
         document.getElementById('btn-de').classList.remove('actief-taal');
         document.getElementById('btn-en').classList.remove('actief-taal');

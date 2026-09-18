@@ -95,7 +95,6 @@ nav a.actief::after {
     width: 100%;
 }
 
-/* --- TOEVOEGING: Styling voor de taalwisselaar knoppen --- */
 .taal-knoppen {
     display: flex;
     gap: 6px;
@@ -121,7 +120,6 @@ nav a.actief::after {
     background-color: #263f36;
     color: white;
 }
-/* -------------------------------------------------- */
 
 .welkom {
     position: relative;
