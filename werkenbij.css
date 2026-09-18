@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -186,11 +186,27 @@ body > header:last-of-type > ul li {
     margin: 0 auto 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
 }
 
-.video:hover {
-    transform: scale(1.01);
+.video-knop {
+    text-align: center;
+    margin: 20px auto 40px;
+}
+
+.video-knop a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #263f36;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.video-knop a:hover {
+    background-color: #b27a3c;
+    transform: translateY(-2px);
 }
 
 .kaarten {
