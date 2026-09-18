@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="nl" id="html-root">
+<head>
+    <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Events - De Walrus</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+
+<body>
+
+<header>
+    <div class="melding" id="txt-melding">
+        Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
+    </div>
+
+    <div class="header-inhoud">
+        <h1>
+            <a href="homepage.html">De Walrus - Grand Café -</a>
+        </h1>
+
+        <nav>
+            <ul>
+                <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
+                <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+                <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+                <li><a href="arrangement.html" id="nav-arr">Arrangementen</a></li>
+                <li><a href="contact.html" id="nav-con">Contact</a></li>
+                <li><a href="sollicitatie.html" id="nav-werk">Werken bij</a></li>
+                <!-- Taalwisselaar knoppen -->
+                <li class="taal-knoppen">
+                    <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+                    <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
+                    <button type="button" id="btn-en" onclick="vertaal('en')">EN</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="event-hero">
+        <img src="afbeeldingen/header-dewalrus.jpg" alt="De Walrus Grand Café">
+        <div class="hero-overlay">
+            <h2 id="hero-titel">Jouw event bij De Walrus</h2>
+            <p id="hero-sub">Vier bijzondere momenten samen met ons</p>
+        </div>
+    </section>
+
+    <section class="event-intro">
+        <h2 id="intro-titel">Iets bijzonders te vieren?</h2>
+
+        <p id="intro-p1">
+            Heb je iets te vieren en wil je uitpakken of een ruimte voor jezelf?
+            Dat kan bij De Walrus! Of het nu gaat om een verjaardag, babyshower,
+            trouwdag of jubileum: we maken er samen een bijzondere dag van.
+        </p>
+
+        <p id="intro-p2">
+            Ook voor zakelijke evenementen ben je bij ons aan het juiste adres.
+            Denk bijvoorbeeld aan een personeelsfeest, netwerkavond, vergadering
+            of een gezellige borrel met collega's.
+        </p>
+    </section>
+
+    <section class="mogelijkheden">
+
+        <h2 id="mog-titel">Voor ieder moment</h2>
+
+        <div class="event-kaarten">
+
+            <div class="event-kaart">
+                <h3 id="kaart1-titel">Verjaardag</h3>
+                <p id="kaart1-tekst">
+                    Vier je verjaardag gezellig met vrienden en familie.
+                    Wij zorgen voor een sfeervolle plek, lekkere hapjes en
+                    drankjes.
+                </p>
+            </div>
+
+            <div class="event-kaart">
+                <h3 id="kaart2-titel">Babyshower</h3>
+                <p id="kaart2-tekst">
+                    Organiseer een gezellige babyshower en maak er samen
+                    een onvergetelijke middag van.
+                </p>
+            </div>
+
+            <div class="event-kaart">
+                <h3 id="kaart3-titel">Jubileum</h3>
+                <p id="kaart3-tekst">
+                    Een mijlpaal verdient een bijzonder moment.
+                    Vier je jubileum met een uitgebreid diner, borrel
+                    of feest.
+                </p>
+            </div>
+
+            <div class="event-kaart">
+                <h3 id="kaart4-titel">Zakelijk event</h3>
+                <p id="kaart4-tekst">
+                    Van personeelsfeest tot netwerkavond of vergadering.
+                    We denken graag mee over de invulling van jouw zakelijke
+                    bijeenkomst.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="ruimte">
+
+        <div class="ruimte-tekst">
+            <h2 id="ruimte-titel">Een ruimte voor jezelf</h2>
+
+            <p id="ruimte-p1">
+                Wil je graag een eigen ruimte voor jouw gezelschap?
+                Bij De Walrus is er ruimte voor verschillende soorten
+                evenementen en gezelschappen.
+            </p>
+
+            <p id="ruimte-p2">
+                We kunnen samen kijken naar de gewenste opstelling,
+                hapjes, drankjes en andere wensen. Zo zorgen we ervoor
+                dat jouw event helemaal aansluit bij de gelegenheid.
+            </p>
+        </div>
+
+        <div class="ruimte-afbeelding">
+            <img src="afbeeldingen/amsterdam-restaurant-kaasfondue-vrienden-gezellig-1.jpg" alt="Ruimte bij De Walrus">
+        </div>
+
+    </section>
+
+    <section class="event-afsluiting">
+
+        <h2 id="sluit-titel">Jouw event bij De Walrus</h2>
+
+        <p id="sluit-p">
+            Heb je al een idee voor jouw evenement? Neem contact met ons op
+            en vertel ons wat je in gedachten hebt. Samen maken we er een
+            mooi en gezellig event van.
+        </p>
+
+        <a href="contact.html" class="knop" id="btn-contact">Neem contact op</a>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>De Walrus Grand Café</p>
+    <p>Leeuwarden &nbsp; | &nbsp; Sneek</p>
+</footer>
+
+<!-- SCRIPT VOOR TAALWISSELAAR -->
+<script>
+    const vertalingen = {
+        nl: {
+            title: "Events - De Walrus",
+            melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            res: "Reserveren", menu: "Menukaart", zak: "Zakelijk", arr: "Arrangementen", con: "Contact", werk: "Werken bij",
+            heroTitel: "Jouw event bij De Walrus",
+            heroSub: "Vier bijzondere momenten samen met ons",
+            introTitel: "Iets bijzonders te vieren?",
+            introP1: "Heb je iets te vieren en wil je uitpakken of een ruimte voor jezelf? Dat kan bij De Walrus! Of het nu gaat om een verjaardag, babyshower, trouwdag of jubileum: we maken er samen een bijzondere dag van.",
+            introP2: "Ook voor zakelijke evenementen ben je bij ons aan het juiste adres. Denk bijvoorbeeld aan een personeelsfeest, netwerkavond, vergadering of een gezellige borrel met collega's.",
+            mogTitel: "Voor ieder moment",
+            kaart1Titel: "Verjaardag",
+            kaart1Tekst: "Vier je verjaardag gezellig met vrienden en familie. Wij zorgen voor een sfeervolle plek, lekkere hapjes en drankjes.",
+            kaart2Titel: "Babyshower",
+            kaart2Tekst: "Organiseer een gezellige babyshower en maak er samen een onvergetelijke middag van.",
+            kaart3Titel: "Jubileum",
+            kaart3Tekst: "Een mijlpaal verdient een bijzonder moment. Vier je jubileum met een uitgebreid diner, borrel of feest.",
+            kaart4Titel: "Zakelijk event",
+            kaart4Tekst: "Van personeelsfeest tot netwerkavond of vergadering. We denken graag mee over de invulling van jouw zakelijke bijeenkomst.",
+            ruimteTitel: "Een ruimte voor jezelf",
+            ruimteP1: "Wil je graag een eigen ruimte voor jouw gezelschap? Bij De Walrus is er ruimte voor verschillende soorten evenementen en gezelschappen.",
+            ruimteP2: "We kunnen samen kijken naar de gewenste opstelling, hapjes, drankjes en andere wensen. Zo zorgen we ervoor dat jouw event helemaal aansluit bij de gelegenheid.",
+            sluitTitel: "Jouw event bij De Walrus",
+            sluitP: "Heb je al een idee voor jouw evenement? Neem contact met ons op en vertel ons wat je in gedachten hebt. Samen maken we er een mooi en gezellig event van.",
+            btnContact: "Neem contact op"
+        },
+        de: {
+            title: "Events - De Walrus",
+            melding: "Achtung: Am 27. September sind wir wegen einer Personalfeier den ganzen Tag geschlossen!",
+            res: "Reservieren", menu: "Speisekarte", zak: "Geschäftlich", arr: "Arrangements", con: "Kontakt", werk: "Karriere",
+            heroTitel: "Ihr Event bei De Walrus",
+            heroSub: "Feiern Sie besondere Momente mit uns",
+            introTitel: "Etwas Besonderes zu feiern?",
+            introP1: "Gibt es etwas zu feiern und Sie möchten sich etwas gönnen oder einen Bereich für sich haben? Das geht bei De Walrus! Ob Geburtstag, Babyparty, Hochzeit oder Jubiläum: Wir machen es zu einem unvergesslichen Tag.",
+            introP2: "Auch für geschäftliche Events sind Sie bei uns an der richtigen Adresse. Denken Sie an eine Firmenfeier, Networking-Event, Meeting oder ein gemütliches Beisammensein mit Kollegen.",
+            mogTitel: "Für jeden Moment",
+            kaart1Titel: "Geburtstag",
+            kaart1Tekst: "Feiern Sie Ihren Geburtstag gemütlich mit Freunden und Familie. Wir sorgen für einen stimmungsvollen Ort, leckere Snacks und Drinks.",
+            kaart2Titel: "Babyparty",
+            kaart2Tekst: "Organisieren Sie eine schöne Babyparty und machen Sie daraus gemeinsam einen unvergesslichen Nachmittag.",
+            kaart3Titel: "Jubiläum",
+            kaart3Tekst: "Ein Meilenstein verdient einen besonderen Moment. Feiern Sie Ihr Jubiläum mit einem ausgiebigen Dinner, Umtrunk oder Fest.",
+            kaart4Titel: "Business-Event",
+            kaart4Tekst: "Von der Firmenfeier bis zum Networking-Abend oder Meeting. Wir denken gerne bei der Gestaltung Ihres Business-Treffens mit.",
+            ruimteTitel: "Ein eigener Bereich für Sie",
+            ruimteP1: "Möchten Sie einen eigenen Raum für Ihre Gesellschaft? Bei De Walrus gibt es Platz für verschiedene Arten von Events und Gruppen.",
+            ruimteP2: "Wir können gemeinsam nach der gewünschten Aufstellung, Snacks, Getränken und anderen Wünschen schauen. So stellen wir sicher, dass Ihr Event perfekt zum Anlass passt.",
+            sluitTitel: "Ihr Event bei De Walrus",
+            sluitP: "Haben Sie bereits eine Idee für Ihr Event? Kontaktieren Sie uns und erzählen Sie uns von Ihren Vorstellungen. Gemeinsam machen wir ein schönes Event daraus.",
+            btnContact: "Kontakt aufnehmen"
+        },
+        en: {
+            title: "Events - De Walrus",
+            melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+            res: "Reservations", menu: "Menu", zak: "Business", arr: "Packages", con: "Contact", werk: "Careers",
+            heroTitel: "Your event at De Walrus",
+            heroSub: "Celebrate special moments with us",
+            introTitel: "Something special to celebrate?",
+            introP1: "Do you have something to celebrate and want a private space? You can at De Walrus! Whether it's a birthday, baby shower, anniversary, or wedding: we will make it a special day together.",
+            introP2: "You are also in the right place for business events. Think of a staff party, networking evening, meeting, or cozy drinks with colleagues.",
+            mogTitel: "For every moment",
+            kaart1Titel: "Birthday",
+            kaart1Tekst: "Celebrate your birthday warmly with friends and family. We provide a cozy atmosphere, delicious snacks, and drinks.",
+            kaart2Titel: "Baby Shower",
+            kaart2Tekst: "Organize a delightful baby shower and make it an unforgettable afternoon together.",
+            kaart3Titel: "Anniversary",
+            kaart3Tekst: "A milestone deserves a special moment. Celebrate your anniversary with an extensive dinner, drinks, or party.",
+            kaart4Titel: "Business Event",
+            kaart4Tekst: "From staff parties to networking evenings or meetings. We gladly think along with you regarding the setup of your business gathering.",
+            ruimteTitel: "A space of your own",
+            ruimteP1: "Would you like a private room for your group? At De Walrus, there is space for various types of events and gatherings.",
+            ruimteP2: "We can look together at the desired setup, snacks, drinks, and other wishes to ensure your event completely fits the occasion.",
+            sluitTitel: "Your event at De Walrus",
+            sluitP: "Do you already have an idea for your event? Contact us and tell us what you have in mind. Together we will make it a great event.",
+            btnContact: "Contact us"
+        }
+    };
+
+    function vertaal(taal) {
+        document.getElementById('html-root').setAttribute('lang', taal);
+        document.getElementById('page-title').innerText = vertalingen[taal].title;
+        document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+        // Navigatie
+        document.getElementById('nav-res').innerText = vertalingen[taal].res;
+        document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+        document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+        document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+        document.getElementById('nav-con').innerText = vertalingen[taal].con;
+        document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+
+        // Pagina inhoud
+        document.getElementById('hero-titel').innerText = vertalingen[taal].heroTitel;
+        document.getElementById('hero-sub').innerText = vertalingen[taal].heroSub;
+        document.getElementById('intro-titel').innerText = vertalingen[taal].introTitel;
+        document.getElementById('intro-p1').innerText = vertalingen[taal].introP1;
+        document.getElementById('intro-p2').innerText = vertalingen[taal].introP2;
+        document.getElementById('mog-titel').innerText = vertalingen[taal].mogTitel;
+
+        document.getElementById('kaart1-titel').innerText = vertalingen[taal].kaart1Titel;
+        document.getElementById('kaart1-tekst').innerText = vertalingen[taal].kaart1Tekst;
+        document.getElementById('kaart2-titel').innerText = vertalingen[taal].kaart2Titel;
+        document.getElementById('kaart2-tekst').innerText = vertalingen[taal].kaart2Tekst;
+        document.getElementById('kaart3-titel').innerText = vertalingen[taal].kaart3Titel;
+        document.getElementById('kaart3-tekst').innerText = vertalingen[taal].kaart3Tekst;
+        document.getElementById('kaart4-titel').innerText = vertalingen[taal].kaart4Titel;
+        document.getElementById('kaart4-tekst').innerText = vertalingen[taal].kaart4Tekst;
+
+        document.getElementById('ruimte-titel').innerText = vertalingen[taal].ruimteTitel;
+        document.getElementById('ruimte-p1').innerText = vertalingen[taal].ruimteP1;
+        document.getElementById('ruimte-p2').innerText = vertalingen[taal].ruimteP2;
+        document.getElementById('sluit-titel').innerText = vertalingen[taal].sluitTitel;
+        document.getElementById('sluit-p').innerText = vertalingen[taal].sluitP;
+        document.getElementById('btn-contact').innerText = vertalingen[taal].btnContact;
+
+        // Actieve knop stijl bijwerken
+        document.getElementById('btn-nl').classList.remove('actief-taal');
+        document.getElementById('btn-de').classList.remove('actief-taal');
+        document.getElementById('btn-en').classList.remove('actief-taal');
+        document.getElementById('btn-' + taal).classList.add('actief-taal');
+    }
+</script>
+
+</body>
+</html>

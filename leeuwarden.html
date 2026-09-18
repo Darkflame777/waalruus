@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" id="html-root">
 <head>
+    <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Walrus - Grand Café</title>
-    <link rel="stylesheet" href="leeuwarden.css">
+    <title id="page-title">De Walrus Leeuwarden - Grand Café</title>
+    <link rel="stylesheet" href="homepage.css">
 </head>
 
 <body>
 
 <header>
 
-    <div class="melding">
+    <div class="melding" id="txt-melding">
         Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
     </div>
 
@@ -22,12 +23,18 @@
 
         <nav>
             <ul>
-                <li><a href="menukaart.html">Menukaart</a></li>
-                <li><a href="arrangement.html">Arrangement</a></li>
-                <li><a href="zakelijk.html">Zakelijk</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="werkenbij.html">Werken bij</a></li>
-                <li><a href="reserveren.html">Reserveren</a></li>
+                <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+                <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+                <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+                <li><a href="contact.html" id="nav-con">Contact</a></li>
+                <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
+                <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
+                <!-- Taalwisselaar knoppen -->
+                <li class="taal-knoppen">
+                    <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+                    <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
+                    <button type="button" id="btn-en" onclick="vertaal('en')">EN</button>
+                </li>
             </ul>
         </nav>
     </div>
@@ -37,7 +44,7 @@
 <main>
 
     <section class="welkom">
-        <h2>Welkom bij De Walrus in Leeuwarden, wat leuk dat je er bent!</h2>
+        <h2 id="welkom-titel">Willkommen bei De Walrus in Leeuwarden, schön, dass Sie da sind!</h2>
 
         <img
                 src="afbeeldingen/header-dewalrus.jpg"
@@ -45,21 +52,102 @@
                 width="1300"
                 height="600"
         >
-        <h1>De Walrus Leeuwarden</h1>
-        <h2> Grand-Café De Walrus is gevestigd op een prachtige locatie aan het Gouverneursplein in hartje Leeuwarden. De panden hebben in de loop der jaren verschillende functies gehad. Zo waren de Leeuwarder Bankvereeniging, de meubelfabriek Bearda en bibliotheek ‘t Centrum voorgangers van De Walrus die haar deuren er in 2009 opende.
-<br>
-            Grand-Café De Walrus is de perfecte plek voor een heerlijke kop koffie met gebak, om te lunchen wanneer u een dagje uit bent in Leeuwarden of voor een borrel met vrienden of collega’s. Bent u op zoek naar een goed restaurant in Leeuwarden? Ook dan bent u bij De Walrus Leeuwarden op het juiste adres. Het sfeervolle restaurant op de eerste verdieping biedt een prachtig uitzicht over het centrum van Leeuwarden.
-<br>
-            Zoekt u een locatie om te dineren met een grote groep als afsluiter van een bedrijfsuitje, familiedag of speciale gelegenheid in Friesland? De Walrus Leeuwarden biedt diverse arrangementen. Zo kunt u genieten van een walking dinner of een diner menu.
-<br>
-            Bent u een weekendje in Leeuwarden, wilt u een dag winkelen gezellig afsluiten of gewoon bijkletsen met vrienden of familie? Geniet van een geheel verzorgde high tea met diverse thee of koffie soorten, hartige hapjes en zoete lekkernijen. Ook voor een high wine of high beer kunt u bij De Walrus Leeuwarden terecht!</h2>
+    </section>
+
+    <section class="intro">
+        <h1 id="sec-titel" style="text-align: center; font-family: Georgia, serif; color: #263f36; margin-bottom: 20px;">De Walrus Leeuwarden</h1>
+
+        <p id="tekst-p1">
+            Het Grand-Café De Walrus bevindt zich op een prachtige locatie aan het Gouverneursplein in het hart van Leeuwarden. De panden hebben door de jaren heen verschillende functies gehad. Zo waren de Leeuwarder Bankvereeniging, meubelfabriek Bearda en bibliotheek 't Centrum de voorgangers van De Walrus, dat hier in 2009 zijn deuren opende.
+        </p>
+        <p id="tekst-p2">
+            Het Grand-Café De Walrus is de perfecte plek voor een heerlijke kop koffie met gebak, om te lunchen tijdens een dagje uit in Leeuwarden, of voor een borrel met vrienden of collega's. Zoek je een goed restaurant in Leeuwarden? Ook dan ben je bij De Walrus Leeuwarden aan het juiste adres. Het sfeervolle restaurant op de eerste verdieping biedt een prachtig uitzicht over het centrum van Leeuwarden.
+        </p>
+        <p id="tekst-p3">
+            Ben je op zoek naar een locatie voor een diner met een grote groep als afsluiting van een bedrijfsuitje, familiedag of een speciale gelegenheid in Friesland? De Walrus Leeuwarden biedt verschillende arrangementen. Zo kun je genieten van een Walking Dinner of een heerlijk menu.
+        </p>
+        <p id="tekst-p4">
+            Ben je een weekendje in Leeuwarden, wil je je winkeldag gezellig afsluiten of gewoon bijkletsen met vrienden of familie? Geniet van een compleet verzorgde High Tea met diverse soorten thee of koffie, hartige hapjes en zoete lekkernijen. Ook voor een High Wine of High Beer ben je bij De Walrus Leeuwarden aan het juiste adres!
+        </p>
+
         <br>
 
-      <img   src="https://www.dewalrus.nl/media/x3bfhbno/dinerenheader.jfif?rmode=min&width=1920&quality=80&v=1dcd31b88097090"
+        <img src="https://www.dewalrus.nl/media/x3bfhbno/dinerenheader.jfif?rmode=min&width=1920&quality=80&v=1dcd31b88097090"
+             alt="Diner bij De Walrus"
              width="1300"
              height="600"
-             >
+             style="display: block; width: 100%; height: auto; border-radius: 8px; margin-top: 20px;"
+        >
     </section>
+
 </main>
+
+<!-- SCRIPT VOOR TAALWISSELAAR -->
+<script>
+    const vertalingen = {
+        nl: {
+            title: "De Walrus Leeuwarden - Grand Café",
+            melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            menu: "Menukaart", arr: "Arrangement", zak: "Zakelijk", con: "Contact", werk: "Werken bij", res: "Reserveren",
+            welkomTitel: "Welkom bij De Walrus in Leeuwarden, leuk dat je er bent!",
+            secTitel: "De Walrus Leeuwarden",
+            p1: "Het Grand-Café De Walrus bevindt zich op een prachtige locatie aan het Gouverneursplein in het hart van Leeuwarden. De panden hebben door de jaren heen verschillende functies gehad. Zo waren de Leeuwarder Bankvereeniging, meubelfabriek Bearda en bibliotheek 't Centrum de voorgangers van De Walrus, dat hier in 2009 zijn deuren opende.",
+            p2: "Het Grand-Café De Walrus is de perfecte plek voor een heerlijke kop koffie met gebak, om te lunchen tijdens een dagje uit in Leeuwarden, of voor een borrel met vrienden of collega's. Zoek je een goed restaurant in Leeuwarden? Ook dan ben je bij De Walrus Leeuwarden aan het juiste adres. Het sfeervolle restaurant op de eerste verdieping biedt een prachtig uitzicht over het centrum van Leeuwarden.",
+            p3: "Ben je op zoek naar een locatie voor een diner met een grote groep als afsluiting van een bedrijfsuitje, familiedag of een speciale gelegenheid in Friesland? De Walrus Leeuwarden biedt verschillende arrangementen. Zo kun je genieten van een Walking Dinner of een heerlijk menu.",
+            p4: "Ben je een weekendje in Leeuwarden, wil je je winkeldag gezellig afsluiten of gewoon bijkletsen met vrienden of familie? Geniet van een compleet verzorgde High Tea met diverse soorten thee of koffie, hartige hapjes en zoete lekkernijen. Ook voor een High Wine of High Beer ben je bij De Walrus Leeuwarden aan het juiste adres!"
+        },
+        de: {
+            title: "De Walrus Leeuwarden - Grand Café",
+            melding: "Achtung: Am 27. September haben wir wegen einer Betriebsfeier den ganzen Tag geschlossen!",
+            menu: "Speisekarte", arr: "Angebote", zak: "Geschäftlich", con: "Kontakt", werk: "Karriere", res: "Reservieren",
+            welkomTitel: "Willkommen bei De Walrus in Leeuwarden, schön, dass Sie da sind!",
+            secTitel: "De Walrus Leeuwarden",
+            p1: "Das Grand-Café De Walrus befindet sich an einem wunderschönen Standort am Gouverneursplein im Herzen von Leeuwarden. Die Gebäude hatten im Laufe der Jahre verschiedene Funktionen. So waren die Leeuwarder Bankvereeniging, die Möbelfabrik Bearda und die Bibliothek ‘t Centrum Vorgänger von De Walrus, das dort 2009 seine Türen öffnete.",
+            p2: "Das Grand-Café De Walrus ist der perfekte Ort für eine köstliche Tasse Kaffee mit Kuchen, zum Mittagessen bei einem Tagesausflug in Leeuwarden oder für einen Umtrunk mit Freunden oder Kollegen. Suchen Sie ein gutes Restaurant in Leeuwarden? Auch dann sind Sie bei De Walrus Leeuwarden an der richtigen Adresse. Das stimmungsvolle Restaurant im ersten Stock bietet einen wunderschönen Blick über das Zentrum von Leeuwarden.",
+            p3: "Suchen Sie eine Location für ein Abendessen mit einer großen Gruppe als Abschluss eines Betriebsausflugs, Familientags oder eines besonderen Anlasses in Friesland? De Walrus Leeuwarden bietet verschiedene Arrangements. So können Sie ein Walking Dinner oder ein Menü genießen.",
+            p4: "Sind Sie für ein Wochenende in Leeuwarden, möchten Sie einen Shoppingtag gemütlich ausklingen lassen oder einfach mit Freunden oder der Familie quatschen? Genießen Sie einen rundum sorglos gestalteten High Tea mit verschiedenen Tee- oder Kaffeesorten, herzhaften Snacks und süßen Leckereien. Auch für einen High Wine oder High Beer sind Sie bei De Walrus Leeuwarden genau richtig!"
+        },
+        en: {
+            title: "De Walrus Leeuwarden - Grand Café",
+            melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+            menu: "Menu", arr: "Packages", zak: "Business", con: "Contact", werk: "Careers", res: "Reservations",
+            welkomTitel: "Welcome to De Walrus in Leeuwarden, great to have you here!",
+            secTitel: "De Walrus Leeuwarden",
+            p1: "Grand-Café De Walrus is located in a wonderful spot at the Gouverneursplein in the heart of Leeuwarden. The buildings have served various functions over the years, preceding De Walrus which opened its doors here in 2009.",
+            p2: "Grand-Café De Walrus is the perfect place for a delicious cup of coffee with cake, lunch during a day out in Leeuwarden, or drinks with friends or colleagues. Looking for a great restaurant in Leeuwarden? You've come to the right place. The cozy restaurant on the first floor offers a beautiful view over the center of Leeuwarden.",
+            p3: "Looking for a venue for a group dinner to conclude a company outing, family day, or special occasion in Friesland? De Walrus Leeuwarden offers various packages, including Walking Dinners and menus.",
+            p4: "Spending a weekend in Leeuwarden, wrapping up a day of shopping, or just catching up? Enjoy a fully arranged High Tea with various teas, coffees, savory snacks, and sweet treats. De Walrus Leeuwarden is also the place to be for a High Wine or High Beer!"
+        }
+    };
+
+    function vertaal(taal) {
+        document.getElementById('html-root').setAttribute('lang', taal);
+        document.getElementById('page-title').innerText = vertalingen[taal].title;
+        document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+        // Navigatie
+        document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+        document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+        document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+        document.getElementById('nav-con').innerText = vertalingen[taal].con;
+        document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+        document.getElementById('nav-res').innerText = vertalingen[taal].res;
+
+        // Pagina inhoud
+        document.getElementById('welkom-titel').innerText = vertalingen[taal].welkomTitel;
+        document.getElementById('sec-titel').innerText = vertalingen[taal].secTitel;
+        document.getElementById('tekst-p1').innerText = vertalingen[taal].p1;
+        document.getElementById('tekst-p2').innerText = vertalingen[taal].p2;
+        document.getElementById('tekst-p3').innerText = vertalingen[taal].p3;
+        document.getElementById('tekst-p4').innerText = vertalingen[taal].p4;
+
+        // Actieve knop stijl bijwerken
+        document.getElementById('btn-nl').classList.remove('actief-taal');
+        document.getElementById('btn-de').classList.remove('actief-taal');
+        document.getElementById('btn-en').classList.remove('actief-taal');
+        document.getElementById('btn-' + taal).classList.add('actief-taal');
+    }
+</script>
+
 </body>
 </html>

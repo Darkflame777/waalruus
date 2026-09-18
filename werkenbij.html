@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De Walrus - Werken bij</title>
@@ -8,12 +9,10 @@
 </head>
 <body>
 
-<!-- MELDING BOVENAAN -->
 <header>
     <span id="banner-text">Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!</span>
 </header>
 
-<!-- HOOFD HEADER MET TAALSWAPPER -->
 <header>
     <div class="language-switcher">
         <button onclick="setLanguage('nl')" class="lang-btn active" id="btn-nl">NL</button>
@@ -33,9 +32,9 @@
             <li><a href="reserveren.html" id="nav-reserveren">Reserveren</a></li>
         </ul>
     </nav>
-        </ul>
-    </nav>
+</header>
 
+<main>
     <h1 class="logo" id="title-main">
         Werken bij De Walrus?
     </h1>
@@ -63,9 +62,9 @@
     </h3>
 
     <ul>
-        <li id="vac-1"><a href="restaurant%20manager.html">Restaurant manager</a></li>
-        <li id="vac-2"><a href="vacature%20kok.html">Kok: Zelfstandig werkend én leerling kok</a></li>
-        <li id="vac-3">Supervisor Bediening</li>
+        <li id="vac-1"><a href="restaurant%20manager.html" id="vac-link-1">Restaurant manager</a></li>
+        <li id="vac-2"><a href="vacature%20kok.html" id="vac-link-2">Kok: Zelfstandig werkend én leerling kok</a></li>
+        <li id="vac-3"><a href="supervisor.html" id="vac-link-3">Supervisor Bediening</a></li>
         <li id="vac-4">Medewerker Bediening</li>
         <li id="vac-5">Keukenhulp / Afwasser</li>
         <li id="vac-6">Schoonmaak</li>
@@ -76,7 +75,7 @@
     </h3>
 
     <h3 class="tekst" id="text-open-app">
-        Open sollicitatie
+        <a href="solicitatie.html">Open sollicitatie</a>
     </h3>
 
     <h1 class="logo" id="title-video">
@@ -115,9 +114,8 @@
     <h3 class="tekst" id="text-apply">
         Heb je vragen over de mogelijkheden of kom je er niet uit met solliciteren? Je kunt ons telefonisch bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100. We zien je sollicitatie graag tegemoet!
     </h3>
-</header>
+</main>
 
-<!-- TAALSCRIPT -->
 <script>
     const translations = {
         nl: {
@@ -186,8 +184,9 @@
         document.getElementById('title-vacancies').innerHTML = translations[lang].titleVacancies;
         document.getElementById('text-vacancies-intro').innerHTML = translations[lang].textVacanciesIntro;
 
-        document.getElementById('vac-1').innerHTML = translations[lang].vac1;
-        document.getElementById('vac-2').innerHTML = translations[lang].vac2;
+        // Vacatures bijwerken inclusief de links die eromheen staan
+        document.getElementById('vac-link-1').innerHTML = translations[lang].vac1;
+        document.getElementById('vac-link-2').innerHTML = translations[lang].vac2;
         document.getElementById('vac-3').innerHTML = translations[lang].vac3;
         document.getElementById('vac-4').innerHTML = translations[lang].vac4;
         document.getElementById('vac-5').innerHTML = translations[lang].vac5;

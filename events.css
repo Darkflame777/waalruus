@@ -78,7 +78,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-
+/* --- TOEVOEGING: Styling voor de taalwisselaar knoppen --- */
 .taal-knoppen {
     display: flex;
     gap: 6px;
@@ -106,105 +106,178 @@ nav a:hover::after {
     color: white;
     transform: none;
 }
+/* -------------------------------------------------- */
 
+.event-hero {
+    position: relative;
+    max-width: 1300px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
 
-.reserveren {
+.event-hero img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.event-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(38, 63, 54, 0.4);
+}
+
+.hero-overlay {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+}
+
+.hero-overlay p {
+    margin-top: 15px;
+    font-size: 19px;
+}
+
+.event-intro,
+.mogelijkheden,
+.ruimte,
+.event-afsluiting {
     max-width: 950px;
     margin: 55px auto;
-    padding: 45px 50px;
+    padding: 40px 50px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.reserveren h2 {
+.event-intro h2,
+.mogelijkheden h2,
+.ruimte h2,
+.event-afsluiting h2 {
     color: #263f36;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 38px;
+    font-size: 32px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
-.reserveren h2::after {
+.event-intro h2::after,
+.mogelijkheden h2::after,
+.ruimte h2::after,
+.event-afsluiting h2::after {
     content: "";
     display: block;
     width: 65px;
     height: 3px;
     background-color: #b27a3c;
-    margin: 15px auto 25px;
+    margin: 15px auto 0;
 }
 
-.intro {
-    max-width: 700px;
-    margin: 0 auto 35px;
+.event-intro p {
+    margin-bottom: 18px;
     color: #555;
-    text-align: center;
     font-size: 17px;
 }
 
-form {
-    width: 100%;
-}
-
-.formulier-rij {
+.event-kaarten {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
-.formulier-groep {
-    margin-bottom: 22px;
+.event-kaart {
+    padding: 30px;
+    background-color: #f5f1e8;
+    border: 2px solid #e4ded2;
+    border-top: 5px solid #b27a3c;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-label {
-    display: block;
-    margin-bottom: 7px;
+.event-kaart:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.event-kaart h3 {
+    margin-bottom: 10px;
     color: #263f36;
-    font-weight: bold;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
 }
 
-input,
-select,
-textarea {
+.event-kaart p {
+    color: #555;
+}
+
+.ruimte {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.ruimte-tekst h2 {
+    text-align: left;
+}
+
+.ruimte-tekst h2::after {
+    margin-left: 0;
+}
+
+.ruimte-tekst p {
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.ruimte-afbeelding img {
+    display: block;
     width: 100%;
-    padding: 13px 15px;
-    border: 1px solid #d8d2c7;
-    border-radius: 5px;
-    background-color: #faf9f6;
-    color: #263f36;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: #b27a3c;
-    box-shadow: 0 0 0 2px rgba(178, 122, 60, 0.12);
+.event-afsluiting {
+    text-align: center;
 }
 
-textarea {
-    resize: vertical;
-    min-height: 120px;
+.event-afsluiting p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555;
+    font-size: 17px;
 }
 
-button[type="submit"] {
-    display: block;
-    margin: 15px auto 0;
+.knop {
+    display: inline-block;
     padding: 13px 30px;
-    border: none;
-    border-radius: 5px;
     background-color: #263f36;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
     font-size: 15px;
     font-weight: bold;
-    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button[type="submit"]:hover {
+.knop:hover {
     background-color: #b27a3c;
     transform: translateY(-2px);
 }
@@ -222,18 +295,23 @@ footer p {
 }
 
 @media (max-width: 900px) {
+
     .header-inhoud {
         flex-direction: column;
         text-align: center;
     }
 
-    .formulier-rij {
+    .event-kaarten {
         grid-template-columns: 1fr;
-        gap: 0;
+    }
+
+    .ruimte {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 600px) {
+
     .header-inhoud {
         padding: 20px;
     }
@@ -249,20 +327,47 @@ footer p {
         margin-top: 5px;
     }
 
-    .reserveren {
+    .event-hero {
+        margin: 25px 15px 0;
+    }
+
+    .event-hero img {
+        height: 400px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 34px;
+    }
+
+    .hero-overlay p {
+        font-size: 16px;
+    }
+
+    .event-intro,
+    .mogelijkheden,
+    .ruimte,
+    .event-afsluiting {
         margin: 30px 15px;
         padding: 30px 20px;
     }
 
-    .reserveren h2 {
-        font-size: 30px;
+    .event-intro h2,
+    .mogelijkheden h2,
+    .ruimte h2,
+    .event-afsluiting h2 {
+        font-size: 29px;
     }
 
-    .intro {
+    .event-intro p,
+    .event-afsluiting p {
         font-size: 16px;
     }
 
-    button[type="submit"] {
+    .ruimte-afbeelding img {
+        height: 280px;
+    }
+
+    .knop {
         width: 100%;
     }
 }

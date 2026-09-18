@@ -1,54 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl" id="html-root">
 <head>
+    <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
     <meta charset="UTF-8">
-    <title>De walrus</title>
-    <link rel="stylesheet" href="menukaart.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tekst over afbeelding</title>
+    <title id="page-title">Menukaart - De Walrus</title>
+    <link rel="stylesheet" href="menukaart.css">
 </head>
 <body>
-<div class="top">
-    Let op: op 27 september zijn we de hele dag gesloten vanwege personeels feest!
+<div class="top" id="txt-melding">
+    Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
 </div>
 <section class="content">
     <header>
         <nav class="logo">
             <ul>
                 <h2 class="logo"><a href="homepage.html">De walrus<br>-grand cafe-</a></h2>
-                <li><a href="menukaart.html">Menukaart</a></li>
-                <li> <a href="arrangement.html">Arrangement</a></li>
-                <li><a href="zakelijk.html">Zakelijk</a> </li>
-                <li><a href="contact.html">Contact</a> </li>
-                <li><a href="werkenbij.html">Werken bij</a> </li>
-                <li><a href="reserveren.html">Reserveren</a> </li>
+                <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+                <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+                <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+                <li><a href="contact.html" id="nav-con">Contact</a></li>
+                <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
+                <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
+                <!-- Taalwisselaar knoppen -->
+                <li class="taal-knoppen">
+                    <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+                    <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
+                    <button type="button" id="btn-en" onclick="vertaal('en')">EN</button>
+                </li>
             </ul>
         </nav>
     </header>
 </section>
 
 <section class="title">
-    <h2 class="title">Ons Menu</h2>
-<p>Bij De Walrus draait het om goed eten, lekker drinken en vooral: gezellig tafelen.<br> Onze menukaart is een mix van vertrouwde klassiekers en nieuwe.<br> Met zorg bereid, royaal geserveerd en altijd met een glimlach gebracht.</p>
-  <button class="button1">
-    <a href="https://www.dewalrus.nl/media/siwp0xch/menunederlands.pdf" target="_blank" rel="noopener noreferrer" id="button">
-        Bekijk de menukaart
-    </a>
-  </button>
+    <h2 class="title" id="titel-hoofd">Ons Menu</h2>
+    <p id="titel-sub">Bij De Walrus draait het om goed eten, lekker drinken en vooral: gezellig tafelen.<br> Onze menukaart is een mix van vertrouwde klassiekers en nieuwe gerechten.<br> Met zorg bereid, royaal geserveerd en altijd met een glimlach gebracht.</p>
+    <button class="button1">
+        <a href="https://www.dewalrus.nl/media/siwp0xch/menunederlands.pdf" target="_blank" rel="noopener noreferrer" id="button-hoofd">
+            Bekijk de menukaart
+        </a>
+    </button>
 </section>
 <br>
 <section id="menu">
     <div class="menu-grid">
-        <a href="https://www.dewalrus.nl/media/siwp0xch/menunederlands.pdf" class="menu-card menu-lunch">
+        <a href="https://www.dewalrus.nl/media/siwp0xch/menunederlands.pdf" target="_blank" rel="noopener noreferrer" class="menu-card menu-lunch">
             <div class="menu-content">
-            <small> Overdag </small> <h3> Lunch </h3> <p> Van verse broodjes en salades tot lekkere lunchspecials. </p>
-            <span class="button button-yellow"> Bekijk lunch </span>
-        </div> </a> <a href="https://www.dewalrus.nl/media/siwp0xch/menunederlands.pdf" class="menu-card menu-diner">
-        <div class="menu-content"> <small> Vanaf de avond </small>
-            <h3> Diner </h3>
-            <p> Klassiekers, vlees, vis, vegetarische gerechten en natuurlijk dessert. </p>
-            <span class="button button-yellow"> Bekijk diner </span>
-        </div>
-    </a>
+                <small id="lunch-klein">Overdag</small>
+                <h3 id="lunch-titel">Lunch</h3>
+                <p id="lunch-tekst">Van verse broodjes en salades tot lekkere lunchspecials.</p>
+                <span class="button button-yellow" id="lunch-btn">Bekijk lunch</span>
+            </div>
+        </a>
+        <a href="https://www.dewalrus.nl/media/siwp0xch/menunederlands.pdf" target="_blank" rel="noopener noreferrer" class="menu-card menu-diner">
+            <div class="menu-content">
+                <small id="diner-klein">Vanaf de avond</small>
+                <h3 id="diner-titel">Diner</h3>
+                <p id="diner-tekst">Klassiekers, vlees, vis, vegetarische gerechten en natuurlijk dessert.</p>
+                <span class="button button-yellow" id="diner-btn">Bekijk diner</span>
+            </div>
+        </a>
     </div>
 </section>
+
+<!-- SCRIPT VOOR TAALWISSELAAR -->
+<script>
+    const vertalingen = {
+        nl: {
+            title: "Menukaart - De Walrus",
+            melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            menu: "Menukaart", arr: "Arrangement", zak: "Zakelijk", con: "Contact", werk: "Werken bij", res: "Reserveren",
+            titelHoofd: "Ons Menu",
+            titelSub: "Bij De Walrus draait het om goed eten, lekker drinken en vooral: gezellig tafelen.<br> Onze menukaart is een mix van vertrouwde klassiekers en nieuwe gerechten.<br> Met zorg bereid, royaal geserveerd en altijd met een glimlach gebracht.",
+            buttonHoofd: "Bekijk de menukaart",
+            lunchKlein: "Overdag",
+            lunchTitel: "Lunch",
+            lunchTekst: "Van verse broodjes en salades tot lekkere lunchspecials.",
+            lunchBtn: "Bekijk lunch",
+            dinerKlein: "Vanaf de avond",
+            dinerTitel: "Diner",
+            dinerTekst: "Klassiekers, vlees, vis, vegetarische gerechten en natuurlijk dessert.",
+            dinerBtn: "Bekijk diner"
+        },
+        de: {
+            title: "Speisekarte - De Walrus",
+            melding: "Achtung: Am 27. September sind wir wegen einer Personalfeier den ganzen Tag geschlossen!",
+            menu: "Speisekarte", arr: "Arrangement", zak: "Geschäftlich", con: "Kontakt", werk: "Karriere", res: "Reservieren",
+            titelHoofd: "Unsere Speisekarte",
+            titelSub: "Bei De Walrus dreht sich alles um gutes Essen, leckere Getränke und vor allem: gemütliches Beisammensein.<br> Unsere Speisekarte ist eine Mischung aus bewährten Klassikern und neuen Gerichten.<br> Mit Sorgfalt zubereitet, großzügig serviert und immer mit einem Lächeln gebracht.",
+            buttonHoofd: "Speisekarte ansehen",
+            lunchKlein: "Tagsüber",
+            lunchTitel: "Mittagessen",
+            lunchTekst: "Von frischen Brötchen und Salaten bis hin zu leckeren Mittagsspezialitäten.",
+            lunchBtn: "Mittagessen ansehen",
+            dinerKlein: "Ab dem Abend",
+            dinerTitel: "Abendessen",
+            dinerTekst: "Klassiker, Fleisch, Fisch, vegetarische Gerichte und natürlich Desserts.",
+            dinerBtn: "Abendessen ansehen"
+        },
+        en: {
+            title: "Menu - De Walrus",
+            melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+            menu: "Menu", arr: "Packages", zak: "Business", con: "Contact", werk: "Careers", res: "Reservations",
+            titelHoofd: "Our Menu",
+            titelSub: "At De Walrus, it's all about good food, delicious drinks, and above all: dining together in a cozy atmosphere.<br> Our menu is a mix of trusted classics and new dishes.<br> Prepared with care, generously served, and always brought with a smile.",
+            buttonHoofd: "View the menu",
+            lunchKlein: "During the day",
+            lunchTitel: "Lunch",
+            lunchTekst: "From fresh sandwiches and salads to delicious lunch specials.",
+            lunchBtn: "View lunch",
+            dinerKlein: "From the evening",
+            dinerTitel: "Dinner",
+            dinerTekst: "Classics, meat, fish, vegetarian dishes, and of course dessert.",
+            dinerBtn: "View dinner"
+        }
+    };
+
+    function vertaal(taal) {
+        document.getElementById('html-root').setAttribute('lang', taal);
+        document.getElementById('page-title').innerText = vertalingen[taal].title;
+        document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+        // Navigatie
+        document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+        document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+        document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+        document.getElementById('nav-con').innerText = vertalingen[taal].con;
+        document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+        document.getElementById('nav-res').innerText = vertalingen[taal].res;
+
+        // Pagina inhoud
+        document.getElementById('titel-hoofd').innerText = vertalingen[taal].titelHoofd;
+        document.getElementById('titel-sub').innerHTML = vertalingen[taal].titelSub;
+        document.getElementById('button-hoofd').innerText = vertalingen[taal].buttonHoofd;
+
+        document.getElementById('lunch-klein').innerText = vertalingen[taal].lunchKlein;
+        document.getElementById('lunch-titel').innerText = vertalingen[taal].lunchTitel;
+        document.getElementById('lunch-tekst').innerText = vertalingen[taal].lunchTekst;
+        document.getElementById('lunch-btn').innerText = vertalingen[taal].lunchBtn;
+
+        document.getElementById('diner-klein').innerText = vertalingen[taal].dinerKlein;
+        document.getElementById('diner-titel').innerText = vertalingen[taal].dinerTitel;
+        document.getElementById('diner-tekst').innerText = vertalingen[taal].dinerTekst;
+        document.getElementById('diner-btn').innerText = vertalingen[taal].dinerBtn;
+
+        // Actieve knop stijl bijwerken
+        document.getElementById('btn-nl').classList.remove('actief-taal');
+        document.getElementById('btn-de').classList.remove('actief-taal');
+        document.getElementById('btn-en').classList.remove('actief-taal');
+        document.getElementById('btn-' + taal).classList.add('actief-taal');
+    }
+</script>
+
+</body>
+</html>

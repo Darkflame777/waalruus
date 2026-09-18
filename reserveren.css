@@ -103,6 +103,33 @@ nav a.actief::after {
 }
 
 
+
+.taal-knoppen {
+    display: flex;
+    gap: 6px;
+    margin-left: 10px;
+}
+
+.taal-knoppen button {
+    background: none;
+    border: 1px solid #263f36;
+    color: #263f36;
+    padding: 4px 9px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.taal-knoppen button:hover,
+.taal-knoppen button.actief-taal {
+    background-color: #263f36;
+    color: white;
+}
+
+
 main {
     width: 90%;
     max-width: 1100px;
@@ -190,6 +217,9 @@ main {
     padding: 11px 22px;
     border-radius: 5px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     transition: background-color 0.3s ease,
     transform 0.3s ease;
 }
@@ -288,6 +318,12 @@ footer {
 
     nav a {
         font-size: 14px;
+    }
+
+    .taal-knoppen {
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 5px;
     }
 
     main {

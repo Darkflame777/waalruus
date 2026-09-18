@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #263f36;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+.melding {
+    background-color: #263f36;
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-inhoud {
+    max-width: 1300px;
+    margin: auto;
+    padding: 22px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header-inhoud h1 a {
+    color: #263f36;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: #263f36;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b27a3c;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #b27a3c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.vacature-hero {
+    position: relative;
+    max-width: 1300px;
+    height: 520px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.vacature-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vacature-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(38, 63, 54, 0.42);
+}
+
+.hero-tekst {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-tekst h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+}
+
+.hero-tekst p {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.vacature-sectie,
+.video-sectie,
+.voordelen,
+.galerij-sectie,
+.contact-vacature,
+.sollicitatie-formulier {
+    max-width: 950px;
+    margin: 55px auto;
+    padding: 40px 50px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.vacature-sectie h2,
+.video-sectie h2,
+.voordelen h2,
+.galerij-sectie h2,
+.contact-vacature h2,
+.sollicitatie-formulier h2 {
+    color: #263f36;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.vacature-sectie h2::after,
+.video-sectie h2::after,
+.voordelen h2::after,
+.galerij-sectie h2::after,
+.contact-vacature h2::after,
+.sollicitatie-formulier h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background-color: #b27a3c;
+    margin: 15px auto 0;
+}
+
+.vacature-sectie p {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.video-sectie {
+    text-align: center;
+}
+
+.video-sectie > p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.video-afbeelding {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-afbeelding img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-afbeelding img:hover {
+    transform: scale(1.02);
+}
+
+.vacature-lijst {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.vacature-lijst li {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 15px 20px 15px 48px;
+    background-color: #f5f1e8;
+    border-left: 4px solid #b27a3c;
+    border-radius: 5px;
+    color: #555;
+}
+
+.vacature-lijst li::before {
+    content: "✓";
+    position: absolute;
+    left: 17px;
+    color: #263f36;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.voordelen {
+    max-width: 1100px;
+}
+
+.voordelen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.voordeel {
+    padding: 25px;
+    background-color: #f5f1e8;
+    border: 2px solid #e4ded2;
+    border-top: 5px solid #b27a3c;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.voordeel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.voordeel h3 {
+    margin-bottom: 10px;
+    color: #263f36;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+}
+
+.voordeel p {
+    color: #555;
+}
+
+.galerij-sectie {
+    max-width: 1100px;
+}
+
+.galerij {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.galerij img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.galerij img:hover {
+    transform: scale(1.02);
+}
+
+.contact-vacature {
+    text-align: center;
+}
+
+.contact-vacature > p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #555;
+    font-size: 17px;
+}
+
+.contact-kaarten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.contact-kaart {
+    padding: 25px;
+    background-color: #f5f1e8;
+    border: 2px solid #e4ded2;
+    border-top: 5px solid #b27a3c;
+    border-radius: 8px;
+}
+
+.contact-kaart h3 {
+    margin-bottom: 10px;
+    color: #263f36;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+}
+
+.contact-kaart p {
+    color: #555;
+}
+
+.contact-kaart a {
+    color: #263f36;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-kaart a:hover {
+    color: #b27a3c;
+}
+
+.afsluiting {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px !important;
+    color: #263f36 !important;
+}
+
+.sollicitatie-formulier {
+    max-width: 950px;
+}
+
+.formulier-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+    color: #555;
+    font-size: 17px;
+}
+
+.formulier-rij {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.formulier-groep {
+    margin-bottom: 22px;
+}
+
+.formulier-groep label {
+    display: block;
+    margin-bottom: 7px;
+    color: #263f36;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d8d2c7;
+    border-radius: 5px;
+    background-color: #faf9f6;
+    color: #263f36;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #b27a3c;
+    box-shadow: 0 0 0 2px rgba(178, 122, 60, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.keuze-groep {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f5f1e8;
+    border: 1px solid #e4ded2;
+    border-radius: 8px;
+}
+
+.keuze-groep h3 {
+    margin-bottom: 15px;
+    color: #263f36;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 9px 0;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #263f36;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    margin: 35px auto 0;
+    padding: 13px 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #263f36;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #b27a3c;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 70px;
+    padding: 45px 30px 25px;
+    background-color: #263f36;
+    color: white;
+}
+
+.footer-inhoud {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-locatie h3 {
+    margin-bottom: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+}
+
+.footer-locatie p {
+    margin: 4px 0;
+}
+
+.footer-locatie a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-locatie a:hover {
+    color: #b27a3c;
+}
+
+.footer-onder {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.footer-onder p {
+    margin: 5px 0;
+}
+
+@media (max-width: 900px) {
+
+    .header-inhoud {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .voordelen-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .formulier-rij {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-inhoud {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header-inhoud {
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 12px 18px;
+    }
+
+    .vacature-hero {
+        height: 400px;
+        margin: 25px 15px 0;
+    }
+
+    .hero-tekst h2 {
+        font-size: 34px;
+    }
+
+    .hero-tekst p {
+        font-size: 16px;
+    }
+
+    .vacature-sectie,
+    .video-sectie,
+    .voordelen,
+    .galerij-sectie,
+    .contact-vacature,
+    .sollicitatie-formulier {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    .vacature-sectie h2,
+    .video-sectie h2,
+    .voordelen h2,
+    .galerij-sectie h2,
+    .contact-vacature h2,
+    .sollicitatie-formulier h2 {
+        font-size: 29px;
+    }
+
+    .vacature-sectie p,
+    .video-sectie > p,
+    .contact-vacature > p,
+    .formulier-intro {
+        font-size: 16px;
+    }
+
+    .video-afbeelding img {
+        height: 250px;
+    }
+
+    .voordelen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galerij {
+        grid-template-columns: 1fr;
+    }
+
+    .galerij img {
+        height: 250px;
+    }
+
+    .contact-kaarten {
+        grid-template-columns: 1fr;
+    }
+
+    .keuze-groep {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
