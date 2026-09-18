@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" id="html-root">
 
 <head>
     <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Walrus - Sneek</title>
+    <title id="page-title">De Walrus - Sneek</title>
     <link rel="stylesheet" href="sneek.css">
 </head>
 
@@ -13,7 +13,7 @@
 
 <header>
 
-    <div class="melding">
+    <div class="melding" id="txt-melding">
         Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
     </div>
 
@@ -25,12 +25,17 @@
 
         <nav>
             <ul>
-                <li><a href="menukaart.html">Menukaart</a></li>
-                <li><a href="arrangement.html">Arrangement</a></li>
-                <li><a href="zakelijk.html">Zakelijk</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="werkenbij.html">Werken bij</a></li>
-                <li><a href="reserveren.html">Reserveren</a></li>
+                <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+                <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+                <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+                <li><a href="contact.html" id="nav-con">Contact</a></li>
+                <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
+                <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
+                <li class="taal-knoppen">
+                    <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+                    <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
+                    <button type="button" id="btn-en" onclick="vertaal('en')">EN</button>
+                </li>
             </ul>
         </nav>
 
@@ -43,7 +48,7 @@
 
     <section class="welkom">
 
-        <h2>
+        <h2 id="welkom-titel">
             Welkom bij De Walrus in Sneek, wat leuk dat je er bent!
         </h2>
 
@@ -57,9 +62,9 @@
 
     <section class="intro">
 
-        <h1>De Walrus Sneek</h1>
+        <h1 id="intro-titel">De Walrus Sneek</h1>
 
-        <p>
+        <p id="intro-p1">
             De Walrus Sneek is een Grand-Café in het centrum van Sneek,
             gevestigd in een prachtig pand aan de Leeuwenburg.
             De locatie werd in 2006 flink verbouwd, waarna De Walrus
@@ -67,31 +72,31 @@
             ontmoetingsplaats in Sneek.
         </p>
 
-        <p>
+        <p id="intro-p2">
             Bij ons kun je genieten van een heerlijke kop koffie met gebak,
             een snelle of juist uitgebreide lunch of een gezellige borrel
             met vrienden of collega's.
         </p>
 
-        <p>
+        <p id="intro-p3">
             Zoek je een locatie om te dineren met een groep als afsluiter
             van een bedrijfsuitje, familiedag of speciale gelegenheid in
             Friesland? De Walrus Sneek biedt diverse arrangementen.
         </p>
 
-        <p>
+        <p id="intro-p4">
             Zo kun je genieten van een walking dinner, proeverij menu
             of gewoon à la carte.
         </p>
 
-        <p>
+        <p id="intro-p5">
             Ben je een weekendje in Sneek en wil je een dag winkelen
             gezellig afsluiten of gewoon bijkletsen met vrienden of familie?
             Geniet dan van een geheel verzorgde high tea met diverse
             thee- of koffiesoorten, hartige hapjes en zoete lekkernijen.
         </p>
 
-        <p>
+        <p id="intro-p6">
             Ook voor een high wine of bierarrangement kun je bij
             De Walrus Sneek terecht!
         </p>
@@ -101,32 +106,32 @@
 
     <section class="locatie">
 
-        <h2>De Walrus Sneek</h2>
+        <h2 id="locatie-titel">De Walrus Sneek</h2>
 
         <div class="locatie-inhoud">
 
             <div class="locatie-kaart">
-                <h3>Ons adres</h3>
+                <h3 id="kaart1-titel">Ons adres</h3>
 
-                <p>
+                <p id="kaart1-tekst">
                     Leeuwenburg 11<br>
                     8601 CG Sneek
                 </p>
             </div>
 
             <div class="locatie-kaart">
-                <h3>Openingstijden</h3>
+                <h3 id="kaart2-titel">Openingstijden</h3>
 
-                <p>
+                <p id="kaart2-tekst">
                     Zondag t/m zaterdag<br>
                     10:00 tot 01:00 uur
                 </p>
             </div>
 
             <div class="locatie-kaart">
-                <h3>Contact</h3>
+                <h3 id="kaart3-titel">Contact</h3>
 
-                <p>
+                <p id="kaart3-tekst">
                     Tel: 0515 - 438 100<br>
                     info@dewalrussneek.nl
                 </p>
@@ -141,15 +146,124 @@
 
 <footer>
 
-    <p>
+    <p id="footer-p1">
         Leuk dat je bent geweest!
     </p>
 
-    <p>
+    <p id="footer-p2">
         © 2026 De Walrus - Cookies en privacy statement
     </p>
 
 </footer>
+
+<script>
+    const vertalingen = {
+        nl: {
+            title: "De Walrus - Sneek",
+            melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            menu: "Menukaart", arr: "Arrangement", zak: "Zakelijk", con: "Contact", werk: "Werken bij", res: "Reserveren",
+            welkomTitel: "Welkom bij De Walrus in Sneek, wat leuk dat je er bent!",
+            introTitel: "De Walrus Sneek",
+            introP1: "De Walrus Sneek is een Grand-Café in het centrum van Sneek, gevestigd in een prachtig pand aan de Leeuwenburg. De locatie werd in 2006 flink verbouwd, waarna De Walrus haar deuren opende in januari 2007. Sindsdien is het dé ontmoetingsplaats in Sneek.",
+            introP2: "Bij ons kun je genieten van een heerlijke kop koffie met gebak, een snelle of juist uitgebreide lunch of een gezellige borrel met vrienden of collega's.",
+            introP3: "Zoek je een locatie om te dineren met een groep als afsluiter van een bedrijfsuitje, familiedag of speciale gelegenheid in Friesland? De Walrus Sneek biedt diverse arrangementen.",
+            introP4: "Zo kun je genieten van een walking dinner, proeverij menu of gewoon à la carte.",
+            introP5: "Ben je een weekendje in Sneek en wil je een dag winkelen gezellig afsluiten of gewoon bijkletsen met vrienden of familie? Geniet dan van een geheel verzorgde high tea met diverse thee- of koffiesoorten, hartige hapjes en zoete lekkernijen.",
+            introP6: "Ook voor een high wine of bierarrangement kun je bij De Walrus Sneek terecht!",
+            locatieTitel: "De Walrus Sneek",
+            kaart1Titel: "Ons adres",
+            kaart1Tekst: "Leeuwenburg 11<br>8601 CG Sneek",
+            kaart2Titel: "Openingstijden",
+            kaart2Tekst: "Zondag t/m zaterdag<br>10:00 tot 01:00 uur",
+            kaart3Titel: "Contact",
+            kaart3Tekst: "Tel: 0515 - 438 100<br>info@dewalrussneek.nl",
+            footerP1: "Leuk dat je bent geweest!",
+            footerP2: "© 2026 De Walrus - Cookies en privacy statement"
+        },
+        de: {
+            title: "De Walrus - Sneek",
+            melding: "Achtung: Am 27. September haben wir wegen einer Betriebsfeier den ganzen Tag geschlossen!",
+            menu: "Speisekarte", arr: "Angebote", zak: "Geschäftlich", con: "Kontakt", werk: "Karriere", res: "Reservieren",
+            welkomTitel: "Willkommen bei De Walrus in Sneek, schön, dass Sie da sind!",
+            introTitel: "De Walrus Sneek",
+            introP1: "Das Grand-Café De Walrus Sneek befindet sich im Zentrum von Sneek in einem wunderschönen Gebäude am Leeuwenburg. Nach umfangreichen Renovierungsarbeiten im Jahr 2006 öffnete De Walrus im Januar 2007 seine Türen und ist seitdem der Treffpunkt in Sneek.",
+            introP2: "Bei uns können Sie eine köstliche Tasse Kaffee mit Kuchen, ein schnelles oder ausgiebiges Mittagessen oder einen gemütlichen Umtrunk mit Freunden oder Kollegen genießen.",
+            introP3: "Suchen Sie eine Location zum Abendessen mit einer Gruppe als Abschluss eines Betriebsausflugs, Familientags oder eines besonderen Anlasses in Friesland? De Walrus Sneek bietet verschiedene Arrangements.",
+            introP4: "Genießen Sie ein Walking Dinner, ein Menü oder à la carte.",
+            introP5: "Sind Sie für ein Wochenende in Sneek und möchten Ihren Shoppingtag gemütlich ausklingen lassen? Genießen Sie einen High Tea mit verschiedenen Tee- oder Kaffeesorten, herzhaften Snacks und süßen Leckereien.",
+            introP6: "Auch für einen High Wine oder ein Bierarrangement sind Sie bei De Walrus Sneek genau richtig!",
+            locatieTitel: "De Walrus Sneek",
+            kaart1Titel: "Unsere Adresse",
+            kaart1Tekst: "Leeuwenburg 11<br>8601 CG Sneek",
+            kaart2Titel: "Öffnungszeiten",
+            kaart2Tekst: "Sonntag bis Samstag<br>10:00 bis 01:00 Uhr",
+            kaart3Titel: "Kontakt",
+            kaart3Tekst: "Tel: 0515 - 438 100<br>info@dewalrussneek.nl",
+            footerP1: "Schön, dass Sie da waren!",
+            footerP2: "© 2026 De Walrus - Cookies und Datenschutzerklärung"
+        },
+        en: {
+            title: "De Walrus - Sneek",
+            melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+            menu: "Menu", arr: "Packages", zak: "Business", con: "Contact", werk: "Careers", res: "Reservations",
+            welkomTitel: "Welcome to De Walrus in Sneek, great to have you here!",
+            introTitel: "De Walrus Sneek",
+            introP1: "Grand-Café De Walrus Sneek is located in the center of Sneek in a beautiful building on Leeuwenburg. Following major renovations in 2006, De Walrus opened its doors in January 2007 and has been the meeting place in Sneek ever since.",
+            introP2: "Enjoy a delicious cup of coffee with cake, a quick or extensive lunch, or cozy drinks with friends or colleagues.",
+            introP3: "Looking for a group dining venue to wrap up a company outing, family day, or special occasion in Friesland? De Walrus Sneek offers various packages.",
+            introP4: "Enjoy a walking dinner, tasting menu, or order à la carte.",
+            introP5: "Spending a weekend in Sneek and want to wrap up a day of shopping? Enjoy a fully arranged high tea with various teas or coffees, savory snacks, and sweet treats.",
+            introP6: "De Walrus Sneek is also the place to be for a high wine or beer arrangement!",
+            locatieTitel: "De Walrus Sneek",
+            kaart1Titel: "Our address",
+            kaart1Tekst: "Leeuwenburg 11<br>8601 CG Sneek",
+            kaart2Titel: "Opening hours",
+            kaart2Tekst: "Sunday through Saturday<br>10:00 AM to 01:00 AM",
+            kaart3Titel: "Contact",
+            kaart3Tekst: "Tel: 0515 - 438 100<br>info@dewalrussneek.nl",
+            footerP1: "Great to have you here!",
+            footerP2: "© 2026 De Walrus - Cookies and privacy statement"
+        }
+    };
+
+    function vertaal(taal) {
+        document.getElementById('html-root').setAttribute('lang', taal);
+        document.getElementById('page-title').innerText = vertalingen[taal].title;
+        document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+        document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+        document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+        document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+        document.getElementById('nav-con').innerText = vertalingen[taal].con;
+        document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+        document.getElementById('nav-res').innerText = vertalingen[taal].res;
+
+        document.getElementById('welkom-titel').innerText = vertalingen[taal].welkomTitel;
+        document.getElementById('intro-titel').innerText = vertalingen[taal].introTitel;
+        document.getElementById('intro-p1').innerText = vertalingen[taal].introP1;
+        document.getElementById('intro-p2').innerText = vertalingen[taal].introP2;
+        document.getElementById('intro-p3').innerText = vertalingen[taal].introP3;
+        document.getElementById('intro-p4').innerText = vertalingen[taal].introP4;
+        document.getElementById('intro-p5').innerText = vertalingen[taal].introP5;
+        document.getElementById('intro-p6').innerText = vertalingen[taal].introP6;
+
+        document.getElementById('locatie-titel').innerText = vertalingen[taal].locatieTitel;
+        document.getElementById('kaart1-titel').innerText = vertalingen[taal].kaart1Titel;
+        document.getElementById('kaart1-tekst').innerHTML = vertalingen[taal].kaart1Tekst;
+        document.getElementById('kaart2-titel').innerText = vertalingen[taal].kaart2Titel;
+        document.getElementById('kaart2-tekst').innerHTML = vertalingen[taal].kaart2Tekst;
+        document.getElementById('kaart3-titel').innerText = vertalingen[taal].kaart3Titel;
+        document.getElementById('kaart3-tekst').innerHTML = vertalingen[taal].kaart3Tekst;
+
+        document.getElementById('footer-p1').innerText = vertalingen[taal].footerP1;
+        document.getElementById('footer-p2').innerText = vertalingen[taal].footerP2;
+
+        document.getElementById('btn-nl').classList.remove('actief-taal');
+        document.getElementById('btn-de').classList.remove('actief-taal');
+        document.getElementById('btn-en').classList.remove('actief-taal');
+        document.getElementById('btn-' + taal).classList.add('actief-taal');
+    }
+</script>
 
 </body>
 </html>

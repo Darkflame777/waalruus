@@ -1,4 +1,3 @@
-/* Stijl voor de taalwisselaar knoppen (in De Walrus stijl) */
 .taal-knoppen {
     display: flex;
     gap: 6px;
@@ -18,7 +17,6 @@
     transition: all 0.3s ease;
 }
 
-/* Als je eroverheen huizelt (hover) en wanneer hij actief is: donkergroen met witte tekst */
 .taal-knoppen button:hover,
 .taal-knoppen button.actief-taal {
     background-color: #263f36;
@@ -118,7 +116,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Stijl voor de taalwisselaar knoppen (NL, DE, EN) */
 .taal-knoppen {
     display: flex;
     gap: 6px;
