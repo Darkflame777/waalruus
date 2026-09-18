@@ -150,7 +150,7 @@ nav a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-body > header:last-of-type > ul {
+main > ul {
     max-width: 800px;
     margin: 25px auto 40px;
     padding: 25px 45px;
@@ -160,7 +160,7 @@ body > header:last-of-type > ul {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
-body > header:last-of-type > ul li {
+main > ul li {
     margin: 10px 0;
     color: #263f36;
     font-size: 16px;
