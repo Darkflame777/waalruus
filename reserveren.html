@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" id="html-root">
 
 <head>
   <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>De Walrus - Reserveren</title>
+  <title id="page-title">De Walrus - Reserveren</title>
   <link rel="stylesheet" href="reserveren.css">
+  <style>
+
+    .taal-knoppen {
+      display: flex;
+      gap: 6px;
+      margin-left: 10px;
+    }
+    .taal-knoppen button {
+      background: none;
+      border: 1px solid #263f36;
+      color: #263f36;
+      padding: 3px 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .taal-knoppen button:hover,
+    .taal-knoppen button.actief-taal {
+      background-color: #263f36;
+      color: white;
+    }
+
+    button.knop {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="melding">
+<header class="melding" id="txt-melding">
   Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
 </header>
 
@@ -23,12 +53,18 @@
 
   <nav>
     <ul>
-      <li><a href="menukaart.html">Menukaart</a></li>
-      <li><a href="arrangement.html">Arrangement</a></li>
-      <li><a href="zakelijk.html">Zakelijk</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="werkenbij.html">Werken bij</a></li>
-      <li><a href="reserveren.html" class="actief">Reserveren</a></li>
+      <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+      <li><a href="arrangement.html" id="nav-arr">Arrangement</a></li>
+      <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+      <li><a href="contact.html" id="nav-con">Contact</a></li>
+      <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
+      <li><a href="reserveren.html" class="actief" id="nav-res">Reserveren</a></li>
+
+      <li class="taal-knoppen">
+        <button id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+        <button id="btn-de" onclick="vertaal('de')">DE</button>
+        <button id="btn-en" onclick="vertaal('en')">EN</button>
+      </li>
     </ul>
   </nav>
 
@@ -40,19 +76,19 @@
 
     <div class="reserveren-tekst">
 
-      <h2>Reserveren</h2>
+      <h2 id="sec-titel">Reserveren</h2>
 
-      <h3>
+      <h3 id="sec-subtitel">
         Wat leuk dat je wilt reserveren bij De Walrus!
       </h3>
 
-      <p>
+      <p id="sec-p1">
         We staan te popelen om je te ontvangen!
         Je geeft je reservering door via het formulier
         voor jouw lunch, borrel of diner.
       </p>
 
-      <p>
+      <p id="sec-p2">
         Kies hieronder de locatie waar je wilt reserveren.
         We kijken ernaar uit om je te verwelkomen bij
         De Walrus!
@@ -71,9 +107,10 @@
           8911 HH Leeuwarden
         </p>
 
-        <a href="reserverenformulier.html" class="knop">
+
+        <button class="knop" onclick="reserveerLocatie('Leeuwarden')" id="btn-Lwd">
           Reserveer in Leeuwarden
-        </a>
+        </button>
 
       </div>
 
@@ -87,9 +124,10 @@
           8601 CG Sneek
         </p>
 
-        <a href="reserverenformulier.html" class="knop">
+
+        <button class="knop" onclick="reserveerLocatie('Sneek')" id="btn-Snk">
           Reserveer in Sneek
-        </a>
+        </button>
 
       </div>
 
@@ -112,14 +150,14 @@
         8911 HH Leeuwarden
       </p>
 
-      <p>
+      <p class="tijd-lwd">
         Zondag t/m zaterdag<br>
         10:00 tot 01:00 uur
       </p>
 
       <p>
         Tel: 058 - 21 377 40<br>
-        E-mail: info@dewalrusleeuwarden.nl
+        <span id="email-lwd">E-mail</span>: info@dewalrusleeuwarden.nl
       </p>
     </div>
 
@@ -132,14 +170,14 @@
         8601 CG Sneek
       </p>
 
-      <p>
+      <p class="tijd-snk">
         Zondag t/m zaterdag<br>
         10:00 tot 01:00 uur
       </p>
 
       <p>
         Tel: 0515 - 438 100<br>
-        E-mail: info@dewalrussneek.nl
+        <span id="email-snk">E-mail</span>: info@dewalrussneek.nl
       </p>
     </div>
 
@@ -147,11 +185,105 @@
 
 
   <div class="footer-onderkant">
-    <p>Leuk dat je bent geweest!</p>
-    <p>© 2026 De Walrus - Cookies en privacy statement</p>
+    <p id="foot-tekst1">Leuk dat je bent geweest!</p>
+    <p id="foot-tekst2">© 2026 De Walrus - Cookies en privacy statement</p>
   </div>
 
 </footer>
+
+
+<script>
+  function reserveerLocatie(locatie) {
+    // Hier kun je jouw logica kwijt, bijvoorbeeld doorsturen naar de formulierpagina:
+    window.location.href = "reserverenformulier.html?locatie=" + locatie.toLowerCase();
+  }
+
+  const vertalingen = {
+    nl: {
+      htmlLang: "nl",
+      title: "De Walrus - Reserveren",
+      melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+      menu: "Menukaart", arr: "Arrangement", zak: "Zakelijk", con: "Contact", werk: "Werken bij", res: "Reserveren",
+      titel: "Reserveren",
+      subtitel: "Wat leuk dat je wilt reserveren bij De Walrus!",
+      p1: "We staan te popelen om je te ontvangen! Je geeft je reservering door via het formulier voor jouw lunch, borrel of diner.",
+      p2: "Kies hieronder de locatie waar je wilt reserveren. We kijken ernaar uit om je te verwelkomen bij De Walrus!",
+      btnLwd: "Reserveer in Leeuwarden",
+      btnSnk: "Reserveer in Sneek",
+      tijd: "Zondag t/m zaterdag<br>10:00 tot 01:00 uur",
+      email: "E-mail",
+      f1: "Leuk dat je bent geweest!",
+      f2: "© 2026 De Walrus - Cookies en privacy statement"
+    },
+    de: {
+      htmlLang: "de",
+      title: "De Walrus - Reservieren",
+      melding: "Achtung: Am 27. September sind wir wegen einer Personalfeier den ganzen Tag geschlossen!",
+      menu: "Speisekarte", arr: "Arrangements", zak: "Geschäftlich", con: "Kontakt", werk: "Karriere", res: "Reservieren",
+      titel: "Reservieren",
+      subtitel: "Wie schön, dass Sie bei De Walrus reservieren möchten!",
+      p1: "Wir können es kaum erwarten, Sie zu empfangen! Geben Sie Ihre Reservierung über das Formular für Ihr Mittagessen, Ihren Umtrunk oder Ihr Abendessen auf.",
+      p2: "Wählen Sie unten den Standort aus, an dem Sie reservieren möchten. Wir freuen uns darauf, Sie bei De Walrus willkommen zu heißen!",
+      btnLwd: "In Leeuwarden reservieren",
+      btnSnk: "In Sneek reservieren",
+      tijd: "Sonntag bis Samstag<br>10:00 bis 01:00 Uhr",
+      email: "E-Mail",
+      f1: "Schön, dass Sie da waren!",
+      f2: "© 2026 De Walrus - Cookies und Datenschutzerklärung"
+    },
+    en: {
+      htmlLang: "en",
+      title: "De Walrus - Reservations",
+      melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+      menu: "Menu", arr: "Packages", zak: "Business", con: "Contact", werk: "Careers", res: "Reservations",
+      titel: "Reservations",
+      subtitel: "How wonderful that you want to book a table at De Walrus!",
+      p1: "We can't wait to welcome you! Submit your reservation using the form for your lunch, drinks, or dinner.",
+      p2: "Choose the location below where you would like to book. We look forward to welcoming you at De Walrus!",
+      btnLwd: "Book in Leeuwarden",
+      btnSnk: "Book in Sneek",
+      tijd: "Sunday to Saturday<br>10:00 to 01:00",
+      email: "Email",
+      f1: "We're glad you visited!",
+      f2: "© 2026 De Walrus - Cookies and privacy statement"
+    }
+  };
+
+  function vertaal(taal) {
+    document.getElementById('html-root').setAttribute('lang', taal);
+    document.getElementById('page-title').innerText = vertalingen[taal].title;
+    document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+
+    document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+    document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+    document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+    document.getElementById('nav-con').innerText = vertalingen[taal].con;
+    document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+    document.getElementById('nav-res').innerText = vertalingen[taal].res;
+
+
+    document.getElementById('sec-titel').innerText = vertalingen[taal].titel;
+    document.getElementById('sec-subtitel').innerText = vertalingen[taal].subtitel;
+    document.getElementById('sec-p1').innerText = vertalingen[taal].p1;
+    document.getElementById('sec-p2').innerText = vertalingen[taal].p2;
+    document.getElementById('btn-Lwd').innerText = vertalingen[taal].btnLwd;
+    document.getElementById('btn-Snk').innerText = vertalingen[taal].btnSnk;
+
+
+    document.querySelector('.tijd-lwd').innerHTML = vertalingen[taal].tijd;
+    document.querySelector('.tijd-snk').innerHTML = vertalingen[taal].tijd;
+    document.getElementById('email-lwd').innerText = vertalingen[taal].email;
+    document.getElementById('email-snk').innerText = vertalingen[taal].email;
+    document.getElementById('foot-tekst1').innerText = vertalingen[taal].f1;
+    document.getElementById('foot-tekst2').innerText = vertalingen[taal].f2;
+
+    document.getElementById('btn-nl').classList.remove('actief-taal');
+    document.getElementById('btn-de').classList.remove('actief-taal');
+    document.getElementById('btn-en').classList.remove('actief-taal');
+    document.getElementById('btn-' + taal).classList.add('actief-taal');
+  }
+</script>
 
 </body>
 </html>
