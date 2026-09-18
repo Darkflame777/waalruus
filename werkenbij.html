@@ -13,7 +13,6 @@
 </header>
 
 <header>
-
     <div class="language-switcher">
         <button onclick="setLanguage('nl')" class="lang-btn active" id="btn-nl">NL</button>
         <button onclick="setLanguage('de')" class="lang-btn" id="btn-de">DE</button>
@@ -30,24 +29,11 @@
             <li><a href="contact.html" id="nav-contact">Contact</a></li>
             <li><a href="werkenbij.html" id="nav-werken">Werken bij</a></li>
             <li><a href="reserveren.html" id="nav-reserveren">Reserveren</a></li>
-
-    <h1><a href="homepage.html">De walrus -grand cafe-</a></h1>
-    <nav>
-        <ul>
-            <li><a href="menukaart.html">Menukaart</a></li>
-            <li><a href="arrangement.html">Arrangement</a></li>
-            <li><a href="zakelijk.html">Zakelijk</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="werken%20bij.html">Werken bij</a></li>
-            <li><a href="reserveren.html">Reserveren</a></li>
-
-=======
         </ul>
     </nav>
->>>>>>> 7efcbb25a6096d63882feacd377a7b3dc4e89367
-        </ul>
-    </nav>
+</header>
 
+<main>
     <h1 class="logo" id="title-main">
         Werken bij De Walrus?
     </h1>
@@ -75,8 +61,8 @@
     </h3>
 
     <ul>
-        <li id="vac-1"><a href="restaurant%20manager.html">Restaurant manager</a></li>
-        <li id="vac-2"><a href="vacature%20kok.html">Kok: Zelfstandig werkend én leerling kok</a></li>
+        <li id="vac-1"><a href="restaurant%20manager.html" id="vac-link-1">Restaurant manager</a></li>
+        <li id="vac-2"><a href="vacature%20kok.html" id="vac-link-2">Kok: Zelfstandig werkend én leerling kok</a></li>
         <li id="vac-3">Supervisor Bediening</li>
         <li id="vac-4">Medewerker Bediening</li>
         <li id="vac-5">Keukenhulp / Afwasser</li>
@@ -100,10 +86,6 @@
             <img src="https://www.dewalrus.nl/media/howbyn0r/maxresdefault.jpg?width=1920&height=1080&quality=80&v=1dcd31b6f61cb50" class="video" alt="Video impressie">
         </a>
     </div>
-<<<<<<< HEAD
->>>>>>> 83c8626af8fa2478736f71335ab9a89be1926a66
-=======
->>>>>>> 7efcbb25a6096d63882feacd377a7b3dc4e89367
 
     <h1 class="logo" id="title-first-day">
         Je eerste werkdag bij De Walrus
@@ -131,13 +113,8 @@
     <h3 class="tekst" id="text-apply">
         Heb je vragen over de mogelijkheden of kom je er niet uit met solliciteren? Je kunt ons telefonisch bereiken in Leeuwarden op 058 213 7740 of in Sneek op 0515 438 100. We zien je sollicitatie graag tegemoet!
     </h3>
-</header>
+</main>
 
-
-=======
-</header>
-
->>>>>>> 7efcbb25a6096d63882feacd377a7b3dc4e89367
 <script>
     const translations = {
         nl: {
@@ -206,8 +183,9 @@
         document.getElementById('title-vacancies').innerHTML = translations[lang].titleVacancies;
         document.getElementById('text-vacancies-intro').innerHTML = translations[lang].textVacanciesIntro;
 
-        document.getElementById('vac-1').innerHTML = translations[lang].vac1;
-        document.getElementById('vac-2').innerHTML = translations[lang].vac2;
+        // Vacatures bijwerken inclusief de links die eromheen staan
+        document.getElementById('vac-link-1').innerHTML = translations[lang].vac1;
+        document.getElementById('vac-link-2').innerHTML = translations[lang].vac2;
         document.getElementById('vac-3').innerHTML = translations[lang].vac3;
         document.getElementById('vac-4').innerHTML = translations[lang].vac4;
         document.getElementById('vac-5').innerHTML = translations[lang].vac5;
