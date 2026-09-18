@@ -86,7 +86,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* --- TOEVOEGING: Styling voor de taalwisselaar knoppen --- */
+
 .taal-knoppen {
     display: flex;
     gap: 6px;
@@ -114,7 +114,7 @@ nav a:hover::after {
     color: white;
     transform: none;
 }
-/* -------------------------------------------------- */
+
 
 .welkom {
     position: relative;
