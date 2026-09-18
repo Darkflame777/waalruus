@@ -45,6 +45,7 @@ header {
 nav ul {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     gap: 25px;
     list-style: none;
@@ -76,6 +77,36 @@ nav a:hover {
 nav a:hover::after {
     width: 100%;
 }
+
+/* --- TOEVOEGING: Styling voor de taalwisselaar knoppen --- */
+.taal-knoppen {
+    display: flex;
+    gap: 6px;
+    margin-left: 5px;
+}
+
+.taal-knoppen button {
+    background: none;
+    border: 1px solid #263f36;
+    color: #263f36;
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+    margin: 0;
+    width: auto;
+}
+
+.taal-knoppen button:hover,
+.taal-knoppen button.actief-taal {
+    background-color: #263f36;
+    color: white;
+    transform: none;
+}
+/* -------------------------------------------------- */
 
 .event-hero {
     position: relative;
@@ -287,6 +318,13 @@ footer p {
 
     nav ul {
         gap: 12px 18px;
+    }
+
+    .taal-knoppen {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        margin-top: 5px;
     }
 
     .event-hero {

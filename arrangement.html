@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" id="html-root">
 
 <head>
     <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Walrus - Arrangementen</title>
+    <title id="page-title">De Walrus - Arrangementen</title>
     <link rel="stylesheet" href="arrangement.css">
 </head>
 
@@ -13,7 +13,7 @@
 
 <header>
 
-    <div class="melding">
+    <div class="melding" id="txt-melding">
         Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
     </div>
 
@@ -25,12 +25,18 @@
 
         <nav>
             <ul>
-                <li><a href="menukaart.html">Menukaart</a></li>
-                <li><a href="arrangement.html">Arrangement</a></li>
-                <li><a href="zakelijk.html">Zakelijk</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="werkenbij.html">Werken bij</a></li>
-                <li><a href="reserveren.html">Reserveren</a></li>
+                <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+                <li><a href="arrangement.html" class="actief" id="nav-arr">Arrangement</a></li>
+                <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+                <li><a href="contact.html" id="nav-con">Contact</a></li>
+                <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
+                <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
+                <!-- Taalwisselaar knoppen -->
+                <li class="taal-knoppen">
+                    <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+                    <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
+                    <button type="button" id="btn-en" onclick="vertaal('en')">EN</button>
+                </li>
             </ul>
         </nav>
 
@@ -41,33 +47,27 @@
 
 <main>
 
-
     <section class="welkom">
-
-        <img
-                src="afbeeldingen/welkomheader.jfif"
-                alt="Welkom bij De Walrus"
-        >
+        <img src="afbeeldingen/welkomheader.jfif" alt="Welkom bij De Walrus">
 
         <div class="welkom-tekst">
-            <h2>Welkom bij De Walrus</h2>
-            <p>Leuk dat je er bent!</p>
+            <h2 id="welkom-titel">Welkom bij De Walrus</h2>
+            <p id="welkom-sub">Leuk dat je er bent!</p>
         </div>
-
     </section>
 
 
     <section class="informatie">
 
-        <h2>Vier het bij De Walrus</h2>
+        <h2 id="info1-titel">Vier het bij De Walrus</h2>
 
-        <p>
+        <p id="info1-p1">
             Een middag genieten met een high tea, een avond borrelen met
             vrienden of een hele zaal afhuren voor jouw feest of vergadering:
             bij De Walrus kan het allemaal. Kies wat bij jouw moment past.
         </p>
 
-        <p>
+        <p id="info1-p2">
             Op deze pagina vind je arrangementen die je zo kunt boeken.
             Denk aan een High Tea, High Wine of een Bioscooparrangement.
         </p>
@@ -76,16 +76,16 @@
 
     <section class="informatie evenement">
 
-        <h2>Iets bijzonders te vieren?</h2>
+        <h2 id="info2-titel">Iets bijzonders te vieren?</h2>
 
-        <p>
+        <p id="info2-p1">
             Heb je iets te vieren en wil je uitpakken of een ruimte voor jezelf?
             Dat kan! Denk aan een verjaardagsfeest, babyshower, trouwdag,
             jubileum... Of juist met het bedrijf: een personeelsfeest,
             netwerkavond of een vergadering.
         </p>
 
-        <a href="events.html" class="knop">
+        <a href="events.html" class="knop" id="btn-event">
             Jouw event bij De Walrus
         </a>
 
@@ -96,18 +96,18 @@
 
         <div class="reserveren-tekst">
 
-            <h2>Reserveren</h2>
+            <h2 id="res-titel">Reserveren</h2>
 
-            <h3>
+            <h3 id="res-sub">
                 Wat leuk dat je wilt reserveren bij De Walrus!
             </h3>
 
-            <p>
+            <p id="res-p">
                 We staan te popelen om je te ontvangen! Je geeft je reservering
                 door via het formulier voor jouw lunch, borrel of diner.
             </p>
 
-            <a href="reserveren.html" class="knop">
+            <a href="reserveren.html" class="knop" id="btn-res">
                 Reserveer een tafel
             </a>
 
@@ -130,14 +130,14 @@
                 8911 HH Leeuwarden
             </p>
 
-            <p>
+            <p class="tijd-lwd">
                 Zondag t/m zaterdag<br>
                 10:00 tot 01:00 uur
             </p>
 
             <p>
                 Tel: 058 - 21 377 40<br>
-                E-mail: info@dewalrusleeuwarden.nl
+                <span id="email-lwd">E-mail</span>: info@dewalrusleeuwarden.nl
             </p>
         </div>
 
@@ -150,25 +150,136 @@
                 8601 CG Sneek
             </p>
 
-            <p>
+            <p class="tijd-snk">
                 Zondag t/m zaterdag<br>
                 10:00 tot 01:00 uur
             </p>
 
             <p>
                 Tel: 0515 - 438 100<br>
-                E-mail: info@dewalrussneek.nl
+                <span id="email-snk">E-mail</span>: info@dewalrussneek.nl
             </p>
         </div>
 
     </div>
 
     <div class="footer-onderkant">
-        <p>Leuk dat je bent geweest!</p>
-        <p>© 2026 De Walrus - Cookies en privacy statement</p>
+        <p id="foot-tekst1">Leuk dat je bent geweest!</p>
+        <p id="foot-tekst2">© 2026 De Walrus - Cookies en privacy statement</p>
     </div>
 
 </footer>
+
+<!-- JAVASCRIPT VOOR DE TAALWISSELAAR -->
+<script>
+    const vertalingen = {
+        nl: {
+            title: "De Walrus - Arrangementen",
+            melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            menu: "Menukaart", arr: "Arrangement", zak: "Zakelijk", con: "Contact", werk: "Werken bij", res: "Reserveren",
+            welkomTitel: "Welkom bij De Walrus",
+            welkomSub: "Leuk dat je er bent!",
+            info1Titel: "Vier het bij De Walrus",
+            info1P1: "Een middag genieten met een high tea, een avond borrelen met vrienden of een hele zaal afhuren voor jouw feest of vergadering: bij De Walrus kan het allemaal. Kies wat bij jouw moment past.",
+            info1P2: "Op deze pagina vind je arrangementen die je zo kunt boeken. Denk aan een High Tea, High Wine of een Bioscooparrangement.",
+            info2Titel: "Iets bijzonders te vieren?",
+            info2P1: "Heb je iets te vieren en wil je uitpakken of een ruimte voor jezelf? Dat kan! Denk aan een verjaardagsfeest, babyshower, trouwdag, jubileum... Of juist met het bedrijf: een personeelsfeest, netwerkavond of een vergadering.",
+            btnEvent: "Jouw event bij De Walrus",
+            resTitel: "Reserveren",
+            resSub: "Wat leuk dat je wilt reserveren bij De Walrus!",
+            resP: "We staan te popelen om je te ontvangen! Je geeft je reservering door via het formulier voor jouw lunch, borrel of diner.",
+            btnRes: "Reserveer een tafel",
+            tijd: "Zondag t/m zaterdag<br>10:00 tot 01:00 uur",
+            email: "E-mail",
+            f1: "Leuk dat je bent geweest!",
+            f2: "© 2026 De Walrus - Cookies en privacy statement"
+        },
+        de: {
+            title: "De Walrus - Arrangements",
+            melding: "Achtung: Am 27. September sind wir wegen einer Personalfeier den ganzen Tag geschlossen!",
+            menu: "Speisekarte", arr: "Arrangements", zak: "Geschäftlich", con: "Kontakt", werk: "Karriere", res: "Reservieren",
+            welkomTitel: "Willkommen bei De Walrus",
+            welkomSub: "Schön, dass Sie da sind!",
+            info1Titel: "Feiern Sie bei De Walrus",
+            info1P1: "Ein Nachmittag mit High Tea, ein Abend mit Drinks unter Freunden oder das Mieten eines ganzen Raumes für Ihre Feier oder Ihr Meeting: Bei De Walrus ist alles möglich. Wählen Sie, was zu Ihrem Moment passt.",
+            info1P2: "Auf dieser Seite finden Sie Arrangements, die Sie direkt buchen können. Denken Sie an High Tea, High Wine oder ein Kino-Arrangement.",
+            info2Titel: "Etwas Besonderes zu feiern?",
+            info2P1: "Gibt es etwas zu feiern und Sie möchten sich etwas gönnen oder einen Bereich für sich haben? Das geht! Denken Sie an eine Geburtstagsfeier, Babyparty, Hochzeit, ein Jubiläum... Oder geschäftlich: eine Firmenfeier, ein Networking-Event oder ein Meeting.",
+            btnEvent: "Ihr Event bei De Walrus",
+            resTitel: "Reservieren",
+            resSub: "Wie schön, dass Sie bei De Walrus reservieren möchten!",
+            resP: "Wir können es kaum erwarten, Sie zu empfangen! Geben Sie Ihre Reservierung über das Formular für Ihr Mittagessen, Ihren Umtrunk oder Ihr Abendessen auf.",
+            btnRes: "Einen Tisch reservieren",
+            tijd: "Sonntag bis Samstag<br>10:00 bis 01:00 Uhr",
+            email: "E-Mail",
+            f1: "Schön, dass Sie da waren!",
+            f2: "© 2026 De Walrus - Cookies und Datenschutzerklärung"
+        },
+        en: {
+            title: "De Walrus - Packages",
+            melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+            menu: "Menu", arr: "Packages", zak: "Business", con: "Contact", werk: "Careers", res: "Reservations",
+            welkomTitel: "Welcome to De Walrus",
+            welkomSub: "We're glad you're here!",
+            info1Titel: "Celebrate at De Walrus",
+            info1P1: "Enjoy an afternoon with a high tea, an evening of drinks with friends, or book an entire room for your party or meeting: at De Walrus, anything is possible. Choose what fits your moment.",
+            info1P2: "On this page, you will find packages that you can book right away. Think of a High Tea, High Wine, or a Cinema Package.",
+            info2Titel: "Something special to celebrate?",
+            info2P1: "Do you have something to celebrate and want to go all out or have a private space? You can! Think of a birthday party, baby shower, anniversary... Or for business: a staff party, networking event, or a meeting.",
+            btnEvent: "Your event at De Walrus",
+            resTitel: "Reservations",
+            resSub: "How wonderful that you want to book a table at De Walrus!",
+            resP: "We can't wait to welcome you! Submit your reservation using the form for your lunch, drinks, or dinner.",
+            btnRes: "Book a table",
+            tijd: "Sunday to Saturday<br>10:00 to 01:00",
+            email: "Email",
+            f1: "We're glad you visited!",
+            f2: "© 2026 De Walrus - Cookies and privacy statement"
+        }
+    };
+
+    function vertaal(taal) {
+        document.getElementById('html-root').setAttribute('lang', taal);
+        document.getElementById('page-title').innerText = vertalingen[taal].title;
+        document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+        // Navigatie
+        document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+        document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+        document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+        document.getElementById('nav-con').innerText = vertalingen[taal].con;
+        document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+        document.getElementById('nav-res').innerText = vertalingen[taal].res;
+
+        // Pagina inhoud
+        document.getElementById('welkom-titel').innerText = vertalingen[taal].welkomTitel;
+        document.getElementById('welkom-sub').innerText = vertalingen[taal].welkomSub;
+        document.getElementById('info1-titel').innerText = vertalingen[taal].info1Titel;
+        document.getElementById('info1-p1').innerText = vertalingen[taal].info1P1;
+        document.getElementById('info1-p2').innerText = vertalingen[taal].info1P2;
+        document.getElementById('info2-titel').innerText = vertalingen[taal].info2Titel;
+        document.getElementById('info2-p1').innerText = vertalingen[taal].info2P1;
+        document.getElementById('btn-event').innerText = vertalingen[taal].btnEvent;
+        document.getElementById('res-titel').innerText = vertalingen[taal].resTitel;
+        document.getElementById('res-sub').innerText = vertalingen[taal].resSub;
+        document.getElementById('res-p').innerText = vertalingen[taal].resP;
+        document.getElementById('btn-res').innerText = vertalingen[taal].btnRes;
+
+        // Footer
+        document.querySelector('.tijd-lwd').innerHTML = vertalingen[taal].tijd;
+        document.querySelector('.tijd-snk').innerHTML = vertalingen[taal].tijd;
+        document.getElementById('email-lwd').innerText = vertalingen[taal].email;
+        document.getElementById('email-snk').innerText = vertalingen[taal].email;
+        document.getElementById('foot-tekst1').innerText = vertalingen[taal].f1;
+        document.getElementById('foot-tekst2').innerText = vertalingen[taal].f2;
+
+        // Actieve knop stijl bijwerken
+        document.getElementById('btn-nl').classList.remove('actief-taal');
+        document.getElementById('btn-de').classList.remove('actief-taal');
+        document.getElementById('btn-en').classList.remove('actief-taal');
+        document.getElementById('btn-' + taal).classList.add('actief-taal');
+    }
+</script>
 
 </body>
 </html>

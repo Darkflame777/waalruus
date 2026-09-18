@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" id="html-root">
 <head>
     <link rel="icon" type="image/png" href="afbeeldingen/ChatGPT%20Image%2018%20sep%202026,%2010_51_35.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserveren - De Walrus</title>
+    <title id="page-title">Reserveren - De Walrus</title>
     <link rel="stylesheet" href="reserverenformulier.css">
 </head>
 
 <body>
 
 <header>
-    <div class="melding">
+    <div class="melding" id="txt-melding">
         Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!
     </div>
 
@@ -22,12 +22,18 @@
 
         <nav>
             <ul>
-                <li><a href="reserveren.html">Reserveren</a></li>
-                <li><a href="menukaart.html">Menukaart</a></li>
-                <li><a href="zakelijk.html">Zakelijk</a></li>
-                <li><a href="arrangement.html">Arrangementen</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="werkenbij.html">Werken bij</a></li>
+                <li><a href="reserveren.html" id="nav-res">Reserveren</a></li>
+                <li><a href="menukaart.html" id="nav-menu">Menukaart</a></li>
+                <li><a href="zakelijk.html" id="nav-zak">Zakelijk</a></li>
+                <li><a href="arrangement.html" id="nav-arr">Arrangementen</a></li>
+                <li><a href="contact.html" id="nav-con">Contact</a></li>
+                <li><a href="werkenbij.html" id="nav-werk">Werken bij</a></li>
+                <!-- Taalwisselaar knoppen -->
+                <li class="taal-knoppen">
+                    <button type="button" id="btn-nl" onclick="vertaal('nl')" class="actief-taal">NL</button>
+                    <button type="button" id="btn-de" onclick="vertaal('de')">DE</button>
+                    <button type="button" id="btn-en" onclick="vertaal('en')">EN</button>
+                </li>
             </ul>
         </nav>
     </div>
@@ -36,37 +42,38 @@
 <main>
 
     <section class="reserveren">
-        <h2>Reserveer een tafel</h2>
+        <h2 id="form-titel">Reserveer een tafel</h2>
 
-        <p class="intro">
+        <p class="intro" id="form-intro">
             Wil je gezellig komen eten of borrelen bij De Walrus?
             Reserveer eenvoudig een tafel via het formulier hieronder.
         </p>
 
-        <form>
+        <!-- Formulier met een nette JavaScript-aanroep op submit -->
+        <form id="reserveringsFormulier" onsubmit="verzendFormulier(event)">
 
             <div class="formulier-rij">
                 <div class="formulier-groep">
-                    <label for="naam">Naam</label>
+                    <label for="naam" id="lbl-naam">Naam</label>
                     <input type="text" id="naam" name="naam" required>
                 </div>
 
                 <div class="formulier-groep">
-                    <label for="email">E-mailadres</label>
+                    <label for="email" id="lbl-email">E-mailadres</label>
                     <input type="email" id="email" name="email" required>
                 </div>
             </div>
 
             <div class="formulier-rij">
                 <div class="formulier-groep">
-                    <label for="telefoon">Telefoonnummer</label>
+                    <label for="telefoon" id="lbl-tel">Telefoonnummer</label>
                     <input type="tel" id="telefoon" name="telefoon" required>
                 </div>
 
                 <div class="formulier-groep">
-                    <label for="personen">Aantal personen</label>
+                    <label for="personen" id="lbl-personen">Aantal personen</label>
                     <select id="personen" name="personen" required>
-                        <option value="">Kies aantal</option>
+                        <option value="" id="opt-kies">Kies aantal</option>
                         <option value="1">1 persoon</option>
                         <option value="2">2 personen</option>
                         <option value="3">3 personen</option>
@@ -77,39 +84,39 @@
                         <option value="8">8 personen</option>
                         <option value="9">9 personen</option>
                         <option value="10">10 personen</option>
-                        <option value="meer">Meer dan 10 personen</option>
+                        <option value="meer" id="opt-meer">Meer dan 10 personen</option>
                     </select>
                 </div>
             </div>
 
             <div class="formulier-rij">
                 <div class="formulier-groep">
-                    <label for="datum">Datum</label>
+                    <label for="datum" id="lbl-datum">Datum</label>
                     <input type="date" id="datum" name="datum" required>
                 </div>
 
                 <div class="formulier-groep">
-                    <label for="tijd">Tijd</label>
+                    <label for="tijd" id="lbl-tijd">Tijd</label>
                     <input type="time" id="tijd" name="tijd" required>
                 </div>
             </div>
 
             <div class="formulier-groep">
-                <label for="locatie">Locatie</label>
+                <label for="locatie" id="lbl-locatie">Locatie</label>
                 <select id="locatie" name="locatie" required>
-                    <option value="">Kies een locatie</option>
+                    <option value="" id="opt-locatie">Kies een locatie</option>
                     <option value="leeuwarden">Leeuwarden</option>
                     <option value="sneek">Sneek</option>
                 </select>
             </div>
 
             <div class="formulier-groep">
-                <label for="opmerking">Opmerking</label>
+                <label for="opmerking" id="lbl-opmerking">Opmerking</label>
                 <textarea id="opmerking" name="opmerking" rows="5"
                           placeholder="Heb je speciale wensen of opmerkingen?"></textarea>
             </div>
 
-            <button type="submit">Reservering aanvragen</button>
+            <button type="submit" id="btn-submit">Reservering aanvragen</button>
 
         </form>
     </section>
@@ -120,6 +127,100 @@
     <p>De Walrus Grand Café</p>
     <p>Leeuwarden &nbsp; | &nbsp; Sneek</p>
 </footer>
+
+<!-- SCRIPT VOOR VERTALING EN FORMULIER -->
+<script>
+    lethuidigeBevestiging = "Bedankt voor je reserveringsaanvraag! We nemen snel contact met je op.";
+
+    const vertalingen = {
+        nl: {
+            title: "Reserveren - De Walrus",
+            melding: "Let op: op 27 september zijn we de hele dag gesloten vanwege personeelsfeest!",
+            res: "Reserveren", menu: "Menukaart", zak: "Zakelijk", arr: "Arrangementen", con: "Contact", werk: "Werken bij",
+            titel: "Reserveer een tafel",
+            intro: "Wil je gezellig komen eten of borrelen bij De Walrus? Reserveer eenvoudig een tafel via het formulier hieronder.",
+            naam: "Naam", email: "E-mailadres", tel: "Telefoonnummer", personen: "Aantal personen", kiesAantal: "Kies aantal", meerP: "Meer dan 10 personen",
+            datum: "Datum", tijd: "Tijd", locatie: "Locatie", kiesLocatie: "Kies een locatie", opmerking: "Opmerking",
+            placeholder: "Heb je speciale wensen of opmerkingen?",
+            btn: "Reservering aanvragen",
+            meldingBevestiging: "Bedankt voor je reserveringsaanvraag! We nemen snel contact met je op."
+        },
+        de: {
+            title: "Reservieren - De Walrus",
+            melding: "Achtung: Am 27. September sind wir wegen einer Personalfeier den ganzen Tag geschlossen!",
+            res: "Reservieren", menu: "Speisekarte", zak: "Geschäftlich", arr: "Arrangements", con: "Kontakt", werk: "Karriere",
+            titel: "Einen Tisch reservieren",
+            intro: "Möchten Sie bei De Walrus gemütlich essen oder etwas trinken? Reservieren Sie ganz einfach einen Tisch über das Formular unten.",
+            naam: "Name", email: "E-Mail-Adresse", tel: "Telefonnummer", personen: "Anzahl der Personen", kiesAantal: "Anzahl wählen", meerP: "Mehr als 10 Personen",
+            datum: "Datum", tijd: "Uhrzeit", locatie: "Standort", kiesLocatie: "Standort wählen", opmerking: "Anmerkung",
+            placeholder: "Haben Sie spezielle Wünsche oder Anmerkungen?",
+            btn: "Reservierung anfragen",
+            meldingBevestiging: "Vielen Dank für Ihre Reservierungsanfrage! Wir werden uns bald mit Ihnen in Verbindung setzen."
+        },
+        en: {
+            title: "Reservations - De Walrus",
+            melding: "Please note: we will be closed all day on September 27th due to a staff party!",
+            res: "Reservations", menu: "Menu", zak: "Business", arr: "Packages", con: "Contact", werk: "Careers",
+            titel: "Book a table",
+            intro: "Would you like to enjoy dinner or drinks at De Walrus? Easily book a table using the form below.",
+            naam: "Name", email: "Email address", tel: "Phone number", personen: "Number of guests", kiesAantal: "Choose number", meerP: "More than 10 people",
+            datum: "Date", tijd: "Time", locatie: "Location", kiesLocatie: "Choose a location", opmerking: "Comment",
+            placeholder: "Do you have any special requests or comments?",
+            btn: "Request reservation",
+            meldingBevestiging: "Thank you for your reservation request! We will contact you soon."
+        }
+    };
+
+    function vertaal(taal) {
+        document.getElementById('html-root').setAttribute('lang', taal);
+        document.getElementById('page-title').innerText = vertalingen[taal].title;
+        document.getElementById('txt-melding').innerHTML = vertalingen[taal].melding;
+
+        document.getElementById('nav-res').innerText = vertalingen[taal].res;
+        document.getElementById('nav-menu').innerText = vertalingen[taal].menu;
+        document.getElementById('nav-zak').innerText = vertalingen[taal].zak;
+        document.getElementById('nav-arr').innerText = vertalingen[taal].arr;
+        document.getElementById('nav-con').innerText = vertalingen[taal].con;
+        document.getElementById('nav-werk').innerText = vertalingen[taal].werk;
+
+        document.getElementById('form-titel').innerText = vertalingen[taal].titel;
+        document.getElementById('form-intro').innerText = vertalingen[taal].intro;
+        document.getElementById('lbl-naam').innerText = vertalingen[taal].naam;
+        document.getElementById('lbl-email').innerText = vertalingen[taal].email;
+        document.getElementById('lbl-tel').innerText = vertalingen[taal].tel;
+        document.getElementById('lbl-personen').innerText = vertalingen[taal].personen;
+        document.getElementById('opt-kies').innerText = vertalingen[taal].kiesAantal;
+        document.getElementById('opt-meer').innerText = vertalingen[taal].meerP;
+        document.getElementById('lbl-datum').innerText = vertalingen[taal].datum;
+        document.getElementById('lbl-tijd').innerText = vertalingen[taal].tijd;
+        document.getElementById('lbl-locatie').innerText = vertalingen[taal].locatie;
+        document.getElementById('opt-locatie').innerText = vertalingen[taal].kiesLocatie;
+        document.getElementById('lbl-opmerking').innerText = vertalingen[taal].opmerking;
+        document.getElementById('opmerking').placeholder = vertalingen[taal].placeholder;
+        document.getElementById('btn-submit').innerText = vertalingen[taal].btn;
+
+        huidigeBevestiging = vertalingen[taal].meldingBevestiging;
+
+        document.getElementById('btn-nl').classList.remove('actief-taal');
+        document.getElementById('btn-de').classList.remove('actief-taal');
+        document.getElementById('btn-en').classList.remove('actief-taal');
+        document.getElementById('btn-' + taal).classList.add('actief-taal');
+    }
+
+    function verzendFormulier(event) {
+        event.preventDefault(); // Voorkomt dat de pagina herlaadt
+        alert(huidigeBevestiging); // Toont de melding in de gekozen taal
+        document.getElementById('reserveringsFormulier').reset(); // Maakt formulier leeg
+    }
+
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const loc = urlParams.get('locatie');
+        if (loc) {
+            document.getElementById('locatie').value = loc;
+        }
+    }
+</script>
 
 </body>
 </html>
